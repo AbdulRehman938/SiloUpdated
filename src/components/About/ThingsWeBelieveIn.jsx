@@ -22,12 +22,12 @@ const ThingsWeBelieveIn = () => {
           <p 
             className="text-black text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-left"
             style={{
-              fontWeight: 500,
+              fontWeight: 400,
               lineHeight: '150%',
               letterSpacing: '0%'
             }}
           >
-           These are the principles that guide everything we create - grounding our work in <span className="font-black">authenticity</span>, driving it with <span className="font-black">creativity</span>, and strengthening it through <span className="font-black">strategy</span>.
+           These are the principles that guide everything we create - grounding our work in <br /> <span className="font-black">authenticity</span>, driving it with <span className="font-black">creativity</span>, and strengthening it through <span className="font-black">strategy</span>.
           </p>
         </div>
         
@@ -44,16 +44,16 @@ const ThingsWeBelieveIn = () => {
               }}
             >
               <img 
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717293/Vector1_kxamhf.png" 
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765908400/1_pui4ev.png" 
                 alt="Content should mean something icon"
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
             
             {/* Text Content Below Card */}
             <h3 
-              className="font-bold text-black text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-3xl text-left"
+              className="font-bold text-black text-lg sm:text-lg md:text-2xl lg:text-xl xl:text2xl 2xl:text-4xl text-left"
               style={{
                 fontFamily: 'Epilogue, sans-serif',
                 fontWeight: 700,
@@ -61,18 +61,18 @@ const ThingsWeBelieveIn = () => {
                 letterSpacing: '0%'
               }}
             >
-              We believe the most powerful content feels real.
+             Strong brands are built on something real.
             </h3>
             
             <p 
               className="text-black text-xs sm:text-sm md:text-base lg:text-sm xl:text-base leading-relaxed text-left"
               style={{
-                fontWeight: 600,
+                fontWeight: 400,
                 lineHeight: '150%',
                 letterSpacing: '0%'
               }}
             >
-             That’s why we focus on creating work that speaks in your brand’s <span className="font-black">true voice </span> and feels native to the platforms it’s on. No filler posts. No forced trends. Just genuine connection that lasts.
+             We believe the most impactful work feels real and true to your brand. Whether we are designing a website, shaping your identity or creating content, everything is crafted with intention and aligned to how your audience actually thinks. No filler or forced moments - just work that connects.
             </p>
           </div>
           
@@ -87,9 +87,9 @@ const ThingsWeBelieveIn = () => {
               }}
             >
               <img 
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717294/Vector2_wppsbr.png" 
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765908401/2_vle5af.png" 
                 alt="We create work that sticks icon"
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
@@ -103,18 +103,18 @@ const ThingsWeBelieveIn = () => {
                 letterSpacing: '0%'
               }}
             >
-             Great content isn’t just noticed — it’s remembered.
+           Design and storytelling should make people feel.
             </h3>
             
             <p 
               className="text-black text-xs sm:text-sm md:text-base lg:text-sm xl:text-base leading-relaxed text-left md:text-left lg:text-left"
               style={{
-                fontWeight: 600,
+                fontWeight: 400,
                 lineHeight: '150%',
                 letterSpacing: '0%'
               }}
             >
-              We push <span className="font-black">creativity</span> beyond surface-level visuals, blending bold ideas with sharp design and motion that hold attention. Every project is an opportunity to challenge convention and craft something distinctive that brings your brand to life.
+             We move beyond surface visuals, creating bold ideas across branding, digital design, websites and motion that hold attention. Every project is a chance to craft something distinctive, considered and built to stand out on every screen.
             </p>
           </div>
           
@@ -129,9 +129,9 @@ const ThingsWeBelieveIn = () => {
               }}
             >
               <img 
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717294/Vector3_xw1icu.png" 
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765908448/3_cmny76.png" 
                 alt="Bold ideas need solid foundation icon"
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
             </div>
@@ -146,18 +146,18 @@ const ThingsWeBelieveIn = () => {
                 letterSpacing: '0%'
               }}
             >
-              Bold ideas need a solid foundation to grow.
+             Strategy gives creativity direction.
             </h3>
             
             <p 
               className="text-black text-xs sm:text-sm md:text-base lg:text-sm xl:text-base leading-relaxed text-left"
               style={{
-                fontWeight: 600,
+                fontWeight: 400,
                 lineHeight: '150%',
                 letterSpacing: '0%'
               }}
             >
-             That’s why every campaign, post, and video we create is built on a solid <span className="font-black">strategic</span> foundation. From audience insights to content pillars, we make sure your brand shows up with purpose and consistency, not noise.
+            From brand positioning and content frameworks to website structure and digital ecosystems, everything we make is grounded in strategy. Clear thinking guides each design and every piece of content, helping your brand show up with purpose, consistency and impact.
             </p>
           </div>
         </div>

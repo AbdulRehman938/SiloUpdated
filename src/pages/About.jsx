@@ -11,8 +11,8 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const About = () => {
   usePageMeta(
-    'About Us | Silo Creative - UGC Agency',
-    'Meet the minds behind Silo Creative. Learn about our approach to user-generated content, our values, and why brands love working with us.'
+    'Silo | Boutique Creative Studio for Modern Brands',
+    'A boutique creative agency blending social media strategy, content strategy, branding, digital design and website development to build meaningful brand experiences.'
   )
 
   // Handle scroll to anchor or top when component mounts

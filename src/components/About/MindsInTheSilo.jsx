@@ -28,17 +28,7 @@ const MindsInTheSilo = () => {
       description:
         "Ruby has a decade of marketing experience, having built a finance-focused agency before leaning into her passion for social. She leads with sharp thinking and builds strong client relationships. Outside work, she’s at pilates, boxing or planning her next city break.",
       imageUrl:
-        "https://res.cloudinary.com/di9tb45rl/image/upload/v1762717229/Carousal1_qyrnxy.png",
-    },
-    {
-      id: "hailey-hippolyte",
-      type: "team-member",
-      name: "Hailey Hippolyte",
-      title: "Head of Social & Creator Partnerships",
-      description:
-        "Hailey turns ideas into standout stories and thoughtful collaborations. With a balance of data and creativity, she helps brands connect in a lasting way. She thrives on bringing people and ideas together, often found chasing sunsets when she’s off the clock.",
-      imageUrl:
-        "https://res.cloudinary.com/di9tb45rl/image/upload/v1762717231/Carousal2_hnaif5.png",
+        "https://res.cloudinary.com/di9tb45rl/image/upload/v1765909402/Placeholder_Image_akzzvs.png",
     },
     {
       id: "will-carter",
@@ -53,10 +43,10 @@ const MindsInTheSilo = () => {
     {
       id: "join-us",
       type: "special-card",
-      title: "Think you’re the right fit for our team?",
-      buttonText: "Current Vacancies",
+      title: "It’s not the size that matters.",
+      buttonText: "View Openings",
       description:
-        "Can’t see an opening that fits you? Get in touch anyway - we’re always on the lookout for our next team-mates!",
+        "But a few more teammates wouldn’t hurt.",
     },
   ];
 
@@ -172,6 +162,28 @@ const MindsInTheSilo = () => {
     cardsPerView === 1
       ? carouselData.length
       : Math.max(1, carouselData.length - cardsPerView + 1);
+
+  // Ensure cards are visible when they slide into carousel view (handles horizontal carousel sliding)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Only add cards to the viewport set, never remove (intersection observer handles removal)
+      if (cardsPerView === 1) {
+        // On mobile, mark current slide as visible
+        setCardsInViewport((prev) => new Set(prev).add(currentSlide));
+      } else {
+        // On larger screens, mark all currently displayed cards
+        setCardsInViewport((prev) => {
+          const newSet = new Set(prev);
+          for (let i = currentSlide; i < Math.min(currentSlide + cardsPerView, carouselData.length); i++) {
+            newSet.add(i);
+          }
+          return newSet;
+        });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [currentSlide, cardsPerView, carouselData.length]);
 
   // Navigation functions with faster transitions
   const goToNextSlide = () => {
@@ -298,7 +310,7 @@ const MindsInTheSilo = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-start justify-center py-6 sm:py-8 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-white overflow-x-hidden">
+    <section className="md:min-h-screen min-h-[80vh] flex items-start justify-center py-6 sm:py-8 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-white overflow-x-hidden">
       <div className="max-w-full mx-auto w-full">
         {/* Header Section - Zoom & Small Laptop Optimized */}
         <div className="text-left xl:text-left mb-6 sm:mb-8 md:mb-12 lg:mb-16 px-2 sm:px-0">
@@ -324,9 +336,7 @@ const MindsInTheSilo = () => {
               letterSpacing: "0%",
             }}
           >
-            Behind The Silo is a collective of storytellers, designers, and
-            social minds who live and breathe content - building brands with
-            creativity and strategy.
+            Behind Silo is a team of storytellers, designers and digital creators building brands with ideas, identity and experiences that move people.
           </p>
         </div>
 
@@ -352,8 +362,10 @@ const MindsInTheSilo = () => {
             style={{ touchAction: "pan-y pinch-zoom" }}
           >
             <motion.div
-              className="flex gap-3 sm:gap-4 md:gap-6 cursor-grab active:cursor-grabbing select-none"
-              drag="x"
+              className={`flex gap-3 sm:gap-4 md:gap-6 select-none ${
+                totalSlides > 1 ? 'cursor-grab active:cursor-grabbing' : ''
+              }`}
+              drag={totalSlides > 1 ? "x" : false}
               dragConstraints={{
                 left:
                   -(cardWidth + gap) *
@@ -523,6 +535,27 @@ const MindsInTheSilo = () => {
                             {item.title}
                           </motion.h3>
 
+                           <motion.p
+                            className="text-black text-sm text-center w-[90%] mx-auto md:w-[100%] sm:text-sm lg:text-base leading-relaxed"
+                            style={{
+                              fontFamily: "DM Sans, sans-serif",
+                              fontWeight: 400,
+                              lineHeight: "150%",
+                              letterSpacing: "0%",
+                            }}
+                            initial={{ opacity: 0, y: 15 }}
+                            animate={{
+                              opacity: isInViewport ? 1 : 0,
+                              y: isInViewport ? 0 : 15,
+                            }}
+                            transition={{
+                              duration: 0.6,
+                              delay: isInViewport ? 0.5 : 0,
+                            }}
+                          >
+                            {item.description}
+                          </motion.p>
+
                           <motion.a
                             href="/careers"
                             className="inline-flex items-center justify-center gap-2 bg-brand h-12 px-8 py-3 text-sm font-bold tracking-wide text-white border-transparent relative overflow-hidden group w-[80%] mx-auto ml-9"
@@ -549,26 +582,7 @@ const MindsInTheSilo = () => {
                             </span>
                           </motion.a>
 
-                          <motion.p
-                            className="text-black text-sm text-center w-[90%] mx-auto md:w-[100%] sm:text-sm lg:text-base leading-relaxed"
-                            style={{
-                              fontFamily: "DM Sans, sans-serif",
-                              fontWeight: 600,
-                              lineHeight: "150%",
-                              letterSpacing: "0%",
-                            }}
-                            initial={{ opacity: 0, y: 15 }}
-                            animate={{
-                              opacity: isInViewport ? 1 : 0,
-                              y: isInViewport ? 0 : 15,
-                            }}
-                            transition={{
-                              duration: 0.6,
-                              delay: isInViewport ? 0.5 : 0,
-                            }}
-                          >
-                            {item.description}
-                          </motion.p>
+                         
                         </motion.div>
                       </motion.div>
                     )}
@@ -579,58 +593,60 @@ const MindsInTheSilo = () => {
           </div>
 
           {/* Navigation Controls - Mobile Optimized */}
-          <div className="flex justify-between items-center mt-6 sm:mt-8 w-full pr-2 sm:pr-4 lg:max-w-full lg:mx-auto lg:pr-10">
-            {/* Navigation Dots - Mobile Enhanced */}
-            <div className="flex space-x-1 sm:space-x-2">
-              {Array.from({ length: totalSlides }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    if (!isTransitioning) {
-                      setIsTransitioning(true);
-                      setCurrentSlide(index);
-                      setTimeout(() => setIsTransitioning(false), 300);
-                    }
-                  }}
-                  className={`w-2 h-2 sm:w-3 sm:h-3 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 ${
-                    currentSlide === index
-                      ? "bg-red-500"
-                      : "bg-red-200 hover:bg-red-300"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                  aria-current={currentSlide === index ? "true" : "false"}
-                />
-              ))}
-            </div>
+          {totalSlides > 1 && (
+            <div className="flex justify-between items-center mt-6 sm:mt-8 w-full pr-2 sm:pr-4 lg:max-w-full lg:mx-auto lg:pr-10">
+              {/* Navigation Dots - Mobile Enhanced */}
+              <div className="flex space-x-1 sm:space-x-2">
+                {Array.from({ length: totalSlides }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      if (!isTransitioning) {
+                        setIsTransitioning(true);
+                        setCurrentSlide(index);
+                        setTimeout(() => setIsTransitioning(false), 300);
+                      }
+                    }}
+                    className={`w-2 h-2 sm:w-3 sm:h-3 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 ${
+                      currentSlide === index
+                        ? "bg-red-500"
+                        : "bg-red-200 hover:bg-red-300"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                    aria-current={currentSlide === index ? "true" : "false"}
+                  />
+                ))}
+              </div>
 
-            {/* Navigation Arrows - Mobile Enhanced */}
-            <div className="flex space-x-1 sm:space-x-2">
-              <button
-                onClick={goToPrevSlide}
-                disabled={isTransitioning || currentSlide === 0}
-                className={`w-10 h-10 sm:w-12 sm:h-12 border border-red-500 text-red-500 flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-base sm:text-lg ${
-                  isTransitioning || currentSlide === 0
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-red-50 active:bg-red-100"
-                }`}
-                aria-label="Previous slide"
-              >
-                <HiArrowLeft />
-              </button>
-              <button
-                onClick={goToNextSlide}
-                disabled={isTransitioning || currentSlide === totalSlides - 1}
-                className={`w-10 h-10 sm:w-12 sm:h-12 border border-red-500 text-red-500 flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-base sm:text-lg ${
-                  isTransitioning || currentSlide === totalSlides - 1
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-red-50 active:bg-red-100"
-                }`}
-                aria-label="Next slide"
-              >
-                <HiArrowRight />
-              </button>
+              {/* Navigation Arrows - Mobile Enhanced */}
+              <div className="flex space-x-1 sm:space-x-2">
+                <button
+                  onClick={goToPrevSlide}
+                  disabled={isTransitioning || currentSlide === 0}
+                  className={`w-10 h-10 sm:w-12 sm:h-12 border border-red-500 text-red-500 flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-base sm:text-lg ${
+                    isTransitioning || currentSlide === 0
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:bg-red-50 active:bg-red-100"
+                  }`}
+                  aria-label="Previous slide"
+                >
+                  <HiArrowLeft />
+                </button>
+                <button
+                  onClick={goToNextSlide}
+                  disabled={isTransitioning || currentSlide === totalSlides - 1}
+                  className={`w-10 h-10 sm:w-12 sm:h-12 border border-red-500 text-red-500 flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 text-base sm:text-lg ${
+                    isTransitioning || currentSlide === totalSlides - 1
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:bg-red-50 active:bg-red-100"
+                  }`}
+                  aria-label="Next slide"
+                >
+                  <HiArrowRight />
+                </button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

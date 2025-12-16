@@ -44,7 +44,7 @@ const row3 = {
 
 const WhoWeLoveWorkingWith = () => {
   return (
-    <section className="main-div md:min-h-[60vh] min-h-[55vh] w-[100vw] flex items-start justify-center pt-32 md:pt-0 pb-6 mb-10 md:mb-0 sm:pb-8 md:pb-12 lg:pb-16 px-3 sm:px-4 md:px-0 bg-white overflow-x-hidden mt-20">
+    <section className="main-div md:min-h-[60vh] min-h-[45vh] w-[100vw] flex items-start justify-center pt-32 md:pt-0 pb-0 mb-0 md:mb-0 sm:pb-8 md:pb-12 lg:pb-16 px-3 sm:px-4 md:px-0 bg-white overflow-x-hidden mt-20">
       <div className="max-w-full mr-auto w-full h-auto">
         {/* Text Section - Zoom & Small Laptop Optimized */}
         <div className="text-left mb-6 sm:mb-8 md:mb-12 lg:mb-16 px-2 sm:px-0 w-full -mt-32 md:mt-0">
