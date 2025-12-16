@@ -1,0 +1,12 @@
+@keyframes bounce-custom {
+  from {
+    transform: translateY(0.1em);
+  }
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.animate-bounce-custom {
+  animation: bounce-custom 0.6s ease-in-out infinite alternate;
+}

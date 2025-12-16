@@ -1,0 +1,114 @@
+/* Target 125% Windows scaling (devicePixelRatio ~1.25) */
+@media (resolution: 1.25dppx), (min-resolution: 120dpi) and (max-resolution: 130dpi) {
+  #video {
+    height: 40vh !important;
+  }
+  .hero-title {
+    font-size: 10vw !important;
+    margin-top: 5vw !important;
+  }
+  .hero-desc {
+    font-size: 1vw !important;
+  }
+  .hero-main {
+    margin-top: 1rem !important;
+  }
+  .home-hero-text-p {
+  margin-top: 0 !important;
+}
+.home-hero-text-h {
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+.home-hero-text-float {
+  margin-top: -1rem !important;
+  width: 100% !important;
+}
+.canvas-style {
+  height: 80% !important;
+}
+.main-div {
+  margin-bottom: 5rem;
+}
+#welcome-parent-div {
+  height: 100vh;
+}
+.contact {
+  margin-top: 5rem !important;
+}
+.hero-top {
+  height: 100vh !important;
+}
+.service-hero-title {
+  height: 270px !important;
+  margin-top: 2rem !important;
+}
+}
+
+/* Target 150% Windows scaling (devicePixelRatio ~1.5) */
+@media (resolution: 1.5dppx), (min-resolution: 144dpi) and (max-resolution: 155dpi) {
+    .hero-main {
+    margin-top: 0rem !important;
+  }
+  #video {
+    height: 40vh !important;
+  }
+  .hero-title {
+    font-size: 10vw !important;
+  }
+  .hero-desc {
+    font-size: 1vw !important;
+  }
+  .header {
+    height: 3rem !important;
+  }
+  .header2 {
+    height: 1.8rem !important;
+    font-size: 2rem !important;
+  }
+.hero-btn {
+    height: 2rem !important;
+}
+.hero-top {
+    height: 36.5rem !important;
+}
+.service-top {
+    padding-top: 2rem !important;
+}
+.service-video {
+    height: 80vh !important;
+}
+.header-btn {
+    padding: 0.3rem 1rem !important;
+}
+.service-video #video {
+  height: 45vh !important;
+  margin-top: 2rem !important;
+}
+.home-hero-text-p {
+  margin-top: 0rem !important;
+}
+.home-hero-text-h {
+  margin-top: -13rem !important;
+}
+.home-hero-text-float {
+  margin-top: -1rem !important;
+  width: 100% !important;
+}
+.canvas-style {
+  height: 70% !important;
+}
+.main-div {
+  margin-bottom: 8rem;
+}
+#welcome-parent-div {
+  height: 50rem;
+}
+.hero-top {
+  height: 100vh !important;
+}
+.service-hero-title {
+  height: 270px !important;
+  margin-top: 2rem !important;
+}
+}

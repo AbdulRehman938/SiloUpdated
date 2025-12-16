@@ -1,0 +1,231 @@
+import { useEffect } from 'react';
+import { Application, Assets, Sprite, Texture, Filter, GlProgram } from 'pixi.js';
+import vertex from '../shaders/siloHover.vertex';
+import fragment from '../shaders/SiloDisplacement.fragment';
+
+export const useSiloHoverPixi = ({ hostRef, svgSrc, height, intensity, isMobile }) => {
+  useEffect(() => {
+    if (isMobile) return;
+
+    const el = hostRef.current;
+    if (!el) return;
+
+    let destroyed = false;
+    let app = null;
+    let logoSprite = null;
+    let logoTex = null;
+    let rippleFilter = null;
+    let time = 0;
+    let targetStrength = 0;
+    let strength = 0;
+    let mouseX = 0;
+    let mouseY = 0;
+    let smoothX = 0;
+    let smoothY = 0;
+    let prevX = 0;
+    let prevY = 0;
+    let smoothVelX = 0;
+    let smoothVelY = 0;
+    let frozen = false;
+
+    const relaxPos = { x: 0, y: 0 };
+    const EDGE_FEATHER = 0.08;
+    const DAMPING = 0.12;
+    const DECAY = 0.9;
+    const STOP_THRESHOLD = 0.01;
+
+    (async () => {
+      app = new Application();
+      await app.init({
+        antialias: true,
+        backgroundAlpha: 0,
+        powerPreference: 'high-performance',
+        resolution: window.devicePixelRatio || 1,
+        autoDensity: true,
+        resizeTo: el,
+      });
+
+      if (destroyed) {
+        app.destroy(true);
+        return;
+      }
+
+      el.innerHTML = '';
+      el.appendChild(app.canvas);
+
+      try {
+        logoTex = await Assets.load(svgSrc);
+        console.log('[Pixi] Texture loaded', svgSrc);
+
+        // Add padding to prevent clipping when liquid effect expands
+        const padX = logoTex.width * 0.12;
+        const padY = logoTex.height * 0.12;
+        const base = document.createElement('canvas');
+        base.width = logoTex.width + (padX * 2);
+        base.height = logoTex.height + (padY * 2);
+        const ctx = base.getContext('2d');
+        if (ctx) {
+          ctx.clearRect(0, 0, base.width, base.height);
+          ctx.drawImage(logoTex.source.resource, padX, padY, logoTex.width, logoTex.height);
+        }
+        logoTex = Texture.from(base);
+      } catch {
+        console.warn('[Pixi] Texture fallback to <img>');
+        el.innerHTML = `<img src="${svgSrc}" alt="logo" style="max-width:100%;height:auto;display:block;" loading="lazy" />`;
+        return;
+      }
+
+      logoSprite = new Sprite(logoTex);
+      logoSprite.anchor.set(0.5);
+      app.stage.addChild(logoSprite);
+
+      const glProgram = new GlProgram({ vertex, fragment });
+      const baseRadiusPix = 190.0;
+      const baseIntensity = (intensity / 40) * 5.4;
+
+      const resources = {
+        ripple: {
+          uMousePix: { value: { x: 0, y: 0 }, type: 'vec2<f32>' },
+          uAspect: { value: { x: 1.0, y: 1.0 }, type: 'vec2<f32>' },
+          uRadiusPix: { value: baseRadiusPix, type: 'f32' },
+          uIntensity: { value: 0.0, type: 'f32' },
+          uVelocity: { value: { x: 0.0, y: 0.0 }, type: 'vec2<f32>' },
+          uTime: { value: 0.0, type: 'f32' },
+        },
+      };
+
+      rippleFilter = new Filter({ glProgram, resources });
+      logoSprite.filters = [rippleFilter];
+
+      const rippleUniforms = rippleFilter.resources.ripple.uniforms;
+
+      const layout = () => {
+        if (!app || !logoSprite || !logoTex) return;
+
+        const w = el.clientWidth;
+        const scaleFactor = 1.25; // Increase size by 25%
+        const horizontalPadding = w * 0.05; // Add 5% padding on each side
+        const canvasWidth = w + (horizontalPadding * 2);
+        const canvasHeight = isMobile ? height : (logoTex.height / logoTex.width) * w * scaleFactor;
+
+        app.renderer.resize(canvasWidth, canvasHeight);
+        logoSprite.x = canvasWidth / 2;
+        logoSprite.y = canvasHeight / 2;
+        logoSprite.width = w * scaleFactor;
+        logoSprite.height = (logoTex.height / logoTex.width) * w * scaleFactor;
+
+        rippleUniforms.uAspect.x = logoSprite.width;
+        rippleUniforms.uAspect.y = logoSprite.height;
+
+        const centerX = logoSprite.width / 2;
+        const centerY = logoSprite.height / 2;
+        prevX = centerX;
+        prevY = centerY;
+        smoothX = centerX;
+        smoothY = centerY;
+        mouseX = centerX;
+        mouseY = centerY;
+        relaxPos.x = centerX;
+        relaxPos.y = centerY;
+      };
+
+      layout();
+      new ResizeObserver(layout).observe(el);
+
+      logoSprite.eventMode = 'static';
+      logoSprite.on('pointerenter', (e) => {
+        targetStrength = 1;
+        frozen = false;
+        if (!logoSprite) return;
+        const pos = e.getLocalPosition(logoSprite);
+        mouseX = pos.x + logoSprite.width / 2;
+        mouseY = pos.y + logoSprite.height / 2;
+        smoothX = mouseX;
+        smoothY = mouseY;
+        prevX = mouseX;
+        prevY = mouseY;
+      });
+
+      logoSprite.on('pointerleave', () => {
+        frozen = true;
+        targetStrength = 0;
+      });
+
+      app.stage.eventMode = 'static';
+      app.stage.hitArea = app.screen;
+      app.stage.on('pointermove', (e) => {
+        if (!logoSprite) return;
+        frozen = false;
+        targetStrength = 1;
+        const pos = e.getLocalPosition(logoSprite);
+        mouseX = pos.x + logoSprite.width / 2;
+        mouseY = pos.y + logoSprite.height / 2;
+      });
+
+      app.ticker.add((ticker) => {
+        if (!logoSprite || !rippleFilter) return;
+
+        time += 0.016 * ticker.deltaTime;
+        rippleUniforms.uTime = time;
+
+        strength += (targetStrength - strength) * 0.1;
+        smoothX += (mouseX - smoothX) * 0.08;
+        smoothY += (mouseY - smoothY) * 0.08;
+
+        const dt = Math.max(1, ticker.deltaTime);
+        const fpsNorm = 60 / dt;
+        const w = logoSprite.width;
+        const h = logoSprite.height;
+
+        const instVelX = ((mouseX - prevX) / Math.max(1, w)) * fpsNorm * 0.8;
+        const instVelY = ((mouseY - prevY) / Math.max(1, h)) * fpsNorm * 0.8;
+        prevX = mouseX;
+        prevY = mouseY;
+
+        smoothVelX += (instVelX - smoothVelX) * DAMPING;
+        smoothVelY += (instVelY - smoothVelY) * DAMPING;
+
+        const speed = Math.abs(smoothVelX) + Math.abs(smoothVelY);
+        if (speed < STOP_THRESHOLD) {
+          smoothVelX *= DECAY;
+          smoothVelY *= DECAY;
+        }
+
+        if (frozen) {
+          const relaxSpeed = 0.005;
+          const decay = 0.92;
+          smoothX += (relaxPos.x - smoothX) * relaxSpeed;
+          smoothY += (relaxPos.y - smoothY) * relaxSpeed;
+          strength *= 0.96;
+          smoothVelX *= decay;
+          smoothVelY *= decay;
+        }
+
+        rippleUniforms.uVelocity.x = smoothVelX;
+        rippleUniforms.uVelocity.y = smoothVelY;
+        rippleUniforms.uMousePix.x = smoothX;
+        rippleUniforms.uMousePix.y = smoothY;
+
+        const uRaw = smoothX / w;
+        const vRaw = smoothY / h;
+        const edgeDist = Math.min(uRaw, vRaw, 1 - uRaw, 1 - vRaw);
+        const edgeFactor = Math.max(0, Math.min(1, edgeDist / EDGE_FEATHER));
+        const fade = 1.0 - Math.min(1.0, (1.0 - DECAY) * 20.0 * (STOP_THRESHOLD / (speed + STOP_THRESHOLD)));
+
+        rippleUniforms.uRadiusPix = baseRadiusPix;
+        rippleUniforms.uIntensity = baseIntensity * edgeFactor * fade * strength;
+      });
+    })();
+
+    return () => {
+      destroyed = true;
+      setTimeout(() => {
+        try {
+          if (app && app.renderer) app.destroy(true);
+        } catch (err) {
+          console.warn('[Pixi cleanup warning]', err);
+        }
+      }, 0);
+    };
+  }, [hostRef, svgSrc, height, intensity, isMobile]);
+};
