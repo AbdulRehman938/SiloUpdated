@@ -4,8 +4,8 @@ import { usePageMeta } from '../hooks/usePageMeta'
 
 const servicee = () => {
   usePageMeta(
-    'Our Services | Silo Creative - UGC & Content Production',
-    'Discover our comprehensive UGC and content creation services. From strategy to production, we help brands create authentic content that converts.'
+    'Silo | Social, Branding, Web & Content Strategy Agency',
+    'Explore services in social media management, content strategy, brand design, UX UI design, website development and motion design for modern brands.'
   )
 
   return (

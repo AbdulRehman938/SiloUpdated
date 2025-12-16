@@ -24,6 +24,7 @@ const Hero = () => {
   const videoContainerRef = useRef(null);
   const heroSectionRef = useRef(null);
   const initialVideoPositionRef = useRef(null);
+  const storedInitialPosition = useRef(null); // Store the initial viewport position once
   const [videoPosition, setVideoPosition] = useState({
     top: 0,
     left: 0,
@@ -90,8 +91,6 @@ const Hero = () => {
           const footerRect = footer?.getBoundingClientRect();
 
           const scrollY = window.scrollY || window.pageYOffset;
-          const initialTop = initialRect.top + scrollY;
-          const initialLeft = initialRect.left;
           const initialWidth = initialRect.width;
           const initialHeight = initialRect.height;
 
@@ -101,47 +100,124 @@ const Hero = () => {
           const targetWidth = 200;
           const targetHeight = 160;
 
-          // Calculate progress (0 to 1) based on hero section scroll
-          const scrollEnd = heroRect.height;
-          const scrollProgress = Math.max(
-            0,
-            Math.min(1, -heroRect.top / scrollEnd)
-          );
+          // Calculate progress (0 to 1) based on hero section position relative to viewport
+          const scrollEnd = heroRect.height * 0.9; // stop earlier
+          const rawProgress = -heroRect.top / scrollEnd;
 
-          // Check if footer is approaching
-          const bottomOffset = 240; // Reduced to allow video to move lower before stopping
-          const footerApproaching =
-            footerRect && footerRect.top <= window.innerHeight;
+          const scrollProgress = Math.max(0, Math.min(1, rawProgress));
+
+          // Check if footer is approaching - trigger earlier by adding offset to viewport height
+          const bottomOffset = 700; // Distance from footer where video stops
+          // Calculate the point where the video would overlap the footer
+          let footerApproaching = false;
+          if (footerRect) {
+            const fixedBottom = window.innerHeight - 24; // 24 = targetBottom
+            const videoBottomY = scrollY + fixedBottom;
+            const videoTopY = videoBottomY - 160; // 160 = targetHeight
+            // If the video bottom would go below the footer top, switch to absolute
+            footerApproaching = videoBottomY > (footerRect.top + scrollY - bottomOffset);
+          }
 
           if (scrollProgress === 0) {
-            // At the top - initial position
+            // At the top - initial position (use viewport-relative positioning)
             setVideoState("initial");
+            storedInitialPosition.current = null; // Reset stored position when back at top
             setVideoPosition({
-              top: initialTop,
-              left: initialLeft,
+              top: initialRect.top + scrollY,
+              left: initialRect.left,
               right: "auto",
               bottom: "auto",
               width: initialWidth,
               height: initialHeight,
             });
-          } else if (!footerApproaching) {
-            // Scrolled - instantly fixed to bottom right
-            setVideoState("fixed");
+          } else if (
+            scrollProgress > 0 &&
+            scrollProgress < 1 &&
+            !footerApproaching
+          ) {
+            // Animating - interpolate between stored initial position and target
+            setVideoState("transitioning");
+
+            // Store initial position once at the start of animation
+            if (!storedInitialPosition.current) {
+              storedInitialPosition.current = {
+                top: initialRect.top,
+                left: initialRect.left,
+                width: initialWidth,
+                height: initialHeight,
+              };
+            }
+
+            // Ease-out cubic function for smooth deceleration
+            const easedProgress = 1 - Math.pow(1 - scrollProgress, 3);
+
+            // Calculate target position in viewport coordinates
+            const viewportHeight = window.innerHeight;
+            const viewportWidth = window.innerWidth;
+
+            // Target during transition: stop 150px higher than final position
+            const transitionStopOffset = 80;
+            const targetTopInViewport =
+              viewportHeight -
+              targetBottom -
+              targetHeight -
+              transitionStopOffset;
+            const targetLeftInViewport =
+              viewportWidth - targetRight - targetWidth;
+
+            // Use stored initial position for consistent interpolation
+            const startTop = storedInitialPosition.current.top;
+            const startLeft = storedInitialPosition.current.left;
+            const startWidth = storedInitialPosition.current.width;
+            const startHeight = storedInitialPosition.current.height;
+
+            // Interpolate viewport positions
+            const interpolatedTopInViewport =
+              startTop + (targetTopInViewport - startTop) * easedProgress;
+            const interpolatedLeftInViewport =
+              startLeft + (targetLeftInViewport - startLeft) * easedProgress;
+            const currentWidth =
+              startWidth + (targetWidth - startWidth) * easedProgress;
+            const currentHeight =
+              startHeight + (targetHeight - startHeight) * easedProgress;
+
+            // Use fixed positioning during transition to keep it viewport-relative
             setVideoPosition({
-              top: "auto",
-              left: "auto",
-              right: targetRight,
-              bottom: targetBottom,
+              top: interpolatedTopInViewport,
+              left: interpolatedLeftInViewport,
+              right: "auto",
+              bottom: "auto",
+              width: currentWidth,
+              height: currentHeight,
+            });
+          } else if (scrollProgress >= 1 && !footerApproaching) {
+            setVideoState("fixed");
+
+            const viewportHeight = window.innerHeight;
+            const viewportWidth = window.innerWidth;
+
+            const finalTop = viewportHeight - targetBottom - targetHeight;
+
+            const finalLeft = viewportWidth - targetRight - targetWidth;
+
+            setVideoPosition({
+              top: finalTop,
+              left: finalLeft,
+              right: "auto",
+              bottom: "auto",
               width: targetWidth,
               height: targetHeight,
             });
           } else if (footerApproaching && footerRect) {
-            // Footer approaching - absolute position
+            // Footer approaching - absolute position, match top to fixed position at transition
             setVideoState("absolute");
             const footerTop = footerRect.top + scrollY;
             const calculatedTop = footerTop - targetHeight - bottomOffset;
+            // Calculate where the video would be if still fixed
+            const fixedTop = window.innerHeight - targetBottom - targetHeight + scrollY;
+            // Use the greater of calculatedTop and fixedTop to ensure no jump
             setVideoPosition({
-              top: calculatedTop,
+              top: Math.min(calculatedTop, fixedTop),
               left: "auto",
               right: targetRight,
               bottom: "auto",
@@ -182,18 +258,18 @@ const Hero = () => {
 
           {/* Heading */}
           <div className="flex flex-col items-center w-full mb-6">
-            <h1 className="font-bold text-[clamp(95px,17vw,160px)] leading-[0.9] mb-6 text-center">
+            <h1 className="font-bold text-[clamp(95px,17vw,200px)] leading-[0.9] mb-6 text-center">
               What we do
             </h1>
 
             {/* Description */}
             <p className="text-black text-base font-normal text-center max-w-2xl px-4 mb-8">
-              We make content that cuts through the noise. Strategy, UGC,
-              design, and motion, built to get noticed and remembered.
+              Stronger socials. Smarter content. Confident branding. High
+              performing websites.
             </p>
 
             {/* Buttons */}
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-4 justify-center -mb-10">
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-[#FF322E] h-12 hero-btn px-8 py-3 text-sm font-bold tracking-wide text-white border-transparent relative overflow-hidden group"
@@ -229,25 +305,23 @@ const Hero = () => {
           className="service-hero-title hidden sm:flex items-center justify-center service-video z-10"
           style={{
             position:
-              videoState === "fixed" && videoPosition.top === "auto"
-                ? "fixed"
+              videoState === "transitioning" ? "fixed"
+                : videoState === "fixed" ? "fixed"
                 : "absolute",
-            top:
-              videoPosition.top !== "auto"
-                ? `${videoPosition.top}px`
-                : videoPosition.top,
-            left:
-              videoPosition.left !== "auto"
-                ? `${videoPosition.left}px`
-                : videoPosition.left,
-            right:
-              videoPosition.right !== "auto"
-                ? `${videoPosition.right}px`
-                : videoPosition.right,
-            bottom:
-              videoPosition.bottom !== "auto"
-                ? `${videoPosition.bottom}px`
-                : videoPosition.bottom,
+            ...(videoState === "fixed"
+              ? {
+                  right: `${24}px`,
+                  bottom: `${24}px`,
+                }
+              : videoState === "absolute"
+              ? {
+                  top: videoPosition.top !== "auto" ? `${videoPosition.top}px` : videoPosition.top,
+                  right: `${24}px`,
+                }
+              : {
+                  top: videoPosition.top !== "auto" ? `${videoPosition.top}px` : videoPosition.top,
+                  left: videoPosition.left !== "auto" ? `${videoPosition.left}px` : videoPosition.left,
+                }),
             width: `${videoPosition.width}px`,
             height: `${videoPosition.height}px`,
             transition: "none", // Smooth animation via position updates
@@ -328,7 +402,7 @@ const Hero = () => {
           >
             <div
               onClick={handleClose}
-              className="absolute inset-0 bg-black/60"
+              className="absolute inset-0 bg-black/80"
             />
 
             <div

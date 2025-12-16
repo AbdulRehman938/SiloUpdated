@@ -6,21 +6,20 @@ const Interested = () => {
     <section className="w-full bg-white text-black pt-16">
       <div className="max-w-[1280px] mx-auto px-4 md:px-0">
         {/* Three column layout on md+, stacked on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-black mx-3">
-          {/* Column 1 */}
-          <div className="md:pr-8 md:border-r md:border-black border-b-black border-b py-10">
-            <div className="bg-white w-full h-60 mb-6 flex overflow-hidden items-start justify-center text-black">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mx-auto md:my-20">
+          {/* Card 1: Social Strategy & Management */}
+          <article className="border border-black border-x-0 border-b-0 md:p-8 p-0 py-5 pl-0 flex flex-col gap-4 mb-5">
+            <div className="w-full h-[250px] md:h-[300px] bg-gray-100 overflow-hidden">
               <img
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717232/first_dyyzet.png"
-                alt="first"
-                className="object-cover object-top w-full h-full"
-                loading="lazy"
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/2_jegbj9.png"
+                alt="img1"
+                className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-4xl font-bold mb-3">
+            <h3 className="font-epilogue font-bold text-[32px] md:text-[28px] lg:text-[32px] leading-[130%] tracking-normal text-black">
               Social Strategy & Management
             </h3>
-            <p className="text-base text-black mb-4">
+            <p className="text-[16px] leading-[150%] tracking-normal text-black">
               We don't just post, we plan, manage, and grow your brand's
               presence.
             </p>
@@ -30,41 +29,47 @@ const Interested = () => {
                   className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
                   style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
                 ></span>
-                Strategy & planning that aligns with your goals
+                Strategy and content planning
               </li>
               <li className="flex items-start">
                 <span
                   className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
                   style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
                 ></span>
-                Consistent content creation that gets attention
+                Content creation and production
               </li>
               <li className="flex items-start">
                 <span
                   className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
                   style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
                 ></span>
-                Publishing and management across platforms
+                Channel scheduling and management
+              </li>
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Community engagement and reporting
               </li>
             </ul>
-          </div>
+          </article>
 
-          {/* Column 2 */}
-          <div className="md:px-8 md:border-r md:border-black py-10 border-b-black border-b">
-            <div className="bg-white w-full h-60 mb-6 flex items-center justify-center text-black">
+          {/* Card 2: Web Design & Development */}
+          <article className="border border-black  md:p-8 p-0 py-5 pr-0 border-l-0 md:border-l border-r-0 border-b-0 flex flex-col gap-4">
+            <div className="w-full h-[250px] md:h-[280px] bg-gray-100 overflow-hidden">
               <img
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717288/second_wt2ss3.png"
-                alt="second"
-                className="object-fill w-full h-full"
-                loading="lazy"
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/3_r08wlm.png"
+                alt="img2"
+                className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-4xl font-bold mb-3">
-              A silo load of UGC Creators
+            <h3 className="font-epilogue font-bold text-[32px] md:text-[28px] lg:text-[32px] leading-[130%] tracking-normal text-black">
+              Web Design & Development
             </h3>
-            <p className="text-base text-black mb-4">
-              We connect brands with real people. Real content. Scaled with
-              strategy.
+            <p className="text-[16px] leading-[150%] tracking-normal text-black">
+              We shape digital spaces. Real craft, real performance that's
+              designed to grow.
             </p>
             <ul className="space-y-3 text-sm text-black">
               <li className="flex items-start">
@@ -72,78 +77,138 @@ const Interested = () => {
                   className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
                   style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
                 ></span>
-                Campaign ideation & creative briefs
+                Strategic UX and site architecture
               </li>
               <li className="flex items-start">
                 <span
                   className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
                   style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
                 ></span>
-                Access to vetted creators worldwide
+                Custom web design for modern brands
               </li>
               <li className="flex items-start">
                 <span
                   className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
                   style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
                 ></span>
-                Usage rights managed & ready-to-post assets
+                Clean, reliable development
+              </li>
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Launch support and ongoing improvements
               </li>
             </ul>
-          </div>
+          </article>
 
-          {/* Column 3 */}
-          <div className="md:col-span-2 lg:col-span-1 md:flex md:justify-center md:pl-8 py-10 border-b-black border-b">
-            <div className="w-full md:w-[85%] lg:w-full">
-              <div className="bg-white w-full h-60 mb-6 flex items-center justify-center text-black">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717293/third_gwfnbk.png"
-                  alt="third"
-                  className="object-cover object-xcenter w-full h-full"
-                  loading="lazy"
-                />
-              </div>
-              <h3 className="text-4xl font-bold mb-3">
-                Building Modern Design & Motion
-              </h3>
-              <p className="text-base text-black mb-4">
-                Building intricate designs that move fast and look sharp.
-              </p>
-              <ul className="space-y-3 text-sm text-black">
-                <li className="flex items-start">
-                  <span
-                    className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
-                    style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-                  ></span>
-                  Branding and identity that sets you apart
-                </li>
-                <li className="flex items-start">
-                  <span
-                    className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
-                    style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-                  ></span>
-                  Websites and digital design built for impact
-                </li>
-                <li className="flex items-start">
-                  <span
-                    className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
-                    style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-                  ></span>
-                  Animation and motion that stop the scroll
-                </li>
-              </ul>
+          {/* Card 3: Brand Design */}
+          <article className="border border-black md:p-8 p-0 py-5 pl-0 border-x-0 border-b flex flex-col gap-4">
+            <div className="w-full h-[250px] md:h-[280px] bg-gray-100 overflow-hidden">
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/Placeholder_Image_zxnykm.png"
+                alt="img3"
+                className="w-full h-full object-cover"
+              />
             </div>
-          </div>
+            <h3 className="font-epilogue font-bold text-[32px] md:text-[28px] lg:text-[32px] leading-[130%] tracking-normal text-black">
+              Brand Design
+            </h3>
+            <p className="text-[16px] leading-[150%] tracking-normal text-black">
+              We design bold branding and expressive motion to shape your visual
+              presence.
+            </p>
+            <ul className="space-y-3 text-sm text-black">
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Brand identity and visual systems
+              </li>
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Logo design and typographic styling
+              </li>
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Colour palettes and design guidelines
+              </li>
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Branded templates and presentation materials
+              </li>
+            </ul>
+          </article>
+
+          {/* Card 4: Content Strategy */}
+          <article className="border border-black md:p-8 p-0 py-5 border-l-0 md:border-l pr-0 border-r-0 border-b flex flex-col gap-4">
+            <div className="w-full h-[250px] md:h-[280px] bg-gray-100 overflow-hidden">
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/Placeholder_Image1_me1r2y.png"
+                alt="img4"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="font-epilogue font-bold text-[32px] md:text-[28px] lg:text-[32px] leading-[130%] tracking-normal text-black">
+              Content Strategy
+            </h3>
+            <p className="text-[16px] leading-[150%] tracking-normal text-black">
+              We build thoughtful strategies that give content focus, intent and
+              results.
+            </p>
+            <ul className="space-y-3 text-sm text-black">
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Audience research and insight development
+              </li>
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Content frameworks and pillar definition
+              </li>
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Messaging, tone of voice and positioning
+              </li>
+              <li className="flex items-start">
+                <span
+                  className="inline-block w-3 h-3 mt-1 mr-3 bg-[#FF322E] rotate-[270deg]"
+                  style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+                ></span>
+                Planning, optimisation and performance guidance
+              </li>
+            </ul>
+          </article>
         </div>
       </div>
       <div
         id="optional"
-        className="max-w-[1280px] h-auto mx-auto px-4 md:px-0 py-16"
+        className="max-w-[1280px] h-auto mx-auto px-4 md:px-0 md:py-16 md:pt-0 py-10"
       >
         <div className="mx-3">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Optional add-ons
           </h2>
-          <p className="text-base md:text-lg text-black font-semibold mb-8">
+          <p className="text-base md:text-lg text-black font-normal mb-8">
             These services support your core campaign and can be added when
             needed.
           </p>
@@ -175,6 +240,16 @@ const Interested = () => {
               <p className="text-base md:text-lg">
                 Influencer Campaign Management (talent sourcing, rate
                 negotiation, deliverables)
+              </p>
+            </div>
+
+            <div className="flex items-start">
+              <span
+                className="inline-block w-3 h-3 mt-1.5 mr-4 bg-[#FF322E] rotate-[270deg] flex-shrink-0"
+                style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+              ></span>
+              <p className="text-base md:text-lg">
+               UGC & Influencer Marketing
               </p>
             </div>
           </div>

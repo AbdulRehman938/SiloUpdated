@@ -13,7 +13,7 @@ const Cards = () => {
   const [isLocked, setIsLocked] = useState(false);
   const isAnimating = useRef(false);
   const unlockTimeoutRef = useRef(null);
-  
+
   useEffect(() => {
     const unsubscribe = cardProgress.on("change", (latest) => {
       if (isAnimating.current && (latest >= CARD_DATA.length || latest <= 0)) {
@@ -29,6 +29,14 @@ const Cards = () => {
         }, delay);
       }
     });
+
+    // Initialize state if below section on load
+    if (desktopRef.current) {
+      const rect = desktopRef.current.getBoundingClientRect();
+      if (rect.bottom < 0) {
+        cardProgress.set(CARD_DATA.length);
+      }
+    }
 
     return () => {
       unsubscribe();
@@ -111,17 +119,11 @@ const Cards = () => {
 
   // Mobile ScrollTrigger
   useEffect(() => {
-    if (!mobileRef.current) return;
+    const mm = gsap.matchMedia();
 
-    // Kill any existing ScrollTriggers to prevent duplicates on re-renders
-    const triggers = ScrollTrigger.getAll();
-    triggers.forEach((trigger) => {
-      if (trigger.vars.trigger === mobileRef.current) {
-        trigger.kill();
-      }
-    });
+    mm.add("(max-width: 639px)", () => {
+      if (!mobileRef.current) return;
 
-    const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: mobileRef.current,
         start: "center center", // Lock when center of section hits center of viewport
@@ -134,9 +136,9 @@ const Cards = () => {
           cardProgress.set(progress);
         },
       });
-    }, mobileRef);
+    });
 
-    return () => ctx.revert(); // Cleanup
+    return () => mm.revert(); // Cleanup
   }, []);
 
   return (
@@ -181,15 +183,16 @@ const Cards = () => {
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20, x: 0, rotate: 0 }}
-                animate={{
+                initial={{
                   opacity: 1,
-                  x: offset.x - 310,
+                  y: 20,
+                  x: -300,
                   rotate: offset.r,
                   scale: 1,
                 }}
                 style={{
                   y: finalY,
+                  rotate: offset.r,
                   zIndex: z,
                 }}
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}
@@ -269,15 +272,21 @@ const Cards = () => {
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20, x: 0, rotate: 0 }}
-                animate={{
-                  opacity: 1,
-                  x: offset.x,
-                  rotate: offset.r,
-                  scale: 1,
-                }}
+                initial={{ opacity: 1, y: 20, x: 10, rotate: offset.r }}
+                animate={
+                  isLocked
+                    ? {
+                        opacity: 1,
+                        x: 10,
+                        rotate: offset.r,
+                        scale: 1,
+                      }
+                    : undefined
+                }
                 style={{
                   y: finalY,
+                  x: 10,
+                  rotate: offset.r,
                   zIndex: z,
                 }}
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}
