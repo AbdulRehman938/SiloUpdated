@@ -9,9 +9,9 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const CaseStudies = () => {
   usePageMeta(
-    'Case Studies | Silo Creative - Our Work & Results',
-    'See how Silo Creative has helped brands achieve incredible results with UGC and content creation. Explore our portfolio of successful campaigns.'
-  )
+    "Case Studies | Silo Creative - Our Work & Results",
+    "See how Silo Creative has helped brands achieve incredible results with UGC and content creation. Explore our portfolio of successful campaigns."
+  );
 
   const [showVideoSection, setShowVideoSection] = useState(true);
   const [showVimeoModal, setShowVimeoModal] = useState(false);
@@ -20,7 +20,7 @@ const CaseStudies = () => {
   return (
     <div className="max-w-[1280px] mx-auto h-auto flex flex-col justify-start items-center mt-16 xl:mt-12 lg:mt-40 md:mt-40">
       <section
-        className="mt-10 mb-10 flex items-start w-full justify-start px-4 md:px-0 pb-6 md:pb-12 lg:pb-16 overflow-hidden"
+        className="mt-10 mb-10 flex items-start w-full justify-start px-1 md:px-0 pb-6 md:pb-12 lg:pb-16 overflow-hidden"
         aria-label="About Silo - Company introduction"
       >
         <div className="flex flex-col justify-between xl:grid xl:grid-cols-[1fr_1.5fr] gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 max-w-full mx-auto w-full items-start md:items-center mt-0 xl:mt-16 lg:mt-0 md:mt-0">
@@ -56,9 +56,10 @@ const CaseStudies = () => {
                     letterSpacing: "0%",
                   }}
                 >
-                  The Silo was built on the belief that content should be more
-                  than just constant output, it should be intentional,
-                  strategic, and deeply rooted in a brand's purpose.
+                  Every project tells a story of strategy shaped, content
+                  crafted, identities defined and digital experiences built.
+                  These case studies capture the thinking and creativity that
+                  turn ideas into work that truly moves brands forward.
                 </p>
               </div>
               {/* Buttons - Zoom & Small Laptop Optimized */}
@@ -97,7 +98,7 @@ const CaseStudies = () => {
               {/* Large Image */}
               <div className="w-full">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717301/studies1_lzgldj.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765923582/Placeholder_Image_rr5dup.png"
                   alt="Silo team member showcasing brand identity"
                   className="w-full h-auto object-cover max-h-[350px]"
                   loading="lazy"
@@ -122,7 +123,7 @@ const CaseStudies = () => {
               {/* Large Image */}
               <div className="flex-1">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717301/studies1_lzgldj.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765923582/Placeholder_Image_rr5dup.png"
                   alt="Silo team member showcasing brand identity"
                   className="w-full h-auto object-cover max-h-[500px] lg:max-h-[550px]"
                   loading="lazy"
@@ -158,7 +159,7 @@ const CaseStudies = () => {
               {/* Large Image */}
               <div className="flex-1 max-w-[460px]">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717301/studies1_lzgldj.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765923582/Placeholder_Image_rr5dup.png"
                   alt="Silo team member showcasing brand identity"
                   className="w-full h-auto object-cover max-h-[550px] 2xl:max-h-none"
                   loading="lazy"
@@ -186,49 +187,55 @@ const CaseStudies = () => {
           id="done"
           className="max-w-[1280px] pb-0 px-4 md:px-10 lg:px-0 mx-auto"
         >
-          <div className="mx-auto ">
+          <div className="mx-auto md:pt-20">
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 py-16 border-b border-b-black group relative cursor-pointer"
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
               onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/3 h-96  transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717287/Smoothie_dhwlm0.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765882727/Untitled_Project_smo9qt.jpg"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-full -translate-y-1/2 w-1/6 h-96 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717289/smoothie-hover_znf5gc.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765883977/Rectangle_34_pbf4gh.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4 text-left">
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out lg:group-hover:translate-x-28">
                 <h3 className="text-4xl font-bold text-black">
-                  Smoothie Smash
+                  Basement Approved
                 </h3>
-                <p className="text-xl text-black font-bold">Food & Drink</p>
-                <p className="text-lg font-semibold text-black">
-                  We built a TikTok-first launch campaign for this food
-                  start-up. Fast cuts, bold graphics, and creator-led taste
-                  tests turned into millions of views and a sell-out first week.
+                <p className="text-xl text-black">
+                  Culture, music and editorial platform
+                </p>
+                <p className="text-lg text-black">
+                  Silo transformed BasementApproved’s digital presence with a
+                  new website, Mixcloud integration and a streamlined content
+                  system that brings their community, music and cultural
+                  storytelling into one cohesive experience.
                 </p>
                 <div className="flex space-x-2 mt-2">
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    UGC
+                    Web Design
                   </span>
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    TikTok
+                    Web Development
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    API Integeration
                   </span>
                 </div>
                 <a
                   href="/case-study/1"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
@@ -248,25 +255,31 @@ const CaseStudies = () => {
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
                 <h3 className="text-4xl font-bold text-black">
-                  Smoothie Smash
+                  Basement Approved
                 </h3>
-                <p className="text-xl text-black font-bold">Food & Drink</p>
-                <p className="text-lg font-semibold text-black">
-                  We built a TikTok-first launch campaign for this food
-                  start-up. Fast cuts, bold graphics, and creator-led taste
-                  tests turned into millions of views and a sell-out first week.
+                <p className="text-xl text-black">
+                  Culture, music and editorial platform
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    UGC
+                <p className="text-lg text-black">
+                  Silo transformed BasementApproved’s digital presence with a
+                  new website, Mixcloud integration and a streamlined content
+                  system that brings their community, music and cultural
+                  storytelling into one cohesive experience.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Web Design
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    TikTok
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Web Development
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    API Integeration
                   </span>
                 </div>
                 <a
                   href="/case-study/1"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -279,19 +292,19 @@ const CaseStudies = () => {
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-80  relative">
+              <div className="w-[60%] mx-auto md:w-1/2 md:-top-20 h-60 top-10 relative">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717287/Smoothie_dhwlm0.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765882727/Untitled_Project_smo9qt.jpg"
                   alt="smoothie"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="absolute -right-80 top-0 w-[70%] h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 overflow-hidden lg:group-hover:rotate-0">
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717289/smoothie-hover_znf5gc.png"
+                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765883977/Rectangle_34_pbf4gh.png"
                     alt="smoothie"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
                 </div>
@@ -300,46 +313,61 @@ const CaseStudies = () => {
 
             {/* Second project */}
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 border-b py-16 border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/2")}
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/3 h-80 xl:h-96 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717249/Lumen_w2q5zm.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/Tomoko-e10fd11f_2_jto3ax.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-full -translate-y-1/2 w-1/6 h-96 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717251/lumer-hover_vxhyvl.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884763/Rectangle_29_il7hhb.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Lumin Solar</h3>
-                <p className="text-xl text-black font-bold">Energy</p>
-                <p className="text-lg font-semibold text-black">
-                  For this clean-tech brand we stripped out the jargon and made
-                  solar feel simple. Scroll-stopping motion and sharp messaging
-                  powered record inbound leads.
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
+                <h3 className="text-4xl font-bold text-black">
+                  Tomoka Fine & Rare
+                </h3>
+                <p className="text-xl text-black">
+                  Modern whisky investment & retail
+                </p>
+                <p className="text-lg text-black">
+                  A heritage whisky brand modernised without losing its soul.
+                  From website build to social, video, PR and CRM, Silo
+                  transformed Tomoka into a premium digital powerhouse.
                 </p>
                 <div className="flex space-x-2 mt-2">
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Motion Design
+                    Branding
                   </span>
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Strategy
+                    Website
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    Social
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    Creative
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    CRM
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    PPC
                   </span>
                 </div>
                 <a
-                  href="/case-study/2"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
-                  onClick={(e) => e.stopPropagation()}
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
@@ -353,29 +381,45 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/2")}
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Lumin Solar</h3>
-                <p className="text-xl text-black font-bold">Energy</p>
-                <p className="text-lg font-semibold text-black">
-                  For this clean-tech brand we stripped out the jargon and made
-                  solar feel simple. Scroll-stopping motion and sharp messaging
-                  powered record inbound leads.
+                <h3 className="text-4xl font-bold text-black">
+                  Tomoka Fine & Rare
+                </h3>
+                <p className="text-xl text-black">
+                  Modern whisky investment & retail
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Motion Design
+                <p className="text-lg text-black">
+                  A heritage whisky brand modernised without losing its soul.
+                  From website build to social, video, PR and CRM, Silo
+                  transformed Tomoka into a premium digital powerhouse.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Brandig
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Strategy
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Website
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Social
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Creative
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    CRM
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    PPC
                   </span>
                 </div>
                 <a
-                  href="/case-study/2"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -388,19 +432,19 @@ const CaseStudies = () => {
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-80  relative">
+              <div className="w-full md:w-1/2 h-60 top-10 md:-top-20 relative">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717249/Lumen_w2q5zm.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/Tomoko-e10fd11f_2_jto3ax.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full md:h-44 object-cover"
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="absolute -right-80 top-0 w-[70%] h-64 xl:h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 overflow-hidden lg:group-hover:rotate-0">
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717251/lumer-hover_vxhyvl.png"
+                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884763/Rectangle_29_il7hhb.png"
                     alt="smoothie"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
                 </div>
@@ -409,49 +453,56 @@ const CaseStudies = () => {
 
             {/* Third project */}
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 py-16 group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/3")}
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-full lg:w-1/4 h-80  transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717287/SMART_h3lxc7.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-full -translate-y-1/2 w-1/6 h-96 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717298/stats-hover_hbm23m.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765885427/Rectangle_33_n4bq46.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Smart Stats</h3>
-                <p className="text-xl text-black font-bold">SaaS</p>
-                <p className="text-lg font-semibold text-black">
-                  We gave this data platform a face, not just numbers. From
-                  explainer animations to punchy LinkedIn posts, we built a
-                  visual system that made analytics unmissable.
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
+                <h3 className="text-4xl font-bold text-black">
+                  Electrolytes with Joly
+                </h3>
+                <p className="text-xl text-black">
+                  A vibrant identity for a new radio show
+                </p>
+                <p className="text-lg text-black">
+                  Silo created an identity reflecting the show’s energetic,
+                  atmospheric and slightly cosmic tone, supported by a visual
+                  system that works across social media and ongoing episode
+                  releases.
                 </p>
                 <div className="flex space-x-2 mt-2">
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Design
+                    Branding
                   </span>
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    B2B
+                    Typography
                   </span>
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    LinkedIn Content
+                    Social Templates
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    Design System
                   </span>
                 </div>
                 <a
-                  href="/case-study/3"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
-                  onClick={(e) => e.stopPropagation()}
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
@@ -465,57 +516,65 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/3")}
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Smart Stats</h3>
-                <p className="text-xl text-black font-bold">SaaS</p>
-                <p className="text-lg font-semibold text-black">
-                  We gave this data platform a face, not just numbers. From
-                  explainer animations to punchy LinkedIn posts, we built a
-                  visual system that made analytics unmissable.
+                <h3 className="text-4xl font-bold text-black">
+                  Electrolytes with Joly
+                </h3>
+                <p className="text-xl text-black">
+                  A vibrant identity for a new radio show
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Design
+                <p className="text-lg text-black">
+                  Silo created an identity reflecting the show’s energetic,
+                  atmospheric and slightly cosmic tone, supported by a visual
+                  system that works across social media and ongoing episode
+                  releases.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Branding
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    B2B
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Typography
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    LinkedIn Content
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Social Templates
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Design System
                   </span>
                 </div>
                 <a
-                  href="/case-study/3"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-72  relative">
+              <div className="w-full md:w-1/2 h-60 top-10 md:-top-20 relative">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717287/SMART_h3lxc7.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full md:h-32 object-cover"
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="absolute -right-80 top-0 w-[70%] h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 overflow-hidden lg:group-hover:rotate-0">
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717298/stats-hover_hbm23m.png"
+                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765885427/Rectangle_33_n4bq46.png"
                     alt="smoothie"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
                 </div>
@@ -526,53 +585,61 @@ const CaseStudies = () => {
           <div className="mx-auto">
             {/* Fourth project */}
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 border-y py-16 border-y-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/4")}
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/3 h-96  transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform translate-x-32 transition-transform duration-600 ease-in-out lg:group-hover:translate-x-32">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717287/Smoothie_dhwlm0.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951283/28cf00a299ba07f7be18bd388b5bf801_1_fxiv5y.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-1/2 h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-full -translate-y-1/2 w-1/6 h-96 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717289/smoothie-hover_znf5gc.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951492/Rectangle_31_tzvdcs.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4 text-left">
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
                 <h3 className="text-4xl font-bold text-black">
-                  Smoothie Smash
+                  Acorn Property Group
                 </h3>
-                <p className="text-xl text-black font-bold">Food & Drink</p>
-                <p className="text-lg font-semibold text-black">
-                  We built a TikTok-first launch campaign for this food
-                  start-up. Fast cuts, bold graphics, and creator-led taste
-                  tests turned into millions of views and a sell-out first week.
+                <p className="text-xl text-black">
+                  Leading sustainable home creators
+                </p>
+                <p className="text-lg text-black">
+                  Building a connected growing digital presence for one of the
+                  South West’s leading housebuilders. Silo has strengthened
+                  Acorn’s digital voice and delivered sustained multi platform
+                  growth.
                 </p>
                 <div className="flex space-x-2 mt-2">
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    UGC
+                    Social Media
                   </span>
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    TikTok
+                    Strategy
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    Influencer
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    Content
                   </span>
                 </div>
                 <a
-                  href="/case-study/4"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
-                  onClick={(e) => e.stopPropagation()}
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -581,56 +648,68 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/4")}
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
                 <h3 className="text-4xl font-bold text-black">
-                  Smoothie Smash
+                  Acorn Property Group
                 </h3>
-                <p className="text-xl text-black font-bold">Food & Drink</p>
-                <p className="text-lg font-semibold text-black">
-                  We built a TikTok-first launch campaign for this food
-                  start-up. Fast cuts, bold graphics, and creator-led taste
-                  tests turned into millions of views and a sell-out first week.
+                <p className="text-xl text-black">
+                  Leading sustainable home creators
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    UGC
+                <p className="text-lg text-black">
+                  Building a connected growing digital presence for one of the
+                  South West’s leading housebuilders. Silo has strengthened
+                  Acorn’s digital voice and delivered sustained multi platform
+                  growth.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Social Media
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    TikTok
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Strategy
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Social Templates
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Influencer
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Content
                   </span>
                 </div>
                 <a
-                  href="/case-study/4"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-80  relative">
+              <div className="w-full md:w-1/2 h-60 top-10 relative md:-top-10">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717287/Smoothie_dhwlm0.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951283/28cf00a299ba07f7be18bd388b5bf801_1_fxiv5y.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-1/2 mx-auto h-full md:h-32 object-cover"
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="absolute -right-80 top-0 w-[70%] h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 overflow-hidden group-hover:rotate-0">
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717289/smoothie-hover_znf5gc.png"
+                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951492/Rectangle_31_tzvdcs.png"
                     alt="smoothie"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
                 </div>
@@ -639,51 +718,59 @@ const CaseStudies = () => {
 
             {/* Fifth project */}
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 border-b py-16 border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/5")}
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/3 h-80 xl:h-96  transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717249/Lumen_w2q5zm.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/1_xifbbg.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-full h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-full -translate-y-1/2 w-1/6 h-96 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717251/lumer-hover_vxhyvl.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951496/Rectangle_32_wekcvt.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Lumin Solar</h3>
-                <p className="text-xl text-black font-bold">Energy</p>
-                <p className="text-lg font-semibold text-black">
-                  For this clean-tech brand we stripped out the jargon and made
-                  solar feel simple. Scroll-stopping motion and sharp messaging
-                  powered record inbound leads.
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
+                <h3 className="text-4xl font-bold text-black">Cluberly</h3>
+                <p className="text-xl text-black">
+                  Savings and investment app built for sports fans, schools and
+                  charities.
+                </p>
+                <p className="text-lg text-black">
+                  We created an animated explainer and a real footage brand
+                  video, along with multi platform edits and branded documents,
+                  to simplify and amplify Cluberly's mission.
                 </p>
                 <div className="flex space-x-2 mt-2">
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Motion Design
+                    Fintech
                   </span>
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Strategy
+                    Video
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    Branding
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    Storytelling
                   </span>
                 </div>
                 <a
-                  href="/case-study/5"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
-                  onClick={(e) => e.stopPropagation()}
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -692,54 +779,63 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/5")}
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Lumin Solar</h3>
-                <p className="text-xl text-black font-bold">Energy</p>
-                <p className="text-lg font-semibold text-black">
-                  For this clean-tech brand we stripped out the jargon and made
-                  solar feel simple. Scroll-stopping motion and sharp messaging
-                  powered record inbound leads.
+                <h3 className="text-4xl font-bold text-black">Cluberly</h3>
+                <p className="text-xl text-black">
+                  Savings and investment app built for sports fans, schools and
+                  charities.
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Motion Design
+                <p className="text-lg text-black">
+                  We created an animated explainer and a real footage brand
+                  video, along with multi platform edits and branded documents,
+                  to simplify and amplify Cluberly's mission.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Fintech
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Strategy
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Video
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Branding
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Storytelling
                   </span>
                 </div>
                 <a
-                  href="/case-study/5"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-80  relative">
+              <div className="w-full md:w-1/2 h-60 top-10 relative md:-top-20">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717249/Lumen_w2q5zm.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/1_xifbbg.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full md:h-32 object-cover"
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="absolute -right-80 top-0 w-[70%] h-64 xl:h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 overflow-hidden group-hover:rotate-0">
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717251/lumer-hover_vxhyvl.png"
+                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951496/Rectangle_32_wekcvt.png"
                     alt="smoothie"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
                 </div>
@@ -748,54 +844,60 @@ const CaseStudies = () => {
 
             {/* Sixth project */}
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 py-16 group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/6")}
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 group relative cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-full lg:w-1/4 h-80  transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform translate-x-32 transition-transform duration-600 ease-in-out lg:group-hover:translate-x-32">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717287/SMART_h3lxc7.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/2_g0zyga.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="w-1/2 h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-full -translate-y-1/2 md:w-1/6 md:h-96 w-full h-64 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717298/stats-hover_hbm23m.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951490/Rectangle_30_fmlti2.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Smart Stats</h3>
-                <p className="text-xl text-black font-bold">SaaS</p>
-                <p className="text-lg font-semibold text-black">
-                  We gave this data platform a face, not just numbers. From
-                  explainer animations to punchy LinkedIn posts, we built a
-                  visual system that made analytics unmissable.
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
+                <h3 className="text-4xl font-bold text-black">
+                  Knightsgate Partners
+                </h3>
+                <p className="text-xl text-black">
+                  Advisory and funding for growing businesses
+                </p>
+                <p className="text-lg text-black">
+                  We partnered with Knightsgate to elevate their brand digital
+                  presence and investor communications through a full website
+                  redesign and fresh creative suite.
                 </p>
                 <div className="flex space-x-2 mt-2">
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Design
+                    Branding
                   </span>
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    B2B
+                    Digital
                   </span>
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    LinkedIn Content
+                    Communications
+                  </span>
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    Creative
                   </span>
                 </div>
                 <a
-                  href="/case-study/6"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
-                  onClick={(e) => e.stopPropagation()}
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -804,57 +906,67 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 pt-12 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/6")}
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 py-12 pt-5 group relative mt-0 cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Smart Stats</h3>
-                <p className="text-xl text-black font-bold">SaaS</p>
-                <p className="text-lg font-semibold text-black">
-                  We gave this data platform a face, not just numbers. From
-                  explainer animations to punchy LinkedIn posts, we built a
-                  visual system that made analytics unmissable.
+                <h3 className="text-4xl font-bold text-black">
+                  Knightsgate Partners
+                </h3>
+                <p className="text-xl text-black">
+                  Advisory and funding for growing businesses
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Design
+                <p className="text-lg text-black">
+                  We partnered with Knightsgate to elevate their brand digital
+                  presence and investor communications through a full website
+                  redesign and fresh creative suite.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Branding
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    B2B
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Digital
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    LinkedIn Content
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Communications
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Creative
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Content
                   </span>
                 </div>
                 <a
-                  href="/case-study/6"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-72  relative">
+              <div className="w-full md:w-1/2 h-64 top-10 relative md:-top-10 md:ml-10">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717287/SMART_h3lxc7.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/2_g0zyga.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className=" w-1/2 mx-auto  h-full md:h-32 object-cover"
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="absolute -right-80 top-0 w-[70%] h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 overflow-hidden group-hover:rotate-0">
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717298/stats-hover_hbm23m.png"
+                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951490/Rectangle_30_fmlti2.png"
                     alt="smoothie"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
                 </div>
