@@ -1,12 +1,19 @@
 import { useState, useRef, useEffect } from "react";
 import Player from "./vimeo-player";
 
-const TitleWithDescription = ({ title, description }) => {
+const TitleWithDescription = ({
+  title,
+  description,
+  mediaType = "video", // "video" or "image"
+  mediaSrc = "https://player.vimeo.com/video/76979871?autoplay=1&muted=1&background=0&controls=0",
+}) => {
   const vimeoIframeRef = useRef(null);
   const playerRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
+    if (mediaType !== "video") return;
+
     const handleIframeLoad = () => {
       if (vimeoIframeRef.current && !playerRef.current) {
         playerRef.current = new Player(vimeoIframeRef.current);
@@ -25,13 +32,16 @@ const TitleWithDescription = ({ title, description }) => {
     }
     return () => {
       if (iframe) iframe.removeEventListener("load", handleIframeLoad);
-      if (playerRef.current) playerRef.current.unload();
+      if (playerRef.current) {
+        playerRef.current.unload();
+        playerRef.current = null;
+      }
     };
-  }, []);
+  }, [mediaType, mediaSrc]);
 
   const handleVimeoClick = () => {
     if (playerRef.current) {
-      playerRef.current.getPaused().then(paused => {
+      playerRef.current.getPaused().then((paused) => {
         if (paused) {
           playerRef.current.play();
           setIsPlaying(true);
@@ -47,24 +57,24 @@ const TitleWithDescription = ({ title, description }) => {
     <>
       <div className="w-full max-w-[1280px] mx-auto py-16 md:py-24 px-3 md:px-0">
         <div className="relative min-h-[300px] md:min-h-[400px]">
-          <div className="relative w-full md:absolute md:top-0 md:left-0 md:w-[45%]">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight">
+          <div className="relative w-full md:absolute md:top-0 md:left-0 md:w-[55%]">
+            <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-epilogue font-bold text-black">
               {title || "This job was pretty bloody cool."}
             </h1>
           </div>
 
-          <div className="relative mt-6 w-full md:absolute md:-bottom-12 md:right-0 md:w-[50%] flex flex-col gap-4 md:mt-0">
+          <div className="relative mt-6 w-full md:absolute md:-bottom-0 md:right-0 md:w-[50%] flex flex-col gap-4 md:mt-0">
             {Array.isArray(description) ? (
               description.map((para, index) => (
                 <p
                   key={index}
-                  className="text-base md:text-lg text-black leading-relaxed"
+                  className="text-base md:text-base text-black leading-relaxed"
                 >
                   {para}
                 </p>
               ))
             ) : (
-              <p className="text-base md:text-lg text-black leading-relaxed">
+              <p className="text-base md:text-base text-black leading-relaxed">
                 {description ||
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."}
               </p>
@@ -72,25 +82,37 @@ const TitleWithDescription = ({ title, description }) => {
           </div>
         </div>
 
-        <div 
-          className="relative w-full h-[30vh] md:h-auto md:aspect-video overflow-hidden mt-20 cursor-pointer"
-          onClick={handleVimeoClick}
-        >
-          <iframe
-            ref={vimeoIframeRef}
-            id="vimeo-player"
-            src="https://player.vimeo.com/video/76979871?autoplay=1&muted=1&background=0&controls=0"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-            title="Vimeo Video"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ border: 0, borderRadius: 0 }}
-          />
-          <div className="absolute inset-0 w-full h-full bg-black bg-opacity-30 pointer-events-none" />
-        </div>
+        {mediaType !== "none" && (
+          <div
+            className="relative w-full h-[30vh] md:h-auto md:aspect-video overflow-hidden mt-20 cursor-pointer"
+            onClick={mediaType === "video" ? handleVimeoClick : undefined}
+          >
+            {mediaType === "video" ? (
+              <>
+                <iframe
+                  ref={vimeoIframeRef}
+                  id="vimeo-player"
+                  src={mediaSrc}
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  title="Vimeo Video"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  style={{ border: 0, borderRadius: 0 }}
+                />
+                <div className="absolute inset-0 w-full h-full bg-black bg-opacity-30 pointer-events-none" />
+              </>
+            ) : (
+              <img
+                src={mediaSrc}
+                alt={title || "Case study media"}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            )}
+          </div>
+        )}
       </div>
 
       {/* Modal removed, video is now in-page. Play/pause toggles on empty area click. */}

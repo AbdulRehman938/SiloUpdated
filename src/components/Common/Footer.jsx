@@ -200,7 +200,7 @@ const Footer = () => {
                 <ul className="space-y-3">
                   <li>
                     <a
-                      href="/case-study/1"
+                      href="/case-studies/basement-approved"
                       className="text-sm ease-in-out duration-200 cursor-pointer hover:text-brand"
                       style={{
                         fontFamily: "DM Sans",
@@ -208,12 +208,12 @@ const Footer = () => {
                         lineHeight: "150%",
                       }}
                     >
-                      Case Study 1
+                      Basement Approved
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/case-study/2"
+                      href="/case-studies/tomoka-fine-and-rare"
                       className="text-sm ease-in-out duration-200 cursor-pointer hover:text-brand"
                       style={{
                         fontFamily: "DM Sans",
@@ -221,12 +221,12 @@ const Footer = () => {
                         lineHeight: "150%",
                       }}
                     >
-                      Case Study 2
+                      Tomoka Fine & Rare
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/case-study/3"
+                      href="/case-studies/electrolytes-with-joly"
                       className="text-sm ease-in-out duration-200 cursor-pointer hover:text-brand"
                       style={{
                         fontFamily: "DM Sans",
@@ -234,12 +234,12 @@ const Footer = () => {
                         lineHeight: "150%",
                       }}
                     >
-                      Case Study 3
+                      Electrolytes with Joly
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/case-study/4"
+                      href="/case-studies/acorn-property-group"
                       className="text-sm ease-in-out duration-200 cursor-pointer hover:text-brand"
                       style={{
                         fontFamily: "DM Sans",
@@ -247,12 +247,12 @@ const Footer = () => {
                         lineHeight: "150%",
                       }}
                     >
-                      Case Study 4
+                      Acorn Property Group
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/case-study/5"
+                      href="/case-studies/cluberly"
                       className="text-sm ease-in-out duration-200 cursor-pointer hover:text-brand"
                       style={{
                         fontFamily: "DM Sans",
@@ -260,12 +260,12 @@ const Footer = () => {
                         lineHeight: "150%",
                       }}
                     >
-                      Case Study 5
+                      Cluberly
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/case-study/6"
+                      href="/case-studies/knightsgate-partners"
                       className="text-sm ease-in-out duration-200 cursor-pointer hover:text-brand"
                       style={{
                         fontFamily: "DM Sans",
@@ -273,7 +273,7 @@ const Footer = () => {
                         lineHeight: "150%",
                       }}
                     >
-                      Case Study 6
+                      Knightsgate Partners
                     </a>
                   </li>
                 </ul>
@@ -534,33 +534,51 @@ const Footer = () => {
               </Link>
               <ul className="space-y-1">
                 <li>
-                  <a href="/case-study/1" className="text-sm hover:text-brand">
-                    Case Study 1
+                  <a
+                    href="/case-studies/basement-approved"
+                    className="text-sm hover:text-brand"
+                  >
+                    Basement Approved
                   </a>
                 </li>
                 <li>
-                  <a href="/case-study/2" className="text-sm hover:text-brand">
-                    Case Study 2
+                  <a
+                    href="/case-studies/tomoka-fine-and-rare"
+                    className="text-sm hover:text-brand"
+                  >
+                    Tomoka Fine & Rare
                   </a>
                 </li>
                 <li>
-                  <a href="/case-study/3" className="text-sm hover:text-brand">
-                    Case Study 3
+                  <a
+                    href="/case-studies/electrolytes-with-joly"
+                    className="text-sm hover:text-brand"
+                  >
+                    Electrolytes with Joly
                   </a>
                 </li>
                 <li>
-                  <a href="/case-study/4" className="text-sm hover:text-brand">
-                    Case Study 4
+                  <a
+                    href="/case-studies/acorn-property-group"
+                    className="text-sm hover:text-brand"
+                  >
+                    Acorn Property Group
                   </a>
                 </li>
                 <li>
-                  <a href="/case-study/5" className="text-sm hover:text-brand">
-                    Case Study 5
+                  <a
+                    href="/case-studies/cluberly"
+                    className="text-sm hover:text-brand"
+                  >
+                    Cluberly
                   </a>
                 </li>
                 <li>
-                  <a href="/case-study/6" className="text-sm hover:text-brand">
-                    Case Study 6
+                  <a
+                    href="/case-studies/knightsgate-partners"
+                    className="text-sm hover:text-brand"
+                  >
+                    Knightsgate Partners
                   </a>
                 </li>
               </ul>

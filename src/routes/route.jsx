@@ -29,7 +29,7 @@ function RoutesTree() {
         <Route path="job-board" element={<JobBoard />} />
         <Route path="blog" element={<Ramblings />} />
         <Route path="case-studies" element={<CaseStudies />} />
-        <Route path="case-study/:id" element={<PostCaseStudy />} />
+        <Route path="case-studies/:id" element={<PostCaseStudy />} />
         <Route path="blog/:id" element={<BlogDetail />} />
         <Route path="ugc-contact" element={<Contact />} />
         <Route path="contact" element={<Contact2 />} />

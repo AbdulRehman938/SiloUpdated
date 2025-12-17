@@ -190,7 +190,9 @@ const CaseStudies = () => {
           <div className="mx-auto md:pt-20">
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/basement-approved")
+              }
             >
               <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
@@ -234,7 +236,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/basement-approved"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -250,7 +252,9 @@ const CaseStudies = () => {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/basement-approved")
+              }
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -278,7 +282,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/basement-approved"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -314,7 +318,9 @@ const CaseStudies = () => {
             {/* Second project */}
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/tomoka-fine-and-rare")
+              }
             >
               <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
@@ -366,7 +372,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/tomoka-fine-and-rare"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -382,7 +388,9 @@ const CaseStudies = () => {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/tomoka-fine-and-rare")
+              }
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -418,7 +426,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/tomoka-fine-and-rare"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -454,7 +462,9 @@ const CaseStudies = () => {
             {/* Third project */}
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/electrolytes-with-joly")
+              }
             >
               <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
@@ -501,7 +511,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/electrolytes-with-joly"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -517,7 +527,9 @@ const CaseStudies = () => {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 py-12 pt-5 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/electrolytes-with-joly")
+              }
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -548,7 +560,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/electrolytes-with-joly"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -586,7 +598,9 @@ const CaseStudies = () => {
             {/* Fourth project */}
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/acorn-property-group")
+              }
             >
               <div className="w-1/3 h-72 transform translate-x-32 transition-transform duration-600 ease-in-out lg:group-hover:translate-x-32">
                 <img
@@ -633,7 +647,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/acorn-property-group"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -649,7 +663,9 @@ const CaseStudies = () => {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/acorn-property-group")
+              }
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -683,7 +699,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/acorn-property-group"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -719,7 +735,7 @@ const CaseStudies = () => {
             {/* Fifth project */}
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() => (window.location.href = "/case-studies/cluberly")}
             >
               <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
@@ -764,7 +780,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/cluberly"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -780,7 +796,7 @@ const CaseStudies = () => {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() => (window.location.href = "/case-studies/cluberly")}
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -809,7 +825,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/cluberly"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -845,7 +861,9 @@ const CaseStudies = () => {
             {/* Sixth project */}
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/knightsgate-partners")
+              }
             >
               <div className="w-1/3 h-72 transform translate-x-32 transition-transform duration-600 ease-in-out lg:group-hover:translate-x-32">
                 <img
@@ -891,7 +909,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/knightsgate-partners"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -907,7 +925,9 @@ const CaseStudies = () => {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 py-12 pt-5 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/knightsgate-partners")
+              }
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -940,7 +960,7 @@ const CaseStudies = () => {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/knightsgate-partners"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >

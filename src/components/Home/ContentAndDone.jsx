@@ -212,7 +212,9 @@ export default function ContentAndDone() {
             {/* First project */}
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/basement-approved")
+              }
             >
               <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
@@ -256,7 +258,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/basement-approved"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -272,7 +274,9 @@ export default function ContentAndDone() {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/basement-approved")
+              }
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -300,7 +304,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/basement-approved"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -336,7 +340,9 @@ export default function ContentAndDone() {
             {/* Second project */}
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/tomoka-fine-and-rare")
+              }
             >
               <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
@@ -388,7 +394,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/tomoka-fine-and-rare"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -404,7 +410,9 @@ export default function ContentAndDone() {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/tomoka-fine-and-rare")
+              }
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -440,7 +448,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/tomoka-fine-and-rare"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -473,11 +481,12 @@ export default function ContentAndDone() {
               </div>
             </div>
 
-           
             {/* Third project */}
             <div
               className="hidden lg:flex items-center justify-around space-x-40 py-6 group relative cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/electrolytes-with-joly")
+              }
             >
               <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
@@ -524,7 +533,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/electrolytes-with-joly"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
@@ -540,7 +549,9 @@ export default function ContentAndDone() {
 
             <div
               className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0  py-12 pt-5 group relative mt-0 cursor-pointer"
-              onClick={() => (window.location.href = "/case-study/1")}
+              onClick={() =>
+                (window.location.href = "/case-studies/electrolytes-with-joly")
+              }
             >
               {/* Text content first */}
               <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
@@ -571,7 +582,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/electrolytes-with-joly"
                   className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -607,7 +618,7 @@ export default function ContentAndDone() {
 
           <div className="flex justify-center md:mt-10">
             <a
-              href="case-studies"
+              href="/case-studies"
               className="inline-flex items-center justify-center gap-2  bg-transparent border-[1px] border-brand h-[55px] px-6 py-3 text-xs font-bold  tracking-wide text-brand relative overflow-hidden group"
             >
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 svg-wrapper group-hover:animate-bounce-custom">
@@ -720,11 +731,11 @@ export default function ContentAndDone() {
               tabIndex={0}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/1";
+                  window.location.href = "/case-studies/basement-approved";
               }}
               onClick={(e) => {
                 if (e.target.closest && e.target.closest("a")) return;
-                window.location.href = "/case-study/1";
+                window.location.href = "/case-studies/basement-approved";
               }}
             >
               <div className="w-full h-80 mb-0">
@@ -760,7 +771,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/1"
+                  href="/case-studies/basement-approved"
                   className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E]"
                 >
                   <span>View Project</span>
@@ -775,11 +786,11 @@ export default function ContentAndDone() {
               tabIndex={0}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/2";
+                  window.location.href = "/case-studies/tomoka-fine-and-rare";
               }}
               onClick={(e) => {
                 if (e.target.closest && e.target.closest("a")) return;
-                window.location.href = "/case-study/2";
+                window.location.href = "/case-studies/tomoka-fine-and-rare";
               }}
             >
               <div className="w-full h-80 mb-0">
@@ -823,7 +834,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/2"
+                  href="/case-studies/tomoka-fine-and-rare"
                   className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E]"
                 >
                   <span>View Project</span>
@@ -838,11 +849,11 @@ export default function ContentAndDone() {
               tabIndex={0}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/3";
+                  window.location.href = "/case-studies/electrolytes-with-joly";
               }}
               onClick={(e) => {
                 if (e.target.closest && e.target.closest("a")) return;
-                window.location.href = "/case-study/3";
+                window.location.href = "/case-studies/electrolytes-with-joly";
               }}
             >
               <div className="w-full h-80">
@@ -881,7 +892,7 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/3"
+                  href="/case-studies/electrolytes-with-joly"
                   className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E]"
                 >
                   <span>View Project</span>
@@ -893,7 +904,7 @@ export default function ContentAndDone() {
 
           <div className="flex justify-center mt-[-5rem]">
             <a
-              href="case-studies"
+              href="/case-studies"
               className="inline-flex items-center justify-center gap-2  bg-transparent border-[1px] border-brand h-[55px] px-6 py-3 text-base font-extrabold  tracking-wide text-brand"
             >
               <span>View all</span>
