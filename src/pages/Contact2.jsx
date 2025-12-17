@@ -9,9 +9,9 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const Contact = () => {
   usePageMeta(
-    'Brand Contact | Silo Creative - Partner With Us',
-    'Looking to collaborate with Silo Creative? Contact our team to discuss how we can help elevate your brand with authentic UGC.'
-  )
+    "Contact Us | Social, Branding & Web Agency",
+    "Get in touch to discuss social media strategy, content strategy, brand design or website design and development. Let’s build your digital presence."
+  );
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -95,11 +95,10 @@ const Contact = () => {
             <div className="space-y-6 sm:space-y-8 order-1 lg:order-1">
               <div>
                 <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black leading-tight">
-                  Ready to stop just posting and start growing?
+                  Ready to make your next move?
                 </h1>
                 <p className="text-black mt-3 sm:mt-4 text-base sm:text-lg">
-                  Looking for the perfect creator to bring your brand to life?
-                  Look no further.
+                  From strategy to design to digital, we are here to make it happen.
                 </p>
               </div>
 
@@ -270,7 +269,7 @@ const Contact = () => {
             {/* Right Image */}
             <div className="order-2 lg:order-2 mt-8 lg:mt-0">
               <img
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717234/contact2_v8cqrr.png"
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765956955/3_xthd8y.png"
                 alt="Person relaxing on chair"
                 className="w-full h-64 sm:h-80 md:h-[75vh] lg:h-[80vh] object-cover"
                 loading="lazy"
@@ -298,7 +297,7 @@ const Contact = () => {
                 </div>
 
                 <Link
-                  to="/contact"
+                  to="/ugc-contact"
                   className="inline-flex items-center justify-center gap-2 bg-[#FF322E] w-xl h-[48px] px-6 py-3 text-xs font-bold tracking-wide text-white  border-transparent relative overflow-hidden group"
                 >
                   <div className="absolute left-3 top-1/2 -translate-y-1/2 translate-x-5 svg-wrapper group-hover:animate-bounce-custom">
@@ -314,7 +313,7 @@ const Contact = () => {
             {/* Right Image - Full Height */}
             <div className="relative order-1 lg:order-2 h-64 sm:h-80 md:h-96 lg:h-auto">
               <img
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717233/contact1_ttxa48.png"
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765956956/Placeholder_Image_wotmns.png"
                 alt="Person in spotlight"
                 className="w-full h-full md:h-[370px] object-cover"
                 loading="lazy"

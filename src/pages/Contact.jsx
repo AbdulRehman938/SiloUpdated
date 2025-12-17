@@ -9,9 +9,9 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const Contact = () => {
   usePageMeta(
-    'Contact Us | Silo Creative - Get In Touch',
-    'Ready to transform your content strategy? Get in touch with Silo Creative to discuss your UGC and content creation needs.'
-  )
+    "UGC Creator Contact Form | Work With Brands",
+    "Apply to work with brands as a UGC creator. Submit your details to access paid UGC opportunities, brand briefs and short form content projects."
+  );
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -53,29 +53,31 @@ const Contact = () => {
     onSubmit: (values, { setSubmitting, resetForm }) => {
       // Handle form submission here
       console.log("Form submitted:", values);
-      
+
       // Get existing data from localStorage
-      const existingData = JSON.parse(localStorage.getItem('contactFormData') || '[]');
-      
+      const existingData = JSON.parse(
+        localStorage.getItem("contactFormData") || "[]"
+      );
+
       // Add new submission with timestamp
       const newSubmission = {
         ...values,
-        submittedAt: new Date().toISOString()
+        submittedAt: new Date().toISOString(),
       };
-      
+
       // Add to array and store in localStorage
       const updatedData = [...existingData, newSubmission];
-      localStorage.setItem('contactFormData', JSON.stringify(updatedData));
-      
+      localStorage.setItem("contactFormData", JSON.stringify(updatedData));
+
       // Log all stored data
-      console.log('All contact form submissions:', updatedData);
-      
+      console.log("All contact form submissions:", updatedData);
+
       // Simulate API call
       setTimeout(() => {
         toast.success("Form submitted successfully!");
         resetForm();
         setSubmitting(false);
-        
+
         // Reload page after successful submit
         setTimeout(() => {
           window.location.reload();
@@ -96,12 +98,15 @@ const Contact = () => {
                   Want to work with brands that get it?
                 </h1>
                 <p className="text-black mt-3 sm:mt-4 text-base sm:text-lg">
-                 Got creative flair? Join our global UGC creator network.
+                  Got creative flair? Join our global UGC creator network.
                 </p>
               </div>
 
               {/* Contact Form */}
-              <form onSubmit={formik.handleSubmit} className="space-y-4 sm:space-y-6">
+              <form
+                onSubmit={formik.handleSubmit}
+                className="space-y-4 sm:space-y-6"
+              >
                 <div>
                   <label
                     htmlFor="name"
@@ -123,7 +128,9 @@ const Contact = () => {
                     }`}
                   />
                   {formik.touched.name && formik.errors.name && (
-                    <p className="mt-1 text-sm text-red-500">{formik.errors.name}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {formik.errors.name}
+                    </p>
                   )}
                 </div>
 
@@ -148,7 +155,9 @@ const Contact = () => {
                     }`}
                   />
                   {formik.touched.email && formik.errors.email && (
-                    <p className="mt-1 text-sm text-red-500">{formik.errors.email}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {formik.errors.email}
+                    </p>
                   )}
                 </div>
 
@@ -173,7 +182,9 @@ const Contact = () => {
                     }`}
                   />
                   {formik.touched.phone && formik.errors.phone && (
-                    <p className="mt-1 text-sm text-red-500">{formik.errors.phone}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {formik.errors.phone}
+                    </p>
                   )}
                 </div>
 
@@ -199,7 +210,9 @@ const Contact = () => {
                     }`}
                   />
                   {formik.touched.message && formik.errors.message && (
-                    <p className="mt-1 text-sm text-red-500">{formik.errors.message}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {formik.errors.message}
+                    </p>
                   )}
                 </div>
 
@@ -232,7 +245,9 @@ const Contact = () => {
                     </label>
                   </div>
                   {formik.touched.terms && formik.errors.terms && (
-                    <p className="mt-1 text-sm text-red-500">{formik.errors.terms}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {formik.errors.terms}
+                    </p>
                   )}
                 </div>
 
@@ -242,7 +257,7 @@ const Contact = () => {
                   className="inline-flex items-center justify-center gap-2 bg-[#FF322E] w-xl h-[48px] px-6 py-3 text-xs font-bold tracking-wide text-white  border-transparent relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed top-7"
                 >
                   <div className="absolute left-3 top-1/2 -translate-y-1/2 translate-x-5 svg-wrapper group-hover:animate-bounce-custom">
-                    <FaChevronRight   className="block text-white w-4 h-4 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-x-3 group-hover:scale-[140%]" />
+                    <FaChevronRight className="block text-white w-4 h-4 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-x-3 group-hover:scale-[140%]" />
                   </div>
                   <span className="block transition-all duration-300 ease-in-out text-base group-hover:translate-x-28">
                     {formik.isSubmitting ? "Submitting..." : "Submit"}
@@ -254,9 +269,11 @@ const Contact = () => {
             {/* Right Image */}
             <div className="order-2 lg:order-2 mt-8 lg:mt-0">
               <img
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717233/contact1_ttxa48.png"
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765956951/1_kp6h6i.png"
                 alt="Person relaxing on chair"
-                className="w-full h-full object-fill" loading="lazy" />
+                className="w-full h-full object-fill"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -271,20 +288,19 @@ const Contact = () => {
               <div className="space-y-4 sm:space-y-6">
                 <div>
                   <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-bold text-black leading-tight">
-                    Brand looking to hire creators?
+                    Brand looking to elevate your digital presence?
                   </h2>
-                  <p className="text-black mt-3 sm:mt-4 text-base sm:text-lg">
-                    We'll match your brand with the right talent and deliver
-                    content that cuts through.
+                  <p className="text-black mt-5 sm:mt-4 text-base sm:text-lg">
+                    From content to design to websites, we’ll deliver work built for impact.
                   </p>
                 </div>
 
                 <Link
-                  to="/contact-brand"
+                  to="/contact"
                   className="inline-flex items-center justify-center gap-2 bg-[#FF322E] w-xl h-[48px] px-6 py-3 text-xs font-bold tracking-wide text-white  border-transparent relative overflow-hidden group"
                 >
                   <div className="absolute left-3 top-1/2 -translate-y-1/2 translate-x-5 svg-wrapper group-hover:animate-bounce-custom">
-                    <FaChevronRight   className="block text-white w-4 h-4 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-x-5 group-hover:scale-[140%]" />
+                    <FaChevronRight className="block text-white w-4 h-4 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-x-5 group-hover:scale-[140%]" />
                   </div>
                   <span className="block transition-all duration-300 ease-in-out text-base group-hover:translate-x-28">
                     Lets chat
@@ -296,14 +312,16 @@ const Contact = () => {
             {/* Right Image - Full Height */}
             <div className="relative order-1 lg:order-2 h-64 sm:h-80 md:h-96 lg:h-auto">
               <img
-                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717234/contact2_v8cqrr.png"
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765956952/2_bskt44.png"
                 alt="Person in spotlight"
-                className="w-full h-full object-cover" loading="lazy" />
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
       </section>
-       <div className="relative left-1/2 -translate-x-1/2 w-screen h-[1px] bg-black mt-10" />
+      <div className="relative left-1/2 -translate-x-1/2 w-screen h-[1px] bg-black mt-10" />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 
 const Home = () => {
   usePageMeta(
-    'Silo | Modern Creative Agency for Social, Brand & Web.',
+    'Modern Creative Agency for Social, Brand & Web.',
     'A modern creative studio specialising in social media strategy, content strategy, brand identity design, web design and custom website development for growing brands.'
   )
 

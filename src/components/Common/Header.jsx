@@ -82,7 +82,7 @@ export default function Header() {
                 Job Board
               </NavLink>
               <NavLink
-                to="/ramblings"
+                to="/blog"
                 className={({ isActive }) =>
                   `px-2 xl:px-2.5 2xl:px-1 py-2 xl:py-2.5 2xl:py-3 font-bold whitespace-nowrap transition-colors ${
                     isActive ? "text-brand font-bold" : "text-black"
@@ -122,7 +122,7 @@ export default function Header() {
 
             {/* CTA visible on large screens only; on tablet/mobile it's inside the hamburger panel below */}
             <Link
-              to="/contact"
+              to="/ugc-contact"
               className="hidden lg:inline-flex relative text-sm xl:text-base 2xl:text-lg whitespace-nowrap bg-brand text-white py-2 xl:py-2.5 2xl:py-3 px-4 xl:px-5 2xl:px-6 items-center border-none overflow-hidden header-btn transition-all duration-200 cursor-pointer group no-underline"
             >
               <div className="absolute svg-wrapper group-hover:animate-bounce-custom">
@@ -237,7 +237,7 @@ export default function Header() {
                     Job Board
                   </NavLink>
                   <NavLink
-                    to="/ramblings"
+                    to="/blog"
                     onClick={close}
                     className={({ isActive }) =>
                       `text-xl font-bold transition-all duration-150 ${
@@ -265,7 +265,7 @@ export default function Header() {
                   style={{ transitionDelay: open ? "480ms" : "0ms" }}
                 >
                   <Link
-                    to="/contact"
+                    to="/ugc-contact"
                     onClick={close}
                     className="w-full inline-flex items-center justify-center gap-3 bg-brand text-white px-6 py-3 font-bold shadow-lg hover:opacity-95 transition no-underline"
                   >

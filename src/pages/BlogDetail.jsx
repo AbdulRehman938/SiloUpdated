@@ -77,7 +77,7 @@ export default function BlogDetail() {
             <h1 className="text-4xl font-bold text-black mb-4">Blog Post Not Found</h1>
             <p className="text-black mb-8">The blog post you're looking for doesn't exist.</p>
             <a 
-              href="/ramblings" 
+              href="/blog" 
               className="inline-flex items-center text-red-500 hover:text-red-600 font-medium transition-colors"
             >
               ← Back to Ramblings

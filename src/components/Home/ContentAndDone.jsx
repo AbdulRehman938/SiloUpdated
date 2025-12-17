@@ -129,52 +129,72 @@ export default function ContentAndDone() {
           {/* Card 1: Social Strategy & Management */}
           <article className="border border-black border-x-0 border-b-0 p-8 pl-0 flex flex-col gap-4 mb-5">
             <div className="w-full h-[250px] md:h-[300px] bg-gray-100 overflow-hidden">
-               <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/2_jegbj9.png" alt="img1" className="w-full h-full object-cover" />
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/2_jegbj9.png"
+                alt="img1"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-epilogue font-bold text-[32px] md:text-[28px] lg:text-[32px] leading-[130%] tracking-normal text-black">
               Social Strategy & Management
             </h3>
             <p className="text-[16px] leading-[150%] tracking-normal text-black">
-              We don't just post, we plan, manage, and grow your brand's presence.
+              We don't just post, we plan, manage, and grow your brand's
+              presence.
             </p>
           </article>
 
           {/* Card 2: Web Design & Development */}
           <article className="border border-black p-8 pr-0 border-r-0 border-b-0 flex flex-col gap-4">
             <div className="w-full h-[250px] md:h-[280px] bg-gray-100 overflow-hidden">
-              <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/3_r08wlm.png" alt="img2" className="w-full h-full object-cover" />
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/3_r08wlm.png"
+                alt="img2"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-epilogue font-bold text-[32px] md:text-[28px] lg:text-[32px] leading-[130%] tracking-normal text-black">
               Web Design & Development
             </h3>
             <p className="text-[16px] leading-[150%] tracking-normal text-black">
-              We shape digital spaces. Real craft, real performance that's designed to grow.
+              We shape digital spaces. Real craft, real performance that's
+              designed to grow.
             </p>
           </article>
 
           {/* Card 3: Brand Design */}
           <article className="border border-black p-8 pl-0 border-x-0 border-b-0 flex flex-col gap-4">
             <div className="w-full h-[250px] md:h-[280px] bg-gray-100 overflow-hidden">
-              <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/Placeholder_Image_zxnykm.png" alt="img3" className="w-full h-full object-cover" />
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/Placeholder_Image_zxnykm.png"
+                alt="img3"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-epilogue font-bold text-[32px] md:text-[28px] lg:text-[32px] leading-[130%] tracking-normal text-black">
               Brand Design
             </h3>
             <p className="text-[16px] leading-[150%] tracking-normal text-black">
-              We design bold branding and expressive motion to shape your visual presence.
+              We design bold branding and expressive motion to shape your visual
+              presence.
             </p>
           </article>
 
           {/* Card 4: Content Strategy */}
           <article className="border border-black p-8 pr-0 border-r-0 border-b-0 flex flex-col gap-4">
             <div className="w-full h-[250px] md:h-[280px] bg-gray-100 overflow-hidden">
-              <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/Placeholder_Image1_me1r2y.png" alt="img4" className="w-full h-full object-cover" />
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/Placeholder_Image1_me1r2y.png"
+                alt="img4"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-epilogue font-bold text-[32px] md:text-[28px] lg:text-[32px] leading-[130%] tracking-normal text-black">
               Content Strategy
             </h3>
             <p className="text-[16px] leading-[150%] tracking-normal text-black">
-              We build thoughtful strategies that give content focus, intent and results.
+              We build thoughtful strategies that give content focus, intent and
+              results.
             </p>
           </article>
         </div>
@@ -188,65 +208,61 @@ export default function ContentAndDone() {
             Just some of the brands we’ve worked with
           </p>
 
-          <div className="w-full mt-10 border-t-[0px] border-t-black">
+          <div className="w-full my-20 border-t-[0px] border-t-black">
             {/* First project */}
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 border-b-[1px] py-16 border-b-black group relative cursor-pointer"
-              role="link"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/1";
-              }}
-              onClick={(e) => {
-                if (e.target.closest("a")) return;
-                window.location.href = "/case-study/1";
-              }}
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/3 h-96 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765882727/Untitled_Project_smo9qt.jpg"
-                  alt="basement approved"
-                  className="w-full h-full object-cover"
+                  alt="smoothie"
+                  className="w-full h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute hover-placeholder left-1/2 top-1/2 -translate-x-full -translate-y-1/2 w-1/6 h-96 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765883977/Rectangle_34_pbf4gh.png"
-                  alt="basement approved"
-                  className="w-full h-full object-cover"
+                  alt="smoothie"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4">
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out lg:group-hover:translate-x-28">
                 <h3 className="text-4xl font-bold text-black">
                   Basement Approved
                 </h3>
-                <p className="text-xl text-black font-base">Culture, music and editorial platform</p>
+                <p className="text-xl text-black">
+                  Culture, music and editorial platform
+                </p>
                 <p className="text-lg text-black">
-                Silo transformed BasementApproved’s digital presence with a new website, Mixcloud integration and a streamlined content system that brings their community, music and cultural storytelling into one cohesive experience.
+                  Silo transformed BasementApproved’s digital presence with a
+                  new website, Mixcloud integration and a streamlined content
+                  system that brings their community, music and cultural
+                  storytelling into one cohesive experience.
                 </p>
                 <div className="flex space-x-2 mt-2">
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
                     Web Design
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
                     Web Development
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
-                    API Integration
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                    API Integeration
                   </span>
                 </div>
                 <a
                   href="/case-study/1"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -255,106 +271,101 @@ export default function ContentAndDone() {
             </div>
 
             <div
-              className="hidden md:block md:flex-col-reverse lg:hidden items-center w-full mx-auto justify-center space-x-10 border-y-[1px] py-12 border-y-black group relative cursor-pointer"
-              role="link"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/1";
-              }}
-              onClick={(e) => {
-                if (e.target.closest("a")) return;
-                window.location.href = "/case-study/1";
-              }}
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 group relative mt-0 cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/2 h-96 relative">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765882727/Untitled_Project_smo9qt.jpg"
-                  alt="basement approved"
-                  className="w-full h-full object-fill"
-                  loading="lazy"
-                />
-                {/* Hover image placeholder */}
-                <div className="absolute hover-placeholder -right-80 top-0 w-[70%] h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 overflow-hidden group-hover:rotate-0">
-                  <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765883977/Rectangle_34_pbf4gh.png"
-                    alt="smoothie"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              {/* Placeholder for image */}
-              <div className="w-[80%] mt-10 flex flex-col justify-center items-start gap-4">
+              {/* Text content first */}
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
                 <h3 className="text-4xl font-bold text-black">
                   Basement Approved
                 </h3>
-                <p className="text-xl text-black font-bold">Culture, music and editorial platform</p>
-                <p className="text-lg font-semibold text-black">
-                 Silo transformed BasementApproved’s digital presence with a new website, Mixcloud integration and a streamlined content system that brings their community, music and cultural storytelling into one cohesive experience.
+                <p className="text-xl text-black">
+                  Culture, music and editorial platform
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                <p className="text-lg text-black">
+                  Silo transformed BasementApproved’s digital presence with a
+                  new website, Mixcloud integration and a streamlined content
+                  system that brings their community, music and cultural
+                  storytelling into one cohesive experience.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
                     Web Design
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
                     Web Development
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
-                    API Integration
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    API Integeration
                   </span>
                 </div>
                 <a
                   href="/case-study/1"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
+              </div>
+              {/* Image second */}
+              <div className="w-[60%] mx-auto md:w-1/2 md:-top-20 h-60 top-10 relative">
+                <img
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765882727/Untitled_Project_smo9qt.jpg"
+                  alt="smoothie"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                {/* Hover image placeholder */}
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
+                  <img
+                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765883977/Rectangle_34_pbf4gh.png"
+                    alt="smoothie"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
 
             {/* Second project */}
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 border-b-[1px] py-16 border-b-black group relative cursor-pointer mt-0"
-              role="link"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/2";
-              }}
-              onClick={(e) => {
-                if (e.target.closest("a")) return;
-                window.location.href = "/case-study/2";
-              }}
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 border-b border-b-black group relative cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/3 h-96 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/Tomoko-e10fd11f_2_jto3ax.png"
-                  alt="lumin solar"
-                  className="w-[140%] h-auto object-contain"
+                  alt="smoothie"
+                  className="w-full h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute hover-placeholder left-1/2 top-1/2 -translate-x-full -translate-y-1/2 w-1/6 h-96 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884763/Rectangle_29_il7hhb.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4">
-                <h3 className="text-4xl font-bold text-black">Tomoka Fine & Rare</h3>
-                <p className="text-xl text-black font-bold">Modern whisky investment & retail</p>
-                <p className="text-lg font-semibold text-black">
-                 A heritage whisky brand modernised without losing its soul. From website build to social, video, PR and CRM, Silo transformed Tomoka into a premium digital powerhouse.
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
+                <h3 className="text-4xl font-bold text-black">
+                  Tomoka Fine & Rare
+                </h3>
+                <p className="text-xl text-black">
+                  Modern whisky investment & retail
+                </p>
+                <p className="text-lg text-black">
+                  A heritage whisky brand modernised without losing its soul.
+                  From website build to social, video, PR and CRM, Silo
+                  transformed Tomoka into a premium digital powerhouse.
                 </p>
                 <div className="flex space-x-2 mt-2">
                   <span className="text-base font-bold text-black p-2 bg-brand/20">
@@ -377,13 +388,13 @@ export default function ContentAndDone() {
                   </span>
                 </div>
                 <a
-                  href="/case-study/2"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -392,136 +403,134 @@ export default function ContentAndDone() {
             </div>
 
             <div
-              className="hidden md:block md:flex-col-reverse lg:hidden items-center w-full mx-auto justify-center space-x-10 border-b-[1px] py-12 border-b-gray-800 group relative top-[3rem] cursor-pointer"
-              role="link"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/2";
-              }}
-              onClick={(e) => {
-                if (e.target.closest("a")) return;
-                window.location.href = "/case-study/2";
-              }}
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/2 h-96 relative">
+              {/* Text content first */}
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
+                <h3 className="text-4xl font-bold text-black">
+                  Tomoka Fine & Rare
+                </h3>
+                <p className="text-xl text-black">
+                  Modern whisky investment & retail
+                </p>
+                <p className="text-lg text-black">
+                  A heritage whisky brand modernised without losing its soul.
+                  From website build to social, video, PR and CRM, Silo
+                  transformed Tomoka into a premium digital powerhouse.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Brandig
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Website
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Social
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    Creative
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    CRM
+                  </span>
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    PPC
+                  </span>
+                </div>
+                <a
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <span>View Project</span>
+                  <span
+                    aria-hidden
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
+                  >
+                    <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
+                  </span>
+                </a>
+              </div>
+              {/* Image second */}
+              <div className="w-full md:w-1/2 h-60 top-10 md:-top-20 relative">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/Tomoko-e10fd11f_2_jto3ax.png"
                   alt="smoothie"
-                  className=" h-auto object-cover"
+                  className="w-full h-full md:h-44 object-cover"
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="absolute hover-placeholder -right-80 top-0 w-[70%] h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 overflow-hidden group-hover:rotate-0">
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
                     src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884763/Rectangle_29_il7hhb.png"
                     alt="smoothie"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
                 </div>
               </div>
-              {/* Placeholder for image */}
-              <div className="w-[80%] flex flex-col justify-center items-start gap-4">
-                <h3 className="text-4xl font-bold text-black">Tomoka Fine & Rare</h3>
-                <p className="text-xl text-black font-bold">Modern whisky investment & retail</p>
-                <p className="text-lg font-semibold text-black">
-                 A heritage whisky brand modernised without losing its soul. From website build to social, video, PR and CRM, Silo transformed Tomoka into a premium digital powerhouse.
-                </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Branding
-                  </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Website
-                  </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Social
-                  </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Creative
-                  </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    CRM
-                  </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    PPC
-                  </span>
-                </div>
-                <a
-                  href="/case-study/2"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
-                >
-                  <span>View Project</span>
-                  <span
-                    aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
-                  >
-                    <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
-                  </span>
-                </a>
-              </div>
             </div>
 
+           
             {/* Third project */}
             <div
-              className="hidden lg:flex items-center justify-around space-x-20 py-16 group relative cursor-pointer"
-              role="link"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/3";
-              }}
-              onClick={(e) => {
-                if (e.target.closest("a")) return;
-                window.location.href = "/case-study/3";
-              }}
+              className="hidden lg:flex items-center justify-around space-x-40 py-6 group relative cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/2 h-96 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-12">
+              <div className="w-1/3 h-72 transform transition-transform duration-600 ease-in-out lg:group-hover:-translate-x-0">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
                   alt="smoothie"
-                  className="w-[75%] h-auto object-contain"
+                  className="w-full h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute hover-placeholder left-1/2 top-1/2 -translate-x-full -translate-y-1/2 w-1/6 h-96 bg-white overflow-hidden opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0 group-hover:pointer-events-auto">
+              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765885427/Rectangle_33_n4bq46.png"
                   alt="smoothie"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-center items-start gap-4">
-                <h3 className="text-4xl font-bold text-black">Electrolytes with Joly</h3>
-                <p className="text-xl text-black font-bold">A vibrant identity for a new radio show</p>
-                <p className="text-lg font-semibold text-black">
-                 Silo created an identity reflecting the show’s energetic, atmospheric and slightly cosmic tone, supported by a visual system that works across social media and ongoing episode releases.
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
+                <h3 className="text-4xl font-bold text-black">
+                  Electrolytes with Joly
+                </h3>
+                <p className="text-xl text-black">
+                  A vibrant identity for a new radio show
+                </p>
+                <p className="text-lg text-black">
+                  Silo created an identity reflecting the show’s energetic,
+                  atmospheric and slightly cosmic tone, supported by a visual
+                  system that works across social media and ongoing episode
+                  releases.
                 </p>
                 <div className="flex space-x-2 mt-2">
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
                     Typography
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 whitespace-nowrap bg-brand/20">
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
                     Social Templates
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 whitespace-nowrap bg-brand/20">
+                  <span className="text-base font-bold text-black p-2 bg-brand/20">
                     Design System
                   </span>
                 </div>
                 <a
-                  href="/case-study/3"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -530,68 +539,68 @@ export default function ContentAndDone() {
             </div>
 
             <div
-              className="hidden md:block md:flex-col-reverse lg:hidden items-center w-full mx-auto justify-center space-x-10 pt-12 group relative top-[5rem] cursor-pointer"
-              role="link"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && !e.target.closest("a"))
-                  window.location.href = "/case-study/3";
-              }}
-              onClick={(e) => {
-                if (e.target.closest("a")) return;
-                window.location.href = "/case-study/3";
-              }}
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0  py-12 pt-5 group relative mt-0 cursor-pointer"
+              onClick={() => (window.location.href = "/case-study/1")}
             >
-              <div className="w-1/2 h-96 relative">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
-                  alt="smoothie"
-                  className=" h-auto object-contain" 
-                  loading="lazy"
-                />
-                {/* Hover image placeholder */}
-                <div className="absolute hover-placeholder -right-80 top-0 w-[70%] h-80 bg-white  opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none group-hover:opacity-100 group-hover:scale-100 overflow-hidden group-hover:rotate-0">
-                  <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765885427/Rectangle_33_n4bq46.png"
-                    alt="smoothie"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              {/* Placeholder for image */}
-              <div className="w-[80%] flex flex-col justify-center items-start gap-4">
-                <h3 className="text-4xl font-bold text-black">Electrolytes with Joly</h3>
-                <p className="text-xl text-black font-bold">A vibrant identity for a new radio show</p>
-                <p className="text-lg font-semibold text-black">
-                Silo created an identity reflecting the show’s energetic, atmospheric and slightly cosmic tone, supported by a visual system that works across social media and ongoing episode releases.
+              {/* Text content first */}
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
+                <h3 className="text-4xl font-bold text-black">
+                  Electrolytes with Joly
+                </h3>
+                <p className="text-xl text-black">
+                  A vibrant identity for a new radio show
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                <p className="text-lg text-black">
+                  Silo created an identity reflecting the show’s energetic,
+                  atmospheric and slightly cosmic tone, supported by a visual
+                  system that works across social media and ongoing episode
+                  releases.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
                     Typography
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
                     Social Templates
                   </span>
-                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
+                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
                     Design System
                   </span>
                 </div>
                 <a
-                  href="/case-study/3"
-                  className="inline-flex items-center gap-2 font-dm mt-10 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  href="/case-study/1"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
+              </div>
+              {/* Image second */}
+              <div className="w-full md:w-1/2 h-60 top-10 md:-top-20 relative">
+                <img
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
+                  alt="smoothie"
+                  className="w-full h-full md:h-32 object-cover"
+                  loading="lazy"
+                />
+                {/* Hover image placeholder */}
+                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
+                  <img
+                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765885427/Rectangle_33_n4bq46.png"
+                    alt="smoothie"
+                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -623,52 +632,72 @@ export default function ContentAndDone() {
           {/* Card 1: Social Strategy & Management */}
           <div className="border border-black border-b-0 border-x-0 p-0 py-5">
             <div className="w-full h-[250px] bg-gray-100 mb-4">
-               <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/2_jegbj9.png" alt="img1" className="w-full h-full object-cover" />
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/2_jegbj9.png"
+                alt="img1"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-epilogue font-bold text-2xl mb-3">
               Social Strategy & Management
             </h3>
             <p className="text-sm text-black leading-relaxed">
-              We don't just post, we plan, manage, and grow your brand's presence.
+              We don't just post, we plan, manage, and grow your brand's
+              presence.
             </p>
           </div>
 
           {/* Card 2: Web Design & Development */}
           <div className="border border-black border-x-0 py-5 border-b-0">
             <div className="w-full h-[250px] bg-gray-100 mb-4">
-              <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/3_r08wlm.png" alt="img2" className="w-full h-full object-cover" />
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/3_r08wlm.png"
+                alt="img2"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-epilogue font-bold text-2xl mb-3">
               Web Design & Development
             </h3>
             <p className="text-sm text-black leading-relaxed">
-              We shape digital spaces. Real craft, real performance that's designed to grow.
+              We shape digital spaces. Real craft, real performance that's
+              designed to grow.
             </p>
           </div>
 
           {/* Card 3: Brand Design */}
           <div className="border border-black border-x-0 py-5 border-b-0">
             <div className="w-full h-[250px] bg-gray-100 mb-4">
-              <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/Placeholder_Image_zxnykm.png" alt="img3" className="w-full h-full object-cover" />
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879825/Placeholder_Image_zxnykm.png"
+                alt="img3"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-epilogue font-bold text-2xl mb-3">
               Brand Design
             </h3>
             <p className="text-sm text-black leading-relaxed">
-              We design bold branding and expressive motion to shape your visual presence.
+              We design bold branding and expressive motion to shape your visual
+              presence.
             </p>
           </div>
 
           {/* Card 4: Content Strategy */}
           <div className="border border-black border-x-0 py-5 border-b-0">
             <div className="w-full h-[250px] bg-gray-100 mb-4">
-              <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/Placeholder_Image1_me1r2y.png" alt="img4" className="w-full h-full object-cover" />
+              <img
+                src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/Placeholder_Image1_me1r2y.png"
+                alt="img4"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-epilogue font-bold text-2xl mb-3">
               Content Strategy
             </h3>
             <p className="text-sm text-black leading-relaxed">
-              We build thoughtful strategies that give content focus, intent and results.
+              We build thoughtful strategies that give content focus, intent and
+              results.
             </p>
           </div>
         </div>
@@ -686,7 +715,7 @@ export default function ContentAndDone() {
 
           <div className="space-y-12 border-t-[1px] border-t-black">
             <div
-              className="border-b-[1px] py-8 border-b-black cursor-pointer"
+              className="py-8 cursor-pointer"
               role="link"
               tabIndex={0}
               onKeyDown={(e) => {
@@ -710,9 +739,14 @@ export default function ContentAndDone() {
                 <h3 className="text-2xl font-bold text-black">
                   Basement Approved
                 </h3>
-                <p className="text-lg text-black font-bold">Culture, music and editorial platform</p>
+                <p className="text-lg text-black font-bold">
+                  Culture, music and editorial platform
+                </p>
                 <p className="text-base font-medium text-black leading-relaxed">
-                Silo transformed BasementApproved’s digital presence with a new website, Mixcloud integration and a streamlined content system that brings their community, music and cultural storytelling into one cohesive experience.
+                  Silo transformed BasementApproved’s digital presence with a
+                  new website, Mixcloud integration and a streamlined content
+                  system that brings their community, music and cultural
+                  storytelling into one cohesive experience.
                 </p>
                 <div className="flex space-x-2">
                   <span className="text-sm font-semibold text-black p-2 bg-brand/20">
@@ -736,7 +770,7 @@ export default function ContentAndDone() {
             </div>
 
             <div
-              className="border-b-[1px] relative top-[-2rem] py-8 border-b-black cursor-pointer"
+              className="relative top-[-2rem] py-8 cursor-pointer"
               role="link"
               tabIndex={0}
               onKeyDown={(e) => {
@@ -757,10 +791,16 @@ export default function ContentAndDone() {
                 />
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-black">Tomoka Fine & Rare</h3>
-                <p className="text-lg text-black font-bold">Modern whisky investment & retail</p>
+                <h3 className="text-2xl font-bold text-black">
+                  Tomoka Fine & Rare
+                </h3>
+                <p className="text-lg text-black font-bold">
+                  Modern whisky investment & retail
+                </p>
                 <p className="text-base font-medium text-black leading-relaxed">
-                  A heritage whisky brand modernised without losing its soul. From website build to social, video, PR and CRM, Silo transformed Tomoka into a premium digital powerhouse.
+                  A heritage whisky brand modernised without losing its soul.
+                  From website build to social, video, PR and CRM, Silo
+                  transformed Tomoka into a premium digital powerhouse.
                 </p>
                 <div className="flex space-x-2">
                   <span className="text-sm font-bold text-black p-2 bg-brand/20">
@@ -814,10 +854,17 @@ export default function ContentAndDone() {
                 />
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-black">Electrolytes with Joly</h3>
-                <p className="text-lg text-black font-bold">A vibrant identity for a new radio show</p>
+                <h3 className="text-2xl font-bold text-black">
+                  Electrolytes with Joly
+                </h3>
+                <p className="text-lg text-black font-bold">
+                  A vibrant identity for a new radio show
+                </p>
                 <p className="text-base font-medium text-black leading-relaxed">
-                  Silo created an identity reflecting the show’s energetic, atmospheric and slightly cosmic tone, supported by a visual system that works across social media and ongoing episode releases.
+                  Silo created an identity reflecting the show’s energetic,
+                  atmospheric and slightly cosmic tone, supported by a visual
+                  system that works across social media and ongoing episode
+                  releases.
                 </p>
                 <div className="flex space-x-2">
                   <span className="text-sm font-bold text-black p-2 bg-brand/20">

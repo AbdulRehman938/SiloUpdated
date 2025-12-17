@@ -9,8 +9,8 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const CareerIndex = () => {
   usePageMeta(
-    'Careers | Silo Creative - Build Your Future With Us',
-    'Join the Silo Creative team and work on exciting UGC projects with leading brands. Explore career opportunities in content creation, strategy, and more.'
+    'Careers at Our Creative & Digital Studio',
+    'Explore roles in social media management, content strategy, brand identity design, motion graphics, digital design and website development at Silo.'
   )
 
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ const CareerIndex = () => {
               <p className="text-sm sm:text-base md:text-lg font-normal text-black leading-relaxed">
                 Want to make ideas happen? Join The Silo - a team of creators
                 <br className="hidden sm:block" />
-                strategists, and storytellers shaping brands that stand out
+                strategists, and storytellers shaping brands that stand <br /> out
                 online
               </p>
             </div>

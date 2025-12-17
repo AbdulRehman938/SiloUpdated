@@ -12,15 +12,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Ramblings() {
   usePageMeta(
-    'Ramblings | Silo Creative - Insights & Ideas',
-    'Dive into our thoughts on UGC, content strategy, creator economy, and the latest trends in digital marketing. Read the Silo Creative blog.'
-  )
+    "Insights on Social, Branding & Web Design",
+    "Read expert insights on social media strategy, content strategy, branding, web design, UX UI design, digital content trends and creative direction for modern brands."
+  );
 
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("View all");
 
   // Toggle this to true when client wants to show blog content via CMS
-  const showContent = false;
+  const showContent = true;
 
   const containerRef = useRef(null);
   const sidebarRef = useRef(null);
@@ -272,7 +272,7 @@ export default function Ramblings() {
                               </a>
                             </div>
 
-                            <div className="aspect-[4/3] overflow-hidden group order-2 md:order-1">
+                            <div className="aspect-[16/9] overflow-hidden group order-2 md:order-1">
                               <img
                                 src={post.image}
                                 alt={post.title}

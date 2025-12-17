@@ -176,7 +176,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <NavLink
-                      to="/ramblings"
+                      to="/blog"
                       className="text-sm ease-in-out duration-200 cursor-pointer"
                       style={{
                         fontFamily: "DM Sans",
@@ -518,7 +518,7 @@ const Footer = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/ramblings" className="text-sm">
+                  <NavLink to="/blog" className="text-sm">
                     Ramblings
                   </NavLink>
                 </li>

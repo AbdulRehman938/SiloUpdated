@@ -11,7 +11,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const About = () => {
   usePageMeta(
-    'Silo | Boutique Creative Studio for Modern Brands',
+    'Boutique Creative Studio for Modern Brands',
     'A boutique creative agency blending social media strategy, content strategy, branding, digital design and website development to build meaningful brand experiences.'
   )
 

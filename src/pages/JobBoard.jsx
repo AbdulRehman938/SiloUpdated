@@ -6,6 +6,11 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 // JobCard Component - Clickable with hover effects
 function JobCard({ job }) {
+  usePageMeta(
+    "UGC Agency Job Board for Brand Briefs",
+    "Discover UGC creator jobs, brand briefs and paid UGC content opportunities. A dedicated job board for UGC creators producing short form content for modern brands."
+  );
+
   const navigate = useNavigate();
 
   const handleCardClick = () => {
@@ -87,7 +92,7 @@ export default function JobBoard() {
                 letterSpacing: "0%",
               }}
             >
-              The Silo job board
+              Silo job board
             </h1>
 
             {/* Description Text - Exact match to screenshot */}
@@ -101,8 +106,8 @@ export default function JobBoard() {
                 letterSpacing: "0%",
               }}
             >
-              The Silo Job Board is where brands post briefs and creators pick
-              them up. Simple.
+              A board for brands post briefs and UGC creators pick them up.
+              Simple.
             </p>
 
             <p
@@ -115,11 +120,10 @@ export default function JobBoard() {
                 letterSpacing: "0%",
               }}
             >
-              It's a live feed of campaigns looking for UGC: TikToks, Reels,
-              photos, product demos, testimonials, ready for creators to jump
-              on. No middlemen, no noise. Just real opportunities, real brands,
-              and a roster of vetted creators who know how to make content that
-              connects.
+              It’s a live feed of brands looking for UGC: TikToks, Reels,
+              photos, product demos and testimonials - ready for creators to
+              jump on. Real opportunities, real brands, and a roster of vetted
+              creators who know how to make content that connects.
             </p>
           </div>
 
@@ -127,7 +131,7 @@ export default function JobBoard() {
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
             {/* Primary Button - Exact screenshot styling */}
             <button
-              onClick={() => (window.location.href = "/contact")}
+              onClick={() => (window.location.href = "/ugc-contact")}
               className="inline-flex items-center justify-center gap-2 bg-[#FF322E] text-white border-transparent relative overflow-hidden group"
               style={{
                 fontFamily: "DM Sans, sans-serif",
@@ -210,14 +214,14 @@ export default function JobBoard() {
                     required
                   />
                   <Link
-                    to="/contact"
+                    to="/ugc-contact"
                     className="inline-flex items-center justify-center gap-2 bg-[#FF322E] h-[48px] px-8 py-4 text-xs font-medium tracking-wide text-white border-transparent relative overflow-hidden group"
                   >
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 svg-wrapper group-hover:animate-bounce-custom">
                       <FaChevronRight className="text-white w-5 h-5 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-[140%]" />
                     </div>
                     <span className="block transition-all whitespace-nowrap duration-300 ease-in-out text-base group-hover:translate-x-40">
-                      Send me jobs
+                      Send me Work
                     </span>
                   </Link>
                 </form>

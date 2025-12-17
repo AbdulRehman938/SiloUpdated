@@ -4,7 +4,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 
 const servicee = () => {
   usePageMeta(
-    'Silo | Social, Branding, Web & Content Strategy Agency',
+    'Social, Branding, Web & Content Strategy Agency',
     'Explore services in social media management, content strategy, brand design, UX UI design, website development and motion design for modern brands.'
   )
 

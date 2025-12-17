@@ -9,7 +9,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const CaseStudies = () => {
   usePageMeta(
-    "Case Studies | Silo Creative - Our Work & Results",
+    "Creative Agency Case Studies & Client Work",
     "See how Silo Creative has helped brands achieve incredible results with UGC and content creation. Explore our portfolio of successful campaigns."
   );
 
@@ -516,7 +516,7 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 py-12 pt-5 group relative mt-0 cursor-pointer"
               onClick={() => (window.location.href = "/case-study/1")}
             >
               {/* Text content first */}
