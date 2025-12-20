@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { FaLink, FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-export default function Hero({ blogPost }) {
+export default function Hero({ blogPost, className = "" }) {
   const [copySuccess, setCopySuccess] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
@@ -57,23 +57,25 @@ export default function Hero({ blogPost }) {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[40%_58%] gap-0 md:gap-0 lg:gap-[2%] md:min-h-[80vh] lg:mt-16">
+    <div
+      className={`grid grid-cols-1 lg:grid-cols-[40%_58%] gap-0 md:gap-0 lg:gap-[2%] lg:mt-24 lg:mb-40 ${className}`}
+    >
       {/* Left Column - Content */}
       <div className="order-1 h-auto lg:order-1">
         <nav className="mb-8" aria-label="Breadcrumb">
           <div className="flex items-center space-x-2 text-base text-black">
             <span>Blog</span>
             <span className="text-black">›</span>
-            <span>{blogPost.category}</span>
+            <span>Category</span>
           </div>
         </nav>
         {/* Blog Title */}
-        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-black lg:mb-16 mb-5 leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-black lg:mb-12 mb-5 leading-tight w-[80%]">
           {blogPost.title || "Blog title heading will go here"}
         </h1>
 
         {/* Author Metadata */}
-        <div className="lg:mb-12 mb-5">
+        <div className="lg:mb-10 mb-5">
           <p className="text-sm text-black">
             By{" "}
             <span className="font-semibold">
@@ -90,7 +92,7 @@ export default function Hero({ blogPost }) {
         </div>
 
         {/* Social Share Section */}
-        <div className="lg:mb-8 mb-5">
+        <div className="lg:mb-5 mb-5">
           <h2 className="text-base font-semibold text-black mb-3">
             Share this post
           </h2>
@@ -136,8 +138,8 @@ export default function Hero({ blogPost }) {
       </div>
 
       {/* Right Column - Featured Image */}
-      <div className="order-2 lg:order-2">
-        <div className="bg-white aspect-auto overflow-hidden flex items-center justify-center relative min-h-[35vh] md:h-auto">
+      <div className="order-2 lg:order-2 h-[50vh] lg:h-auto lg:relative">
+        <div className="bg-white aspect-auto overflow-hidden flex items-center justify-center relative min-h-[35vh] h-full lg:absolute lg:inset-0 lg:min-h-0">
           {!imageError && blogPost.featuredImage ? (
             <>
               {!imageLoaded && (

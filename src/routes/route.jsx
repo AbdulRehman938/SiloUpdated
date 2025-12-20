@@ -18,6 +18,11 @@ import JobBoardDetail from "../pages/JobBoardDetail.jsx";
 import BlogDetail from "../pages/BlogDetail.jsx";
 import CaseStudies from "../pages/CaseStudies.jsx";
 import PostCaseStudy from "../pages/PostCaseStudy.jsx";
+import TheRiseOfAI from "../pages/Ramblings/TheRiseOfAI.jsx";
+import BrandIdentityShift from "../pages/Ramblings/BrandIdentityShift.jsx";
+import SocialAlgorithmChanges from "../pages/Ramblings/SocialAlgorithmChanges.jsx";
+import UGCvsTraditionalAds from "../pages/Ramblings/UGCvsTraditionalAds.jsx";
+import MeetTheCreators from "../pages/Ramblings/MeetTheCreators.jsx";
 
 function RoutesTree() {
   return (
@@ -30,7 +35,11 @@ function RoutesTree() {
         <Route path="blog" element={<Ramblings />} />
         <Route path="case-studies" element={<CaseStudies />} />
         <Route path="case-studies/:id" element={<PostCaseStudy />} />
-        <Route path="blog/:id" element={<BlogDetail />} />
+        <Route path="blog/1" element={<TheRiseOfAI />} />
+        <Route path="blog/2" element={<BrandIdentityShift />} />
+        <Route path="blog/3" element={<SocialAlgorithmChanges />} />
+        <Route path="blog/4" element={<UGCvsTraditionalAds />} />
+        <Route path="blog/5" element={<MeetTheCreators />} />
         <Route path="ugc-contact" element={<Contact />} />
         <Route path="contact" element={<Contact2 />} />
         <Route path="terms" element={<Terms />} />

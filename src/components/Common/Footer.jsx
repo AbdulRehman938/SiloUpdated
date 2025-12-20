@@ -35,7 +35,7 @@ const Footer = () => {
                     loading="lazy"
                   />
                 </Link>
-                <p className="text-xl font-medium mb-3">
+                <p className="text-base font-semibold mb-5 -mt-2">
                   Join our newsletter to stay up to date.
                 </p>
                 <form
@@ -67,7 +67,7 @@ const Footer = () => {
                     href="/privacy-policy"
                     className="underline cursor-pointer ease-in-out duration-200"
                   >
-                    Legal & Website changes
+                    Legal & Website Terms
                   </a>{" "}
                   and provide consent to receive updates from our company.
                 </p>
@@ -132,20 +132,6 @@ const Footer = () => {
                       }}
                     >
                       Meet the Team
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/about#why-ugc"
-                      onClick={(e) => handleAnchorClick(e, "/about", "why-ugc")}
-                      className="text-sm ease-in-out duration-200 cursor-pointer hover:text-brand"
-                      style={{
-                        fontFamily: "DM Sans",
-                        fontWeight: 700,
-                        lineHeight: "150%",
-                      }}
-                    >
-                      Why UGC?
                     </a>
                   </li>
                   <li>
@@ -273,7 +259,7 @@ const Footer = () => {
                         lineHeight: "150%",
                       }}
                     >
-                      Knightsgate Partners
+                      Knightsgate
                     </a>
                   </li>
                 </ul>
@@ -282,40 +268,6 @@ const Footer = () => {
               <div className="md:col-span-2">
                 <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
                 <ul className="space-y-3">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm ease-in-out duration-200 cursor-pointer flex items-center gap-2"
-                      style={{
-                        fontFamily: "DM Sans",
-                        fontWeight: 700,
-                        lineHeight: "150%",
-                      }}
-                    >
-                      {/* <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717295/Youtube_dtmefe.png" alt="Youtube" className="w-4 h-4" loading="lazy" /> */}
-                      <FaYoutube className="w-4 h-4 text-black font-bold" />
-                      Youtube
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm ease-in-out duration-200 cursor-pointer flex items-center gap-2"
-                      style={{
-                        fontFamily: "DM Sans",
-                        fontWeight: 700,
-                        lineHeight: "150%",
-                      }}
-                    >
-                      <img
-                        src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717294/X_loibpj.png"
-                        alt="X"
-                        className="w-4 h-4"
-                        loading="lazy"
-                      />
-                      X
-                    </a>
-                  </li>
                   <li>
                     <a
                       href="#"
@@ -385,19 +337,19 @@ const Footer = () => {
                 href="/privacy-policy"
                 className="font-bold text-black underline text-sm ease-in-out duration-200 cursor-pointer"
               >
-                Legal & Website changes
+                Legal & Website Terms
               </a>
               <Link
                 to="/terms"
                 className="font-bold text-black underline text-sm ease-in-out duration-200 cursor-pointer"
               >
-                Terms of Service
+                Terms & Conditions
               </Link>
               <a
                 href="/cookies"
                 className="font-bold text-black underline text-sm ease-in-out duration-200 cursor-pointer"
               >
-                Cookies Settings
+                Cookies Policy
               </a>
             </div>
           </div>
@@ -422,20 +374,6 @@ const Footer = () => {
             </div>
             {/* Social icons row */}
             <div className="flex gap-3 mb-2 mt-4">
-              <a href="#" className="bg-neutral-200 p-2">
-                <span className="sr-only">Youtube</span>
-                {/* <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717295/Youtube_dtmefe.png" alt="Youtube" className="w-4 h-4" loading="lazy" /> */}
-                <FaYoutube className="w-4 h-4 text-black font-bold" />
-              </a>
-              <a href="#" className="bg-neutral-200 p-2">
-                <span className="sr-only">twitter</span>
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717294/X_loibpj.png"
-                  alt="X"
-                  className="w-4 h-4"
-                  loading="lazy"
-                />
-              </a>
               <a href="#" className="bg-neutral-200 p-2">
                 <span className="sr-only">Instagram</span>
                 <img
@@ -496,15 +434,6 @@ const Footer = () => {
                     className="text-sm"
                   >
                     Meet the Team
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/about#why-ugc"
-                    onClick={(e) => handleAnchorClick(e, "/about", "why-ugc")}
-                    className="text-sm"
-                  >
-                    Why UGC?
                   </a>
                 </li>
                 <li>
@@ -578,7 +507,7 @@ const Footer = () => {
                     href="/case-studies/knightsgate-partners"
                     className="text-sm hover:text-brand"
                   >
-                    Knightsgate Partners
+                    Knightsgate
                   </a>
                 </li>
               </ul>
@@ -592,19 +521,19 @@ const Footer = () => {
                 href="/privacy-policy"
                 className="ease-in-out font-bold text-black duration-200 cursor-pointer"
               >
-                Legal & Website changes
+                Legal & Website Terms
               </a>
               <Link
                 to="/terms"
                 className="ease-in-out font-bold text-black duration-200 cursor-pointer"
               >
-                Terms of Service
+                Terms & Conditions
               </Link>
               <a
                 href="/cookies"
                 className="ease-in-out font-bold text-black duration-200 cursor-pointer"
               >
-                Cookies Settings
+                Cookies Policy
               </a>
             </div>
           </div>
@@ -633,7 +562,7 @@ const Footer = () => {
               </button>
             </form>
             <p className="text-xs font-bold text-black mt-3">
-              By subscribing you agree to with our Legal & Website changes and
+              By subscribing you agree to with our Legal & Website Terms and
               provide consent to receive updates from our company.
             </p>
           </div>

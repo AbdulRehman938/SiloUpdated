@@ -2,28 +2,24 @@
 export const blogDetailsData = {
   1: {
     id: 1,
-    image: "https://res.cloudinary.com/di9tb45rl/image/upload/v1762717286/rambling1_wotzmr.png",
+    image: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960191/1_rr3wzk.png",
     category: "UGC",
     readTime: "5 min read",
-    title: "How to brief a UGC creator",
+    title: "The Rise of AI-Powered Content Creation",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    author: "Demo Author",
-    publishDate: "12 Sept 2024",
-    featuredImage: "https://res.cloudinary.com/di9tb45rl/image/upload/v1762717272/placeholderblog1_r8kl8d.png",
+    author: "Ruby Turbot",
+    publishDate: "12 Sept 2025",
+    featuredImage: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960191/1_rr3wzk.png",
     content: {
       introduction: {
         title: 'Introduction',
         paragraphs: [
-          'Hi laudantium est et quaerat ligula ac diam, error vel vitae sapien duis molestie neque dolor faucibus eget vestibulum leo. Dictum quis molestie est et Tellus aliquam lorem urna aliam. Mauris pretium mauris mauris amet, diam elit neque Curabitur. At feugiat sapien varius id.',
-          'Eget quis mauris leo lacinia pharetra, tempus. Sapien in vestibulum mollis et vulputate lectus ut sed aliquam. Auctor ut lacinia arcu quis Tellus magna mauris. Nulla ut habitasse diam ut. Suspendisse tellus neque, quis egestas elit et vulputate. Mauris pretium mauris mauris amet, diam elit neque Curabitur. At feugiat sapien varius id.'
+          'Content demand has grown exponentially over the past five years. With more platforms, more formats, and more competition, brands are under pressure to publish high quality content at a pace that was unthinkable a decade ago. In 2025, AI has become the most transformative solution for meeting this demand. It is not a shortcut or a gimmick. AI powered content creation is now a core part of how modern marketing teams plan, produce, and scale social media output.',
+          'AI tools are reshaping everything from ideation and scripting to editing, design, and performance analysis. Brands of every size are adopting AI not to replace creative teams, but to empower them to work faster, smarter, and with greater consistency. AI has become the new creative partner that never sleeps.'
         ]
       },
-      contentImage: {
-        src: 'https://res.cloudinary.com/di9tb45rl/image/upload/v1762717274/placeholderblog2_vdiswn.png',
-        alt: 'Placeholder project image showing example visuals',
-        caption: 'Illustrative placeholder image — example project visuals'
-      },
       quote: {
+        title: 'Quote',
         text: 'Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus.',
         author: 'Demo Author'
       },
@@ -40,14 +36,14 @@ export const blogDetailsData = {
   },
   2: {
     id: 2,
-    image: "https://res.cloudinary.com/di9tb45rl/image/upload/v1762717283/rambling2_dhai4t.png",
+    image: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960191/2_gtiyqf.png",
     category: "Animation",
     readTime: "5 min read",
     title: "Animation checklist for social media",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
     author: "Demo Author",
     publishDate: "12 Sept 2024",
-    featuredImage: "https://res.cloudinary.com/di9tb45rl/image/upload/v1762717272/placeholderblog1_r8kl8d.png",
+    featuredImage: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960191/2_gtiyqf.png",
     content: {
       introduction: {
         title: 'Introduction',
@@ -57,7 +53,7 @@ export const blogDetailsData = {
         ]
       },
       contentImage: {
-        src: 'https://res.cloudinary.com/di9tb45rl/image/upload/v1762717274/placeholderblog2_vdiswn.png',
+        src: 'https://res.cloudinary.com/di9tb45rl/image/upload/v1765960191/2_gtiyqf.png',
         alt: 'Placeholder project image showing example visuals',
         caption: 'Illustrative placeholder image — example project visuals'
       },

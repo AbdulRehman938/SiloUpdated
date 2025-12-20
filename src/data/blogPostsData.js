@@ -32,7 +32,7 @@ export const blogPostsData = [
   },
   {
     id: 4,
-    image: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960198/Placeholder_Image_kwdrqm.png",
+    image: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960193/4_mobwpq.png",
     category: "Insights",
     readTime: "5 min read",
     title: "Why UGC Is Outperforming Traditional Ads in 2025 and How Brands Are Adapting",
@@ -42,7 +42,7 @@ export const blogPostsData = [
   },
   {
     id: 5,
-    image: "https://res.cloudinary.com/di9tb45rl/image/upload/v1762717294/rambling6_o0p8nd.png",
+    image: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960198/Placeholder_Image_kwdrqm.png",
     category: "Insights",
     readTime: "5 min read",
     title: "Meet the Creators: Stories from Our Network",

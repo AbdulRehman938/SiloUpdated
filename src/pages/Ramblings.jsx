@@ -199,10 +199,10 @@ export default function Ramblings() {
                               {filteredPosts[0].readTime}
                             </span>
                           </div>
-                          <h2 className="text-3xl font-bold text-black mb-4 hover:text-brand transition-colors">
+                          <h2 className="text-4xl font-bold text-black mb-4 hover:text-brand transition-colors">
                             {filteredPosts[0].title}
                           </h2>
-                          <p className="text-black mb-6 text-lg">
+                          <p className="text-black mb-6 text-base">
                             {filteredPosts[0].description}
                           </p>
                           <a
@@ -250,7 +250,7 @@ export default function Ramblings() {
                                 </span>
                               </div>
 
-                              <h3 className="text-xl font-bold text-black mb-3 hover:text-brand transition-colors">
+                              <h3 className="text-2xl font-bold text-black mb-3 hover:text-brand transition-colors">
                                 {post.title}
                               </h3>
 
