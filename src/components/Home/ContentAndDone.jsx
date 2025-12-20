@@ -618,7 +618,7 @@ export default function ContentAndDone() {
 
           <div className="flex justify-center md:mt-10">
             <a
-              href="/case-studies"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2  bg-transparent border-[1px] border-brand h-[55px] px-6 py-3 text-xs font-bold  tracking-wide text-brand relative overflow-hidden group"
             >
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 svg-wrapper group-hover:animate-bounce-custom">
@@ -904,7 +904,7 @@ export default function ContentAndDone() {
 
           <div className="flex justify-center mt-[-5rem]">
             <a
-              href="/case-studies"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2  bg-transparent border-[1px] border-brand h-[55px] px-6 py-3 text-base font-extrabold  tracking-wide text-brand"
             >
               <span>View all</span>
