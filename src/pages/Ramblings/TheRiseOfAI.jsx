@@ -71,8 +71,8 @@ export default function TheRiseOfAI() {
   };
 
   usePageMeta(
-    `${blogPost.title} | Silo Creative Ramblings`,
-    "Content demand has grown exponentially over the past five years. Read more about AI-Powered Content Creation."
+    "AI-Powered Content Creation: 2025 Guide for Brands",
+    "Discover how AI tools are transforming content creation in 2025. Learn how brands scale production, boost quality, and streamline social media workflows."
   );
 
   return (

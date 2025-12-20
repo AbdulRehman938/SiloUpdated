@@ -148,9 +148,9 @@ export default function NewsletterSubscription({
         </form>
         <p className="text-xs text-black mt-3">
           By subscribing you agree to with our{" "}
-          <a href="/privacy-policy" className="underline hover:text-black">
+          <Link to="/privacy" className="underline hover:text-black">
             Privacy Policy
-          </a>
+          </Link>
         </p>
       </div>
     </div>

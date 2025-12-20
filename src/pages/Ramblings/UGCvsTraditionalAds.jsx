@@ -72,8 +72,8 @@ export default function UGCvsTraditionalAds() {
   };
 
   usePageMeta(
-    `${blogPost.title} | Silo Creative Ramblings`,
-    "Content demand has grown exponentially over the past five years. Read more about AI-Powered Content Creation."
+    "Why UGC Beats Traditional Ads in 2025",
+    "UGC is outperforming traditional ads across every platform in 2025. See why consumers trust creators more and how brands scale UGC for results."
   );
 
   return (

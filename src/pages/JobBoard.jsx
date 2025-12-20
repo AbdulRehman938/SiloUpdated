@@ -228,12 +228,9 @@ export default function JobBoard() {
 
                 <p className="text-xs text-black mt-3">
                   By clicking Sign Up you're confirming that you agree with our{" "}
-                  <a
-                    href="/privacy-policy"
-                    className="underline hover:text-brand"
-                  >
+                  <Link to="/terms" className="underline hover:text-brand">
                     Terms and Conditions
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

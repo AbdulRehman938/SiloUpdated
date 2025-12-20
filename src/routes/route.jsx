@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../pages/Home.jsx";
 import Layout from "../Layout.jsx";
 import Services from "../pages/Services.jsx";
@@ -11,6 +11,7 @@ import Contact2 from "../pages/Contact2.jsx";
 import Terms from "../pages/Terms.jsx";
 import Privacy from "../pages/Privacy.jsx";
 import Cookies from "../pages/Cookies.jsx";
+import Legal from "../pages/Legal.jsx";
 import NotFound from "../pages/NotFound.jsx";
 import CareerIndex from "../pages/CareerIndex.jsx";
 import JobDetail from "../pages/JobDetail.jsx";
@@ -35,20 +36,37 @@ function RoutesTree() {
         <Route path="blog" element={<Ramblings />} />
         <Route path="case-studies" element={<CaseStudies />} />
         <Route path="case-studies/:id" element={<PostCaseStudy />} />
-        <Route path="blog/1" element={<TheRiseOfAI />} />
-        <Route path="blog/2" element={<BrandIdentityShift />} />
-        <Route path="blog/3" element={<SocialAlgorithmChanges />} />
-        <Route path="blog/4" element={<UGCvsTraditionalAds />} />
-        <Route path="blog/5" element={<MeetTheCreators />} />
+        <Route
+          path="ai-powered-content-creation-2025"
+          element={<TheRiseOfAI />}
+        />
+        <Route
+          path="2025-brand-identity-trends-motion-design"
+          element={<BrandIdentityShift />}
+        />
+        <Route
+          path="2025-social-media-algorithm-updates"
+          element={<SocialAlgorithmChanges />}
+        />
+        <Route
+          path="ugc-outperforming-traditional-ads-2025"
+          element={<UGCvsTraditionalAds />}
+        />
+        <Route
+          path="interactive-web-experiences-2025"
+          element={<MeetTheCreators />}
+        />
         <Route path="ugc-contact" element={<Contact />} />
         <Route path="contact" element={<Contact2 />} />
         <Route path="terms" element={<Terms />} />
-        <Route path="privacy-policy" element={<Privacy />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="legal" element={<Legal />} />
         <Route path="cookies" element={<Cookies />} />
         <Route path="careers" element={<CareerIndex />} />
         <Route path="job/:id" element={<JobDetail />} />
         <Route path="jobs/:jobId" element={<JobBoardDetail />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="404" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/404" replace />} />
       </Route>
     </Routes>
   );

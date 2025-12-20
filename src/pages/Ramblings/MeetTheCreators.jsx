@@ -70,8 +70,8 @@ export default function MeetTheCreators() {
   };
 
   usePageMeta(
-    `${blogPost.title} | Silo Creative Ramblings`,
-    "Content demand has grown exponentially over the past five years. Read more about AI-Powered Content Creation."
+    "Interactive Web Experiences: 2025 Design Trends",
+    "Web design is evolving fast. Discover 2025’s shift from static websites to interactive, personalised web experiences that engage and convert users."
   );
 
   return (

@@ -72,8 +72,8 @@ export default function SocialAlgorithmChanges() {
   };
 
   usePageMeta(
-    `${blogPost.title} | Silo Creative Ramblings`,
-    "Content demand has grown exponentially over the past five years. Read more about AI-Powered Content Creation."
+    "2025 Social Media Algorithm Updates Explained",
+    "Stay ahead of the biggest TikTok, Meta and YouTube algorithm changes in 2025. Understand what’s new and how to adapt your social strategy."
   );
 
   return (

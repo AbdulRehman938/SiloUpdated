@@ -63,12 +63,12 @@ const Footer = () => {
                 </form>
                 <p className="mt-3 text-sm text-black font-bold max-w-md">
                   By subscribing you agree to with our{" "}
-                  <a
-                    href="/privacy-policy"
+                  <Link
+                    to="/legal"
                     className="underline cursor-pointer ease-in-out duration-200"
                   >
                     Legal & Website Terms
-                  </a>{" "}
+                  </Link>{" "}
                   and provide consent to receive updates from our company.
                 </p>
               </div>
@@ -333,24 +333,24 @@ const Footer = () => {
               © {year} The Silo Creative Limited. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center gap-6 text-base">
-              <a
-                href="/privacy-policy"
+              <Link
+                to="/legal"
                 className="font-bold text-black underline text-sm ease-in-out duration-200 cursor-pointer"
               >
                 Legal & Website Terms
-              </a>
+              </Link>
               <Link
                 to="/terms"
                 className="font-bold text-black underline text-sm ease-in-out duration-200 cursor-pointer"
               >
                 Terms & Conditions
               </Link>
-              <a
-                href="/cookies"
+              <Link
+                to="/privacy"
                 className="font-bold text-black underline text-sm ease-in-out duration-200 cursor-pointer"
               >
                 Cookies Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -516,25 +516,25 @@ const Footer = () => {
 
           {/* Bottom Links */}
           <div className="mt-6 pt-4 flex justify-around items-center w-full">
-            <div className="flex flex-wrap items-center gap-4 text-xs mx-auto">
-              <a
-                href="/privacy-policy"
+            <div className="flex flex-wrap items-center gap-4 text-xs mx-auto justify-center">
+              <Link
+                to="/legal"
                 className="ease-in-out font-bold text-black duration-200 cursor-pointer"
               >
                 Legal & Website Terms
-              </a>
+              </Link>
               <Link
                 to="/terms"
                 className="ease-in-out font-bold text-black duration-200 cursor-pointer"
               >
                 Terms & Conditions
               </Link>
-              <a
-                href="/cookies"
+              <Link
+                to="/privacy"
                 className="ease-in-out font-bold text-black duration-200 cursor-pointer"
               >
                 Cookies Policy
-              </a>
+              </Link>
             </div>
           </div>
           {/* Newsletter */}

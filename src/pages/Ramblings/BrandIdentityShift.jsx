@@ -72,8 +72,8 @@ export default function BrandIdentityShift() {
   };
 
   usePageMeta(
-    `${blogPost.title} | Silo Creative Ramblings`,
-    "The 2025 Brand Identity Shift: Minimalism Out, Motion Led Design In. Read more about the shift."
+    "2025 Brand Identity Trends: Motion Led Design",
+    "Explore 2025’s biggest branding shift from minimalism to motion led design. Learn how dynamic identities help brands stand out across digital channels."
   );
 
   return (
