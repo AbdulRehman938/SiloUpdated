@@ -137,6 +137,7 @@ const KnightsgatePartners = () => {
           src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765966835/Placeholder_Lightbox_2_r3duh2.png"
           alt="img"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 

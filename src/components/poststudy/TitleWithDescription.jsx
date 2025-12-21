@@ -109,6 +109,7 @@ const TitleWithDescription = ({
                 src={mediaSrc}
                 alt={title || "Case study media"}
                 className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
               />
             )}
           </div>

@@ -48,16 +48,19 @@ const BasementApproved = () => {
           "A fully rebuilt website that unifies music, culture and editorial content.",
       },
       column2: {
-        image: { src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765974657/1_ppkdip.png", alt: "Automated mixes hub" },
+        image: {
+          src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765974657/1_ppkdip.png",
+          alt: "Automated mixes hub",
+        },
         stat: {
           heading: "Automated mixes hub",
-           value: (
-          <>
-            <span className="text-[0.8em]">Mixcloud</span>
-            <br />
-            <span className="text-[0.8em]">API</span>
-          </>
-        ),
+          value: (
+            <>
+              <span className="text-[0.8em]">Mixcloud</span>
+              <br />
+              <span className="text-[0.8em]">API</span>
+            </>
+          ),
           description:
             "Introduction of an automated Mixes hub powered by the Mixcloud API.",
         },
@@ -66,16 +69,19 @@ const BasementApproved = () => {
         stat: {
           heading: "Dynamic mix publishing",
           value: (
-          <>
-            <span className="text-[0.7em]">Auto</span>
-            <br />
-            <span className="text-[0.7em]">Updating</span>
-          </>
-        ),
+            <>
+              <span className="text-[0.7em]">Auto</span>
+              <br />
+              <span className="text-[0.7em]">Updating</span>
+            </>
+          ),
           description:
             "Dynamic mix pages that update automatically as new content is published.",
         },
-        image: { src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765974659/Placeholder_Image_hkr78c.png", alt: "Dynamic mix publishing" },
+        image: {
+          src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765974659/Placeholder_Image_hkr78c.png",
+          alt: "Dynamic mix publishing",
+        },
       },
     },
     fullScreenImage: {
@@ -174,6 +180,7 @@ const BasementApproved = () => {
           src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765966107/image_14_jsndeb.png"
           alt="img"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -235,20 +242,22 @@ const BasementApproved = () => {
         column2={caseStudy.stats.column2}
         column3={caseStudy.stats.column3}
       />
- <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-6 md:px-0 py-10 md:py-20 lg:mb-10">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-6 md:px-0 py-10 md:py-20 lg:mb-10">
         <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/3 lg:w-1/2">
-         Strengthening the platform for a growing community
+          Strengthening the platform for a growing community
         </h1>
         <div className="flex flex-col w-full md:w-2/3 gap-6 justify-between items-start text-left font-epilogue text-base md:text-lg">
           <p>
-           A significantly improved user experience with better structure and navigation.Stronger alignment between the website and BasementApproved’s long established social presence.
+            A significantly improved user experience with better structure and
+            navigation.Stronger alignment between the website and
+            BasementApproved’s long established social presence.
           </p>
           <p>
-           A digital platform that now reflects the scale and influence of a brand with over 340,000 followers.
+            A digital platform that now reflects the scale and influence of a
+            brand with over 340,000 followers.
           </p>
         </div>
       </div>
-     
 
       <Section />
       <div className="relative left-1/2 -translate-x-1/2 w-screen h-[1px] bg-black mt-10" />

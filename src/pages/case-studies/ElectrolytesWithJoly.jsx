@@ -73,9 +73,18 @@ const ElectrolytesWithJoly = () => {
       ],
 
       images: [
-        { src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765998153/1_vmu3xv.png", alt: "Workout tracking screen" },
-        { src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765998155/2_xwc2m7.png", alt: "Social challenges" },
-        { src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765998163/Placeholder_Image_pxcpro.png", alt: "Achievement system" },
+        {
+          src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765998153/1_vmu3xv.png",
+          alt: "Workout tracking screen",
+        },
+        {
+          src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765998155/2_xwc2m7.png",
+          alt: "Social challenges",
+        },
+        {
+          src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765998163/Placeholder_Image_pxcpro.png",
+          alt: "Achievement system",
+        },
       ],
     },
     simpleHeadingText: {
@@ -112,6 +121,7 @@ const ElectrolytesWithJoly = () => {
           src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765966122/Placeholder_Lightbox_ldgfrj.png"
           alt="img"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -137,11 +147,17 @@ const ElectrolytesWithJoly = () => {
       />
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-6 md:px-0 py-10 md:py-20">
         <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
-         Clear and confident visual direction for the show’s future
+          Clear and confident visual direction for the show’s future
         </h1>
         <div className="flex flex-col w-full md:w-[70%] gap-6 justify-between items-start text-left font-epilogue text-base md:text-base">
           <p>
-           The new identity gives Electrolytes With Joly a visual direction that feels intentional and fully aligned with the tone of the show. It brings consistency to how episodes are presented, strengthens the overall brand presence and provides assets that are simple to use as the show grows. The system supports both one off releases and long term content, giving the brand room to evolve while maintaining a strong sense of character.
+            The new identity gives Electrolytes With Joly a visual direction
+            that feels intentional and fully aligned with the tone of the show.
+            It brings consistency to how episodes are presented, strengthens the
+            overall brand presence and provides assets that are simple to use as
+            the show grows. The system supports both one off releases and long
+            term content, giving the brand room to evolve while maintaining a
+            strong sense of character.
           </p>
         </div>
       </div>

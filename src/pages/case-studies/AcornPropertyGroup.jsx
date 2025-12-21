@@ -218,6 +218,7 @@ const AcornPropertyGroup = () => {
           src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765966918/Placeholder_Lightbox_uxp28m.png"
           alt="img"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -269,11 +270,14 @@ const AcornPropertyGroup = () => {
 
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-6 md:px-0 py-10 md:py-20">
         <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/3 lg:w-1/2">
-         The outcome: a confident and growing multi platform presence
+          The outcome: a confident and growing multi platform presence
         </h1>
         <div className="flex flex-col w-full md:w-2/3 gap-6 justify-between items-start text-left font-epilogue text-base md:text-lg">
           <p>
-           Acorn’s digital identity now mirrors the craftsmanship and care that define their developments. Their presence is clearer, stronger and more engaging — supported by ongoing optimisation, strategic content planning and a partnership built to support long term growth.
+            Acorn’s digital identity now mirrors the craftsmanship and care that
+            define their developments. Their presence is clearer, stronger and
+            more engaging — supported by ongoing optimisation, strategic content
+            planning and a partnership built to support long term growth.
           </p>
         </div>
       </div>

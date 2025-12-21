@@ -149,6 +149,7 @@ const Cluberly = () => {
           src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765966838/Placeholder_Lightbox_r1xyms.png"
           alt="img"
           className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -192,11 +193,15 @@ const Cluberly = () => {
 
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-6 md:px-0 py-10 md:py-20 md:pt-0">
         <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
-         Strengthening clarity for every audience
+          Strengthening clarity for every audience
         </h1>
         <div className="flex flex-col w-full md:w-[70%] gap-6 justify-between items-start text-left font-epilogue text-base md:text-base">
           <p>
-           Cluberly now has a clear and cohesive range of communication tools that convey the product’s value, purpose and simplicity. These assets have improved engagement across marketing, investor pitches and partnership conversations, helping the brand build stronger connections with audiences.
+            Cluberly now has a clear and cohesive range of communication tools
+            that convey the product’s value, purpose and simplicity. These
+            assets have improved engagement across marketing, investor pitches
+            and partnership conversations, helping the brand build stronger
+            connections with audiences.
           </p>
         </div>
       </div>
