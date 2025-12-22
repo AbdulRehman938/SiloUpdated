@@ -39,6 +39,8 @@ const MindsInTheSilo = () => {
         "Will designs clean, human-focused digital experiences with a balance of creativity and practical thinking. He helps brands show up with clarity and purpose, turning ideas into simple products people enjoy using. When he’s not working, he’s likely on a padel court perfecting his backhand.",
       imageUrl:
         "https://res.cloudinary.com/di9tb45rl/image/upload/v1762717231/Carousal4_inzouv.png",
+      // allow per-item override of image container heights (mobile / md / lg)
+      imageHeightClass: "h-[26rem] md:h-[25rem] lg:h-[30rem]",
     },
     {
       id: "join-us",
@@ -410,6 +412,7 @@ const MindsInTheSilo = () => {
             >
               {carouselData.map((item, index) => {
                 const isInViewport = cardsInViewport.has(index);
+                const isDisplayed = index >= currentSlide && index < currentSlide + cardsPerView;
 
                 return (
                   <motion.div
@@ -422,10 +425,10 @@ const MindsInTheSilo = () => {
                     style={{ width: `${cardWidth}px` }}
                     initial={{ opacity: 0, scale: 0.8, y: 50, rotateY: -15 }}
                     animate={{
-                      opacity: isInViewport ? 1 : 0,
-                      scale: isInViewport ? 1 : 0.8,
-                      y: isInViewport ? 0 : 50,
-                      rotateY: isInViewport ? 0 : -15,
+                      opacity: (isInViewport || isDisplayed) ? 1 : 0,
+                      scale: (isInViewport || isDisplayed) ? 1 : 0.8,
+                      y: (isInViewport || isDisplayed) ? 0 : 50,
+                      rotateY: (isInViewport || isDisplayed) ? 0 : -15,
                     }}
                     transition={{
                       duration: 0.8,
@@ -438,9 +441,8 @@ const MindsInTheSilo = () => {
                     {item.type === "team-member" ? (
                       // Team Member Card - No fading animations
                       <motion.div
-                        className="bg-white h-full flex flex-col border-[1px] p-1 transition-all duration-200"
+                        className="bg-white flex flex-col border-[1px] p-1 transition-all duration-200 min-h-[28rem]"
                         style={{
-                          minHeight: "300px",
                           pointerEvents: "auto",
                           borderColor:
                             cardsPerView === 1 && isInViewport
@@ -460,13 +462,15 @@ const MindsInTheSilo = () => {
                         whileHover={!isDragging ? {} : {}}
                         transition={{ duration: 0.3 }}
                       >
-                        <img
-                          src={item.imageUrl}
-                          alt={`${item.name} - Team Member`}
-                          className="w-full h-auto object-cover flex-1 max-h-[22rem] lg:max-h-[22rem] md:max-h-[30rem]"
-                          loading="lazy"
-                          draggable={false}
-                        />
+                        <div className={`w-full ${item.imageHeightClass || 'h-[26rem] md:h-[25rem] lg:h-[30rem]'} overflow-hidden`}>
+                          <img
+                            src={item.imageUrl}
+                            alt={`${item.name} - Team Member`}
+                            className="w-full h-full object-cover block"
+                            loading="lazy"
+                            draggable={false}
+                          />
+                        </div>
 
                         {/* Text Content - No animations */}
                         <div className="mt-0 pt-3 sm:pt-3 lg:pt-4">
@@ -484,9 +488,8 @@ const MindsInTheSilo = () => {
                     ) : (
                       // Special Card - Viewport-based animations
                       <motion.div
-                        className=" p-3 sm:p-4 lg:p-6 xl:p-8 h-full flex flex-col justify-center items-center text-left border-[1px] group"
+                        className="p-3 sm:p-4 lg:p-6 xl:p-8 flex flex-col justify-center items-center text-left border-[1px] group min-h-[28rem] md:min-h-[40rem]"
                         style={{
-                          minHeight: "300px",
                           backgroundColor: "#FFE5E5",
                           borderColor: "#FF322E",
                           pointerEvents: isDragging ? "none" : "auto",
@@ -505,8 +508,8 @@ const MindsInTheSilo = () => {
                           className="space-y-6 sm:space-y-4 lg:space-y-6 xl:space-y-8 max-w-xs"
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{
-                            opacity: isInViewport ? 1 : 0,
-                            scale: isInViewport ? 1 : 0.8,
+                            opacity: (isInViewport || isDisplayed) ? 1 : 0,
+                            scale: (isInViewport || isDisplayed) ? 1 : 0.8,
                           }}
                           transition={{
                             duration: 0.6,
@@ -523,9 +526,9 @@ const MindsInTheSilo = () => {
                             }}
                             initial={{ opacity: 0, scale: 0.7, rotateZ: -5 }}
                             animate={{
-                              opacity: isInViewport ? 1 : 0,
-                              scale: isInViewport ? 1 : 0.7,
-                              rotateZ: isInViewport ? 0 : -5,
+                              opacity: (isInViewport || isDisplayed) ? 1 : 0,
+                              scale: (isInViewport || isDisplayed) ? 1 : 0.7,
+                              rotateZ: (isInViewport || isDisplayed) ? 0 : -5,
                             }}
                             transition={{
                               duration: 0.6,
@@ -545,8 +548,8 @@ const MindsInTheSilo = () => {
                             }}
                             initial={{ opacity: 0, y: 15 }}
                             animate={{
-                              opacity: isInViewport ? 1 : 0,
-                              y: isInViewport ? 0 : 15,
+                              opacity: (isInViewport || isDisplayed) ? 1 : 0,
+                              y: (isInViewport || isDisplayed) ? 0 : 15,
                             }}
                             transition={{
                               duration: 0.6,

@@ -144,6 +144,9 @@ const KnightsgatePartners = () => {
       <TitleWithDescription
         title={caseStudy.titleSection.title}
         description={caseStudy.titleSection.description}
+        minHeightClass="min-h-[300px] md:min-h-[250px]"
+        leftWidthClass="md:w-[45%]"
+        rightWidthClass="md:w-[50%] text-3xl"
         mediaType="none"
       />
       <GalleryWithText
@@ -180,6 +183,9 @@ const KnightsgatePartners = () => {
       <TitleWithDescription
         title={caseStudy.titleSection2.title}
         description={caseStudy.titleSection2.description}
+        minHeightClass="min-h-[300px] md:min-h-[400px]"
+        leftWidthClass="md:w-[55%]"
+        rightWidthClass="md:w-[50%]"
         mediaType="none"
       />
       {/* <FullScreenImage

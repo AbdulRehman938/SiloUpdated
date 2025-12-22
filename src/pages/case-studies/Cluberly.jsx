@@ -156,8 +156,12 @@ const Cluberly = () => {
       <TitleWithDescription
         title={caseStudy.titleSection.title}
         description={caseStudy.titleSection.description}
-        mediaType="image"
-        mediaSrc="https://res.cloudinary.com/di9tb45rl/image/upload/v1766006435/1_eghyei.png"
+        minHeightClass="min-h-[300px] md:min-h-[250px]"
+        leftWidthClass="md:w-[45%]"
+        rightWidthClass="md:w-[50%]"
+        mediaType="iframe"
+        mediaSrc="https://player.vimeo.com/video/1148605076?badge=0&autopause=0&player_id=0&app_id=58479"
+        mediaCover="https://res.cloudinary.com/di9tb45rl/image/upload/v1766006435/1_eghyei.png"
       />
 
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-6 md:px-0 py-10 md:py-20">

@@ -75,9 +75,9 @@ export default function JobBoard() {
   const showJobs = false;
 
   return (
-    <div className="w-full bg-white md:mt-7 mb-20 max-w-[1280px] mx-auto mt-20">
+    <div className="w-full bg-white md:mt-20 mb-20 max-w-[1280px] mx-auto mt-20">
       {/* Container with 95vw max-width */}
-      <div className="max-w-[full] mx-[3vw] md:mx-auto px-0 sm:px-0 md:px-0 py-10 lg:py-14 lg:pt-20 my-20 md:mb-0">
+      <div className="max-w-[full] mx-[3vw] md:mx-auto px-0 sm:px-0 md:px-0 py-10 lg:py-14 lg:pt-28 my-20 md:mb-0">
         {/* Hero Section - Adjusted for 95vw */}
         <div className="mb-12 lg:mb-16">
           <div className="w-full lg:w-1/2">

@@ -66,7 +66,7 @@ const StatsSection = ({ title, column1, column2, column3 }) => {
         </div>
 
         {/* Column 3: Image then Stats */}
-        <div className="w-full aspect-[4/3] bg-white overflow-hidden">
+        <div className={`w-full ${column3?.image?.heightClass || 'aspect-[4/3]'} bg-white overflow-hidden`}>
           {column3?.image?.src ? (
             <img
               src={column3.image.src}
@@ -87,7 +87,7 @@ const StatsSection = ({ title, column1, column2, column3 }) => {
           )}
         </div>
 
-        <div className="bg-white border-[1px] border-black p-8 flex flex-col justify-between">
+        <div className={`bg-white border-[1px] border-black p-8 flex flex-col justify-between ${column3?.stat?.heightClass || ''}`}>
           <h3 className="text-lg font-bold text-black mb-4">
             {column3?.stat?.heading || "Short stats heading goes here"}
           </h3>
@@ -168,7 +168,7 @@ const StatsSection = ({ title, column1, column2, column3 }) => {
         {/* Column 3: Stat on top, Image on bottom */}
         <div className="flex flex-col md:flex-row lg:flex-col gap-6 md:gap-8 md:col-span-2 lg:col-span-1">
           {/* Stat Card */}
-          <div className="bg-white border-[1px] border-black p-8 lg:p-0 lg:py-10 xl:p-10 flex flex-col justify-between md:w-1/2 lg:w-full">
+          <div className={`bg-white border-[1px] border-black p-8 lg:p-0 lg:py-10 xl:p-10 flex flex-col justify-between md:w-1/2 lg:w-full ${column3?.stat?.heightClass || ''}`}>
             <h3 className="text-lg md:text-xl font-bold text-black mb-4">
               {column3?.stat?.heading || "Short stats heading goes here"}
             </h3>
@@ -185,7 +185,7 @@ const StatsSection = ({ title, column1, column2, column3 }) => {
           </div>
 
           {/* Image Card */}
-          <div className="w-full md:w-1/2 lg:w-full aspect-[4/3] bg-white overflow-hidden">
+          <div className={`w-full md:w-1/2 lg:w-full ${column3?.image?.heightClass || 'aspect-[4/3]'} bg-white overflow-hidden`}>
             {column3?.image?.src ? (
               <img
                 src={column3.image.src}

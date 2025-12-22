@@ -126,7 +126,7 @@ const TomokaFineAndRare = () => {
         <video
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
-          src="https://res.cloudinary.com/di9tb45rl/video/upload/v1765992636/Website_Video_1_dbsva7.mp4"
+          src="https://res.cloudinary.com/di9tb45rl/video/upload/v1766430730/Website_Video_1_pxleqo.mp4"
           loop
           muted
           autoPlay
@@ -137,6 +137,9 @@ const TomokaFineAndRare = () => {
       <TitleWithDescription
         title={caseStudy.titleSection.title}
         description={caseStudy.titleSection.description}
+        minHeightClass="min-h-[300px] md:min-h-[200px]"
+        leftWidthClass="md:w-[45%]"
+        rightWidthClass="md:w-[50%]"
         mediaType="image"
         mediaSrc="https://res.cloudinary.com/di9tb45rl/image/upload/v1765993464/1_fy5lxs.png"
         /*

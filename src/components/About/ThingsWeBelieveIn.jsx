@@ -53,7 +53,7 @@ const ThingsWeBelieveIn = () => {
             
             {/* Text Content Below Card */}
             <h3 
-              className="font-bold text-black text-lg sm:text-lg md:text-2xl lg:text-xl xl:text2xl 2xl:text-4xl text-left"
+              className="font-bold text-black text-lg sm:text-lg md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-3xl text-left"
               style={{
                 fontFamily: 'Epilogue, sans-serif',
                 fontWeight: 700,
@@ -96,8 +96,9 @@ const ThingsWeBelieveIn = () => {
             
             {/* Text Content Below Card */}
             <h3 
-              className="font-bold text-black text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-3xl text-left md:text-left lg:text-left"
+              className="font-bold text-black text-lg sm:text-lg md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-3xl text-left"
               style={{
+                fontFamily: 'Epilogue, sans-serif',
                 fontWeight: 700,
                 lineHeight: '140%',
                 letterSpacing: '0%'
@@ -138,9 +139,9 @@ const ThingsWeBelieveIn = () => {
             
             {/* Text Content Below Card */}
             <h3 
-              className="font-bold text-black text-base sm:text-lg md:text-xl lg:text-lg xl:text-xl 2xl:text-2xl text-left"
+              className="font-bold text-black text-lg sm:text-lg md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-3xl text-left"
               style={{
-                fontFamily: 'Epilogue, sans-serif',
+                 fontFamily: 'Epilogue, sans-serif',
                 fontWeight: 700,
                 lineHeight: '140%',
                 letterSpacing: '0%'

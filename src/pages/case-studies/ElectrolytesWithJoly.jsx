@@ -128,6 +128,9 @@ const ElectrolytesWithJoly = () => {
       <TitleWithDescription
         title={caseStudy.titleSection.title}
         description={caseStudy.titleSection.description}
+        minHeightClass="min-h-[300px] md:min-h-[400px]"
+        leftWidthClass="md:w-[45%]"
+        rightWidthClass="md:w-[50%]"
         mediaType="none"
       />
       {/* <StatsSection

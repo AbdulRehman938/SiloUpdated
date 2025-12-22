@@ -246,14 +246,14 @@ export default function ContentAndDone() {
                   system that brings their community, music and cultural
                   storytelling into one cohesive experience.
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap md:flex-nowrap gap-2 mt-2">
+                  <span className="text-base font-normal text-black p-2 bg-brand/20">
                     Web Design
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                  <span className="text-base font-normal text-black p-2 bg-brand/20">
                     Web Development
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                  <span className="text-base font-normal text-black p-2 bg-brand/20">
                     API Integeration
                   </span>
                 </div>
@@ -293,13 +293,18 @@ export default function ContentAndDone() {
                   storytelling into one cohesive experience.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-base font-normal whitespace-nowrap text-black p-2 bg-brand/20">
                     Web Design
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                    <div className="w-full md:w-auto">
+                      <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-base font-normal md:whitespace-nowrap text-black p-2 bg-brand/20">
+                          Design System
+                        </span>
+                    </div>
+                  <span className="text-base font-normal whitespace-nowrap text-black p-2 bg-brand/20">
                     Web Development
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-base font-normal whitespace-nowrap text-black p-2 bg-brand/20">
                     API Integeration
                   </span>
                 </div>
@@ -373,25 +378,27 @@ export default function ContentAndDone() {
                   From website build to social, video, PR and CRM, Silo
                   transformed Tomoka into a premium digital powerhouse.
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap md:flex-nowrap gap-2 mt-2">
+                  <span className="text-base font-semibold text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold text-black p-2 bg-brand/20">
                     Website
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold text-black p-2 bg-brand/20">
                     Social
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold text-black p-2 bg-brand/20">
                     Creative
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold text-black p-2 bg-brand/20">
                     CRM
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    PPC
-                  </span>
+                  <div className="w-full md:w-auto">
+                    <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-base font-semibold text-black p-2 bg-brand/20 md:inline-block">
+                      PPC
+                    </span>
+                  </div>
                 </div>
                 <a
                   href="/case-studies/tomoka-fine-and-rare"
@@ -428,22 +435,25 @@ export default function ContentAndDone() {
                   transformed Tomoka into a premium digital powerhouse.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
-                    Brandig
+                  <span className="text-base font-semibold md:whitespace-nowrap text-black p-2 bg-brand/20">
+                    Branding
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
-                    Website
+                  <span className="text-base font-semibold md:whitespace-nowrap text-black p-2 bg-brand/20">
+                    Typography
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
-                    Social
+                  <span className="text-base font-semibold md:whitespace-nowrap text-black p-2 bg-brand/20">
+                    Social Templates
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
-                    Creative
-                  </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <div className="w-full md:w-auto">
+                    <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-base font-semibold md:whitespace-nowrap text-black p-2 bg-brand/20">
+                      Design System
+                    </span>
+                  </div>
+                  <span className="text-base font-semibold md:whitespace-nowrap text-black p-2 bg-brand/20">
                     CRM
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  
+                  <span className="text-base font-semibold md:whitespace-nowrap text-black p-2 bg-brand/20 block md:inline-block">
                     PPC
                   </span>
                 </div>
@@ -518,19 +528,21 @@ export default function ContentAndDone() {
                   system that works across social media and ongoing episode
                   releases.
                 </p>
-                <div className="flex space-x-2 mt-2">
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap md:flex-nowrap gap-2 mt-2">
+                  <span className="text-base font-semibold text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold text-black p-2 bg-brand/20">
                     Typography
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold text-black p-2 bg-brand/20">
                     Social Templates
                   </span>
-                  <span className="text-base font-bold text-black p-2 bg-brand/20">
-                    Design System
-                  </span>
+                  <div className="w-full md:w-auto">
+                    <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-base font-semibold text-black p-2 bg-brand/20 md:inline-block">
+                      Design System
+                    </span>
+                  </div>
                 </div>
                 <a
                   href="/case-studies/electrolytes-with-joly"
@@ -568,22 +580,24 @@ export default function ContentAndDone() {
                   releases.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold whitespace-nowrap text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold whitespace-nowrap text-black p-2 bg-brand/20">
                     Typography
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-base font-semibold whitespace-nowrap text-black p-2 bg-brand/20">
                     Social Templates
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
-                    Design System
-                  </span>
+                  <div className="w-full md:w-auto">
+                    <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-base font-semibold whitespace-nowrap text-black p-2 bg-brand/20 md:inline-block">
+                      Design System
+                    </span>
+                  </div>
                 </div>
                 <a
                   href="/case-studies/electrolytes-with-joly"
-                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 h font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -618,7 +632,7 @@ export default function ContentAndDone() {
 
           <div className="flex justify-center md:mt-10">
             <a
-              href="/contact"
+              href="/case-studies"
               className="inline-flex items-center justify-center gap-2  bg-transparent border-[1px] border-brand h-[55px] px-6 py-3 text-xs font-bold  tracking-wide text-brand relative overflow-hidden group"
             >
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 svg-wrapper group-hover:animate-bounce-custom">
@@ -759,7 +773,7 @@ export default function ContentAndDone() {
                   system that brings their community, music and cultural
                   storytelling into one cohesive experience.
                 </p>
-                <div className="flex space-x-2">
+                <div className="flex flex-wrap md:flex-nowrap gap-2">
                   <span className="text-sm font-semibold text-black p-2 bg-brand/20">
                     Web Design
                   </span>
@@ -813,25 +827,27 @@ export default function ContentAndDone() {
                   From website build to social, video, PR and CRM, Silo
                   transformed Tomoka into a premium digital powerhouse.
                 </p>
-                <div className="flex space-x-2">
-                  <span className="text-sm font-bold text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap md:flex-nowrap gap-2">
+                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-sm font-bold text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
                     Website
                   </span>
-                  <span className="text-sm font-bold text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
                     Social
                   </span>
-                  <span className="text-sm font-bold text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
                     Creative
                   </span>
-                  <span className="text-sm font-bold text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold text-black p-2 bg-brand/20">
                     CRM
                   </span>
-                  <span className="text-sm font-bold text-black p-2 bg-brand/20">
-                    PPC
-                  </span>
+                  <div className="w-full md:w-auto">
+                    <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-sm font-semibold text-black p-2 bg-brand/20">
+                      PPC
+                    </span>
+                  </div>
                 </div>
                 <a
                   href="/case-studies/tomoka-fine-and-rare"
@@ -856,7 +872,7 @@ export default function ContentAndDone() {
                 window.location.href = "/case-studies/electrolytes-with-joly";
               }}
             >
-              <div className="w-full h-80">
+              <div className="w-full h-60">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
                   alt="smart stats"
@@ -877,7 +893,7 @@ export default function ContentAndDone() {
                   system that works across social media and ongoing episode
                   releases.
                 </p>
-                <div className="flex space-x-2">
+                <div className="flex flex-wrap md:flex-nowrap gap-2">
                   <span className="text-sm font-bold text-black p-2 bg-brand/20">
                     Branding
                   </span>
@@ -887,9 +903,11 @@ export default function ContentAndDone() {
                   <span className="text-sm font-bold text-black p-2 whitespace-nowrap bg-brand/20">
                     Social Templates
                   </span>
-                  <span className="text-sm font-bold text-black p-2 whitespace-nowrap bg-brand/20">
-                    Design System
-                  </span>
+                  <div className="w-full md:w-auto">
+                    <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-sm font-bold text-black p-2 whitespace-nowrap bg-brand/20">
+                      Design System
+                    </span>
+                  </div>
                 </div>
                 <a
                   href="/case-studies/electrolytes-with-joly"
@@ -904,7 +922,7 @@ export default function ContentAndDone() {
 
           <div className="flex justify-center mt-[-5rem]">
             <a
-              href="/contact"
+              href="/case-studies"
               className="inline-flex items-center justify-center gap-2  bg-transparent border-[1px] border-brand h-[55px] px-6 py-3 text-base font-extrabold  tracking-wide text-brand"
             >
               <span>View all</span>

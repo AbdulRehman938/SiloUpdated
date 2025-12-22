@@ -58,10 +58,14 @@ const AcornPropertyGroup = () => {
           value: "105%",
           description:
             " Certain months saw impressions rising by more than 105% during key periods of activity.",
+          // per-page stat card height for column3
+          heightClass: "min-h-[20rem] md:min-h-[36rem] lg:min-h-[22rem]",
         },
         image: {
           src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1766000003/4_frrh5j.png",
           alt: "Lead generation metrics",
+          // per-page image height for column3
+          heightClass: "h-[20rem] md:h-[36rem] lg:h-[19rem]",
         },
       },
     },
@@ -225,6 +229,9 @@ const AcornPropertyGroup = () => {
       <TitleWithDescription
         title={caseStudy.titleSection.title}
         description={caseStudy.titleSection.description}
+        minHeightClass="min-h-[300px] md:min-h-[250px]"
+        leftWidthClass="md:w-[45%]"
+        rightWidthClass="md:w-[50%]"
         mediaType="image"
         mediaSrc="https://res.cloudinary.com/di9tb45rl/image/upload/v1765999896/0_lzwkcq.png"
       />

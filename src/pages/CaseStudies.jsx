@@ -45,23 +45,21 @@ const CaseStudies = () => {
             {/* Text and Buttons Container */}
             <div className="flex flex-col gap-3 sm:gap-4 items-start w-full px-2 sm:px-0">
               {/* Brand Statement - Zoom & Small Laptop Optimized */}
-              <div>
-                <p
-                  className="text-black text-sm sm:text-base md:text-lg lg:text-xl xl:text-[18px] leading-relaxed text-left max-w-full xl:max-w-lg px-2 sm:px-0 font-epilogue"
-                  style={{
-                    opacity: 1,
-                    fontWeight: 400,
-                    fontFamily: "Epilogue, sans-serif",
-                    lineHeight: "150%",
-                    letterSpacing: "0%",
-                  }}
-                >
-                  Every project tells a story of strategy shaped, content
-                  crafted, identities defined and digital experiences built.
-                  These case studies capture the thinking and creativity that
-                  turn ideas into work that truly moves brands forward.
-                </p>
-              </div>
+              <p
+                className="text-black text-sm sm:text-base md:text-lg lg:text-xl xl:text-[18px] leading-relaxed text-left max-w-full xl:max-w-lg px-2 sm:px-0 font-epilogue"
+                style={{
+                  opacity: 1,
+                  fontWeight: 400,
+                  fontFamily: "Epilogue, sans-serif",
+                  lineHeight: "150%",
+                  letterSpacing: "0%",
+                }}
+              >
+                Every project tells a story of strategy shaped, content
+                crafted, identities defined and digital experiences built.
+                These case studies capture the thinking and creativity that
+                turn ideas into work that truly moves brands forward.
+              </p>
               {/* Buttons - Zoom & Small Laptop Optimized */}
               <div className="flex flex-row gap-3 sm:gap-4 items-start w-full sm:w-auto xl:mx-0">
                 <a
@@ -251,7 +249,7 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 group relative mt-0 cursor-pointer"
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-t-0 border-t-black md:border-t-0 md:border-b md:border-b-black py-12 group relative mt-0 cursor-pointer"
               onClick={() =>
                 (window.location.href = "/case-studies/basement-approved")
               }
@@ -296,7 +294,7 @@ const CaseStudies = () => {
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-[60%] mx-auto md:w-1/2 md:-top-20 h-60 top-10 relative">
+              <div className="w-[60%] mx-auto md:w-1/2 md:-top-20 h-60 top-0 relative">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765882727/Untitled_Project_smo9qt.jpg"
                   alt="smoothie"
@@ -387,7 +385,7 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 md:border-b md:border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
               onClick={() =>
                 (window.location.href = "/case-studies/tomoka-fine-and-rare")
               }
@@ -440,7 +438,7 @@ const CaseStudies = () => {
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-60 top-10 md:-top-20 relative">
+              <div className="w-full md:w-1/2 h-60 top-0 md:-top-20 relative">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/Tomoko-e10fd11f_2_jto3ax.png"
                   alt="smoothie"
@@ -526,7 +524,7 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 md:border-b md:border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
               onClick={() =>
                 (window.location.href = "/case-studies/electrolytes-with-joly")
               }
@@ -574,7 +572,7 @@ const CaseStudies = () => {
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-60 top-10 md:-top-20 relative">
+              <div className="w-full md:w-1/2 h-60 top-0 md:-top-20 relative">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
                   alt="smoothie"
@@ -662,7 +660,7 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 md:border-b md:border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
               onClick={() =>
                 (window.location.href = "/case-studies/acorn-property-group")
               }
@@ -713,7 +711,7 @@ const CaseStudies = () => {
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-60 top-10 relative md:-top-10">
+              <div className="w-full md:w-1/2 h-60 top-0 relative md:-top-10">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951283/28cf00a299ba07f7be18bd388b5bf801_1_fxiv5y.png"
                   alt="smoothie"
@@ -795,7 +793,7 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-b border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 md:border-b md:border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
               onClick={() => (window.location.href = "/case-studies/cluberly")}
             >
               {/* Text content first */}
@@ -839,7 +837,7 @@ const CaseStudies = () => {
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-60 top-10 relative md:-top-20">
+              <div className="w-full md:w-1/2 h-60 top-0 relative md:-top-20">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/1_xifbbg.png"
                   alt="smoothie"
@@ -867,9 +865,9 @@ const CaseStudies = () => {
             >
               <div className="w-1/3 h-72 transform translate-x-32 transition-transform duration-600 ease-in-out lg:group-hover:translate-x-32">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/2_g0zyga.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1766427917/image_15_uceyvk.png"
                   alt="smoothie"
-                  className="w-1/2 h-[calc(100%-32px)] object-cover my-4" // 16px gap top and bottom
+                  className="w-[60%] h-[20rem] object-cover my-4 mt-0" // 16px gap top and bottom
                   loading="lazy"
                 />
               </div>
@@ -924,7 +922,7 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 py-12 pb-0 pt-5 group relative mt-0 cursor-pointer"
               onClick={() =>
                 (window.location.href = "/case-studies/knightsgate-partners")
               }
@@ -974,9 +972,9 @@ const CaseStudies = () => {
                 </a>
               </div>
               {/* Image second */}
-              <div className="w-full md:w-1/2 h-64 top-10 relative md:-top-10 md:ml-10">
+              <div className="w-full md:w-1/2 h-64 top-0 relative md:-top-10 md:ml-10">
                 <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/2_g0zyga.png"
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1766427917/image_15_uceyvk.png"
                   alt="smoothie"
                   className=" w-1/2 mx-auto  h-full md:h-32 object-cover"
                   loading="lazy"
@@ -995,7 +993,7 @@ const CaseStudies = () => {
           </div>
         </div>
       </LazySection>
-      <div className="w-screen mx-auto h-[1px] bg-black md:my-28 my-28 relative left-1/2 -translate-x-1/2" />
+      <div className="w-screen mx-auto h-[1px] bg-black md:my-28 my-28 mb-10 relative left-1/2 -translate-x-1/2" />
       <LazySection>
         <Section />
       </LazySection>

@@ -1,69 +1,109 @@
 import { useState, useRef, useEffect } from "react";
 import Player from "./vimeo-player";
+import { FaCirclePlay } from "react-icons/fa6";
+import { FaCirclePause } from "react-icons/fa6";
 
 const TitleWithDescription = ({
   title,
   description,
-  mediaType = "video", // "video" or "image"
+  mediaType = "video", // "video" or "image" or "iframe"
   mediaSrc = "https://player.vimeo.com/video/76979871?autoplay=1&muted=1&background=0&controls=0",
+  mediaCover = null,
+  mediaScaleY = 1,
+  minHeightClass = null,
+  // allow per-page control of left (title) and right (description) widths
+  leftWidthClass = null,
+  rightWidthClass = null,
 }) => {
   const vimeoIframeRef = useRef(null);
   const playerRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [animating, setAnimating] = useState(false);
+  const animTimeoutRef = useRef(null);
+  const [mouseIdle, setMouseIdle] = useState(false);
+  const idleTimeoutRef = useRef(null);
 
   useEffect(() => {
-    if (mediaType !== "video") return;
+    // initialize Vimeo Player for embedded iframe; do NOT autoplay — start paused by default
+    if (mediaType !== "video" && mediaType !== "iframe") return;
 
-    const handleIframeLoad = () => {
-      if (vimeoIframeRef.current && !playerRef.current) {
-        playerRef.current = new Player(vimeoIframeRef.current);
-        playerRef.current.setVolume(1);
-        playerRef.current.setMuted(true);
-        playerRef.current.play();
-        setIsPlaying(true);
-      }
+    let mounted = true;
+
+    const setupPlayer = () => {
+      if (!vimeoIframeRef.current || playerRef.current) return;
+      playerRef.current = new Player(vimeoIframeRef.current);
+      // set up volume/mute safely
+      playerRef.current.setVolume(1).catch(() => {});
+      playerRef.current.setMuted(true).catch(() => {});
+
+      // start paused by default
+      if (mounted) setIsPlaying(false);
+
+      const handlePlay = () => mounted && setIsPlaying(true);
+      const handlePause = () => mounted && setIsPlaying(false);
+
+      playerRef.current.on("play", handlePlay);
+      playerRef.current.on("pause", handlePause);
+
+      playerRef.current._silo_handlers = { handlePlay, handlePause };
     };
 
     const iframe = vimeoIframeRef.current;
     if (iframe) {
-      iframe.addEventListener("load", handleIframeLoad);
-      // If already loaded, call immediately
-      if (iframe.readyState === "complete") handleIframeLoad();
+      setupPlayer();
+      iframe.addEventListener("load", setupPlayer);
     }
+
     return () => {
-      if (iframe) iframe.removeEventListener("load", handleIframeLoad);
+      mounted = false;
+      if (iframe) iframe.removeEventListener("load", setupPlayer);
       if (playerRef.current) {
-        playerRef.current.unload();
+        const handlers = playerRef.current._silo_handlers || {};
+        try {
+          if (handlers.handlePlay) playerRef.current.off("play", handlers.handlePlay);
+          if (handlers.handlePause) playerRef.current.off("pause", handlers.handlePause);
+        } catch (e) {}
+        try {
+          playerRef.current.unload();
+        } catch (e) {}
         playerRef.current = null;
       }
     };
   }, [mediaType, mediaSrc]);
 
   const handleVimeoClick = () => {
-    if (playerRef.current) {
-      playerRef.current.getPaused().then((paused) => {
-        if (paused) {
-          playerRef.current.play();
-          setIsPlaying(true);
-        } else {
-          playerRef.current.pause();
-          setIsPlaying(false);
-        }
-      });
-    }
+    if (!playerRef.current) return;
+    playerRef.current.getPaused().then((paused) => {
+      if (paused) {
+        playerRef.current.play();
+        // animate button on resume
+        setAnimating(true);
+        if (animTimeoutRef.current) clearTimeout(animTimeoutRef.current);
+        animTimeoutRef.current = setTimeout(() => setAnimating(false), 400);
+      } else {
+        playerRef.current.pause();
+      }
+    });
   };
+
+  useEffect(() => {
+    return () => {
+      if (animTimeoutRef.current) clearTimeout(animTimeoutRef.current);
+    };
+  }, []);
 
   return (
     <>
       <div className="w-full max-w-[1280px] mx-auto py-16 md:py-24 px-3 md:px-0">
-        <div className="relative min-h-[300px] md:min-h-[400px]">
-          <div className="relative w-full md:absolute md:top-0 md:left-0 md:w-[55%]">
+        <div className={`relative ${minHeightClass || 'min-h-[300px] md:min-h-[400px]'}`}>
+          <div className={`relative w-full md:absolute md:top-0 md:left-0 ${leftWidthClass || 'md:w-[55%]'}`}>
             <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-epilogue font-bold text-black">
               {title || "This job was pretty bloody cool."}
             </h1>
           </div>
 
-          <div className="relative mt-6 w-full md:absolute md:-bottom-0 md:right-0 md:w-[50%] flex flex-col gap-4 md:mt-0">
+          <div className={`relative mt-6 w-full md:absolute md:-bottom-0 md:right-0 ${rightWidthClass || 'md:w-[50%]'} flex flex-col gap-4 md:mt-0`}>
             {Array.isArray(description) ? (
               description.map((para, index) => (
                 <p
@@ -84,7 +124,27 @@ const TitleWithDescription = ({
 
         {mediaType !== "none" && (
           <div
-            className="relative w-full h-[30vh] md:h-auto md:aspect-video overflow-hidden mt-20 cursor-pointer"
+            className="relative w-full h-[30vh] md:h-auto md:aspect-video overflow-hidden mt-20"
+            onMouseEnter={() => {
+              setHovered(true);
+              setMouseIdle(false);
+              if (idleTimeoutRef.current) clearTimeout(idleTimeoutRef.current);
+              idleTimeoutRef.current = setTimeout(() => setMouseIdle(true), 1000);
+            }}
+            onMouseMove={() => {
+              // reset idle timer on movement
+              setMouseIdle(false);
+              if (idleTimeoutRef.current) clearTimeout(idleTimeoutRef.current);
+              idleTimeoutRef.current = setTimeout(() => setMouseIdle(true), 1000);
+            }}
+            onMouseLeave={() => {
+              setHovered(false);
+              setMouseIdle(false);
+              if (idleTimeoutRef.current) {
+                clearTimeout(idleTimeoutRef.current);
+                idleTimeoutRef.current = null;
+              }
+            }}
             onClick={mediaType === "video" ? handleVimeoClick : undefined}
           >
             {mediaType === "video" ? (
@@ -99,16 +159,83 @@ const TitleWithDescription = ({
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                   title="Vimeo Video"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  style={{ border: 0, borderRadius: 0 }}
+                  className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto z-0"
+                  style={{ border: 0, borderRadius: 0, transform: `translate(-50%,-50%) scaleY(${mediaScaleY})` }}
                 />
-                <div className="absolute inset-0 w-full h-full bg-black bg-opacity-30 pointer-events-none" />
+
+                {/* Show cover image over the video when paused */}
+                {!isPlaying && mediaCover && (
+                  <img
+                    src={mediaCover}
+                    alt={title || "video cover"}
+                    className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto object-cover z-10"
+                    style={{ transform: `translate(-50%,-50%)` }}
+                    loading="lazy"
+                  />
+                )}
+
+                <div className="absolute inset-0 w-full h-full bg-black bg-opacity-30 pointer-events-none z-15" />
               </>
+              ) : mediaType === "iframe" ? (
+                <>
+                  <iframe
+                    ref={vimeoIframeRef}
+                    src={mediaSrc}
+                    title={title || "Case study video"}
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto"
+                    style={{ transform: `translate(-50%,-50%) scaleY(${mediaScaleY})` }}
+                  />
+
+                    {/* Show cover image over the video when paused */}
+                    {!isPlaying && mediaCover && (
+                      <img
+                        src={mediaCover}
+                        alt={title || "video cover"}
+                        className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto object-cover z-10"
+                        style={{ transform: `translate(-50%,-50%)` }}
+                        loading="lazy"
+                      />
+                    )}
+
+                    {/* Overlay + centered play/pause button */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      {/** dark overlay shown only when paused */}
+                      {!isPlaying && (
+                        <div className="absolute inset-0 bg-black bg-opacity-30 z-15" />
+                      )}
+
+                    {/* Button: visible when paused, or when hovered while playing and not idle for 1s */}
+                    {((!isPlaying) || (hovered && !mouseIdle)) && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleVimeoClick();
+                        }}
+                        className={`relative z-20 pointer-events-auto rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-300 ${animating ? 'scale-110' : 'scale-100'}`}
+                        aria-label={isPlaying ? "Pause video" : "Play video"}
+                      >
+                        {isPlaying ? (
+                         
+                            <FaCirclePause className="w-12 h-12 bg-black rounded-full text-white" />
+                        ) : (
+                          // Pause icon when paused
+                         // Play icon while playing (per spec) — will hide when not hovered
+                         <FaCirclePlay className="w-12 h-12 bg-black rounded-full text-white" />
+                        )}
+                      </button>
+                    )}
+                  </div>
+                </>
             ) : (
               <img
                 src={mediaSrc}
                 alt={title || "Case study media"}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute left-1/2 top-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2 object-cover"
                 loading="lazy"
               />
             )}

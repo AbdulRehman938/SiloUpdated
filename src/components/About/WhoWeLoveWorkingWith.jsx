@@ -5,7 +5,7 @@ import "../../styles/scaling-overrides.css";
 // Marquee row data objects — edit these to add/remove/modify each row
 const row1 = {
   id: "row1",
-  text: "Creative Alchemy , Strategic Storycraft , Cinematic Motion Design , High‑Impact UGC , Craft‑forward Design , Social‑first Campaigns , Distinctive Brand Language , ",
+  text: "E-commerce & DTC , Beauty & Skincare , Wellness & Supplements , Food & Beverage , Lifestyle & Home , Travel & Hospitality , ",
   speed: 40,
   direction: "left",
   className: "text-lg md:text-lg xl:text-2xl font-bold text-black",
@@ -19,7 +19,7 @@ const row1 = {
 
 const row2 = {
   id: "row2",
-  text: "Bold Intent , Purpose‑driven Growth Strategies , Rapid Iteration at Scale , Playful yet Polished Execution , Authentic Human‑first Content , Digital Experience Design , Measurable Impact , ",
+  text: "Hotels & Resorts , Airbnbs , Adventure & Experiences , Home Décor , Furniture , Kitchenware , Premium & Emerging Brands , ",
   speed: 40,
   direction: "right",
   className: "text-lg md:text-lg xl:text-2xl font-bold text-black",
@@ -30,7 +30,7 @@ const row2 = {
 
 const row3 = {
   id: "row3",
-  text: "Collaborative Minds , Relentless Curiosity , Exponential Growth Mindset , Visionary Roadmaps , Future‑focused Craftsmanship , Silo Studio Ethos , Industry‑defining Work , ",
+  text: "Social-led Rebrands , Creator-led Campaigns , Retention & Community , Direct-to-Consumer Growth , Premium Collaborations , ",
   speed: 40,
   direction: "left",
   className: "text-lg md:text-lg xl:text-2xl font-bold text-black",
