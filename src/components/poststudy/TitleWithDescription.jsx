@@ -168,8 +168,8 @@ const TitleWithDescription = ({
                   <img
                     src={mediaCover}
                     alt={title || "video cover"}
-                    className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto object-cover z-10"
-                    style={{ transform: `translate(-50%,-50%)` }}
+                    className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto object-cover z-10 transform-gpu transition-transform duration-500"
+                    style={{ transform: `translate(-50%,-50%) scale(1.03)` }}
                     loading="lazy"
                   />
                 )}
@@ -196,8 +196,8 @@ const TitleWithDescription = ({
                       <img
                         src={mediaCover}
                         alt={title || "video cover"}
-                        className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto object-cover z-10"
-                        style={{ transform: `translate(-50%,-50%)` }}
+                        className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto object-cover z-10 transform-gpu transition-transform duration-500"
+                        style={{ transform: `translate(-50%,-50%) scale(1.03)` }}
                         loading="lazy"
                       />
                     )}

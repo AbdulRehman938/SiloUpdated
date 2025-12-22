@@ -94,7 +94,7 @@ const GalleryWithText = ({ heading, text, content, images }) => {
           {displayImages.map((image, index) => (
             <div
               key={index}
-              className="w-full aspect-[3/4] bg-white overflow-hidden"
+              className="w-full aspect-square bg-white overflow-hidden"
             >
               {image.src ? (
                 <img
