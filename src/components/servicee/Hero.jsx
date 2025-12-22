@@ -72,7 +72,9 @@ const Hero = () => {
     }
   }, []);
 
-  // Handle scroll for smooth video animation
+  /* Scroll animation & sticky behavior temporarily disabled.
+     Commented out so the video remains fixed at its initial position.
+
   useEffect(() => {
     let ticking = false;
 
@@ -239,6 +241,13 @@ const Hero = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
+  }, []);
+
+*/
+
+  // Animations disabled: keep video fixed at its initial captured position
+  useEffect(() => {
+    setVideoState("initial");
   }, []);
 
   return (
