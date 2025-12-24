@@ -49,7 +49,7 @@ export default function Header() {
                   }`
                 }
               >
-                The Silo
+                About Us
               </NavLink>
               <NavLink
                 to="/case-studies"
@@ -180,7 +180,7 @@ export default function Header() {
                     }
                     style={{ transitionDelay: open ? "80ms" : "0ms" }}
                   >
-                    The Silo
+                    About Us
                   </NavLink>
                   <NavLink
                     to="/case-studies"

@@ -152,7 +152,7 @@ export default function Ramblings() {
               >
                 <div
                   ref={sidebarRef}
-                  className="relative pb-4 bg-white z-40 shadow-md lg:shadow-none"
+                  className="relative pb-4 w-full bg-white z-40 shadow-none"
                 >
                   <h3 className="text-lg font-bold text-black mb-6">
                     Blog categories

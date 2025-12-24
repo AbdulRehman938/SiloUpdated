@@ -126,7 +126,7 @@ const Cards = () => {
 
       ScrollTrigger.create({
         trigger: mobileRef.current,
-        start: "center center", // Lock when center of section hits center of viewport
+        start: "60% center", // Lock when the cards (at 80% height) hit the center of viewport
         end: "+=2000", // Scroll distance to complete the animation
         pin: true, // Pin the section
         scrub: 0.5, // Smooth scrubbing
@@ -219,7 +219,7 @@ const Cards = () => {
       {/* Mobile View - Only Visible on Mobile */}
       <div
         ref={mobileRef}
-        className="sm:hidden w-full h-[calc(85vh-100px)] flex flex-col items-center justify-center relative"
+        className="sm:hidden w-full h-[110vh] pb-20 flex flex-col items-center justify-center relative"
         style={{ overflow: "hidden" }}
       >
         <h1 className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 text-brand text-[20vw] leading-[5rem] font-bold text-center z-10 pointer-events-none">
@@ -227,7 +227,7 @@ const Cards = () => {
         </h1>
 
         <div
-          className="absolute left-1/2 top-[80%] -translate-x-1/2 -translate-y-1/2 z-[20] flex items-center justify-center"
+          className="absolute left-1/2 top-[85%] -translate-x-1/2 -translate-y-1/2 z-[20] flex items-center justify-center"
           style={{ height: 200, width: 300 }}
         >
           {CARD_DATA.map((card, i) => {
@@ -253,21 +253,10 @@ const Cards = () => {
             const z = 40 - i;
 
             // Mobile Transform Logic
-            const isLast = i === CARD_DATA.length - 1;
-            const scrollY = useTransform(cardProgress, [i, i + 1], [0, -500]);
-            // For last card, keep y at 0 (no movement), otherwise use scrollY
-            const y = isLast ? 0 : scrollY;
-            // Apply offset
-            const finalY = useTransform(
-              // If y is a MotionValue, useTransform works. If y is 0, we need to handle it.
-              // Since useTransform expects a MotionValue as first arg, we wrap 0 in one if needed.
-              // However, hooks can't be conditional.
-              // So we must use useTransform for both cases or use a different approach.
-              // We can just use scrollY and override the output range for the last card?
-              // Or just:
-              scrollY,
-              (v) => -offset.y + (isLast ? 0 : v)
-            );
+            // Mobile Transform Logic
+            const scrollY = useTransform(cardProgress, [i, i + 1], [0, -1000]);
+
+            const finalY = useTransform(scrollY, (v) => -offset.y + v);
 
             return (
               <motion.div
@@ -290,28 +279,21 @@ const Cards = () => {
                   zIndex: z,
                 }}
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}
-                className="absolute -translate-x-1/2 -translate-y-1/2 w-[280px] h-[160px] bg-white border-[1px] border-[#FF322E]  flex flex-col items-start justify-center px-4 py-3 shadow-lg"
+                className="absolute -translate-x-1/2 -translate-y-1/2 w-[310px] h-[220px] bg-white border-[1px] border-[#FF322E] flex flex-col items-start justify-between px-8 py-8"
               >
-                <div className="mb-2 flex w-full justify-between items-center text-xs font-bold">
-                  <div className="w-6 h-6">
-                    <svg
-                      width="24"
-                      height="24"
-                      fill="none"
-                      stroke="#FF322E"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      {card.icon.props.children}
-                    </svg>
+                <div className="flex w-full justify-between items-start">
+                  <div className="scale-[0.55] origin-top-left">
+                    {card.icon}
                   </div>
                 </div>
-                <h2 className="text-sm font-bold mb-1 leading-tight">
-                  {card.title}
-                </h2>
-                <p className="text-xs text-black leading-relaxed">
-                  {card.desc}
-                </p>
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-xl font-extrabold uppercase leading-tight tracking-tight text-black font-epilogue">
+                    {card.title}
+                  </h2>
+                  <p className="text-[13px] text-black/80 leading-relaxed font-dm">
+                    {card.desc}
+                  </p>
+                </div>
               </motion.div>
             );
           })}

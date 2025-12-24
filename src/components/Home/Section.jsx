@@ -31,7 +31,7 @@ const Section = () => {
                 </a>
 
                 <a
-                  href="/contact"
+                  href="/ugc-contact"
                   className="inline-flex items-center justify-center gap-2  bg-transparent border-[1px] border-brand h-[55px] px-6 py-3 text-xs font-bold  tracking-wide text-brand relative overflow-hidden group"
                 >
                   <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 svg-wrapper group-hover:animate-bounce-custom">
@@ -61,7 +61,7 @@ const Section = () => {
         <div className="border border-black pb-6  overflow-hidden">
           <div className="flex flex-col items-stretch">
             {/* Top: right image placeholder (appears on top for md view) */}
-            <div className="w-full bg-white-50 h-52 md:h-72 lg:h-72">
+            <div className="w-full bg-white-50 h-52 md:h-full lg:h-full">
               <img
                 src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765880016/Placeholder_Image_crecm6.png"
                 alt="section"
@@ -86,7 +86,7 @@ const Section = () => {
                   For Brands
                 </a>
                 <a
-                  href="/contact"
+                  href="/ugc-contact"
                   className="inline-flex items-center font-bold justify-center border border-[#FF322E] text-[#FF322E] px-4 py-2 "
                 >
                   For Creators
@@ -118,7 +118,7 @@ const Section = () => {
                   For Brands
                 </a>
                 <a
-                  href="/contact"
+                  href="/ugc-contact"
                   className="inline-flex items-center font-bold justify-center border border-[#FF322E] text-[#FF322E] px-4 py-2 "
                 >
                   For Creators
@@ -127,7 +127,7 @@ const Section = () => {
             </div>
 
             {/* Bottom: image placeholder */}
-            <div className="w-full bg-white-50 h-44">
+            <div className="w-full bg-white-50 h-60">
               <img
                 src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765880016/Placeholder_Image_crecm6.png"
                 alt="section"

@@ -104,10 +104,8 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/about#things-we-believe-in"
-                      onClick={(e) =>
-                        handleAnchorClick(e, "/about", "things-we-believe-in")
-                      }
+                      href="/about#hero"
+                      onClick={(e) => handleAnchorClick(e, "/about", "hero")}
                       className="text-sm ease-in-out duration-200 cursor-pointer hover:text-brand"
                       style={{
                         fontFamily: "DM Sans",
@@ -374,7 +372,7 @@ const Footer = () => {
             </div>
             {/* Social icons row */}
             <div className="flex gap-3 mb-2 mt-4">
-              <a href="#" className="bg-neutral-200 p-2">
+              <a href="#" className="bg-transparent p-2">
                 <span className="sr-only">Instagram</span>
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717241/Instagram_ec8sza.png"
@@ -383,12 +381,12 @@ const Footer = () => {
                   loading="lazy"
                 />
               </a>
-              <a href="#" className="bg-neutral-200 p-2">
+              <a href="#" className="bg-transparent p-2">
                 <span className="sr-only">TikTok</span>
                 {/* <img src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717291/Tiktok_ryqcdc.png" alt="TikTok" className="w-4 h-4" loading="lazy" /> */}
                 <SiTiktok className="w-4 h-4 text-black font-bold" />
               </a>
-              <a href="#" className="bg-neutral-200 p-2">
+              <a href="#" className="bg-transparent p-2">
                 <span className="sr-only">LinkedIn</span>
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1762717248/Linkedin_joc2nv.png"
@@ -416,10 +414,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/about#things-we-believe-in"
-                    onClick={(e) =>
-                      handleAnchorClick(e, "/about", "things-we-believe-in")
-                    }
+                    href="/about#hero"
+                    onClick={(e) => handleAnchorClick(e, "/about", "hero")}
                     className="text-sm"
                   >
                     Mission and Values

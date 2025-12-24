@@ -11,9 +11,9 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const About = () => {
   usePageMeta(
-    'Boutique Creative Studio for Modern Brands',
-    'A boutique creative agency blending social media strategy, content strategy, branding, digital design and website development to build meaningful brand experiences.'
-  )
+    "Boutique Creative Studio for Modern Brands",
+    "A boutique creative agency blending social media strategy, content strategy, branding, digital design and website development to build meaningful brand experiences."
+  );
 
   // Handle scroll to anchor or top when component mounts
   useEffect(() => {
@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <div className="bg-white overflow-x-hidden flex flex-col mx-auto">
-      <div className="min-h-screen mx-auto max-w-[1280px]">
+      <div id="hero" className="min-h-screen mx-auto max-w-[1280px]">
         <Hero />
       </div>
 
@@ -62,9 +62,9 @@ const About = () => {
             <MindsInTheSilo />
           </div>
         </LazySection>
-         <div className="relative left-1/2 -translate-x-1/2 w-screen h-[1px] bg-black mt-10 mb-20" />
+        <div className="relative left-1/2 -translate-x-1/2 w-screen h-[1px] bg-black mt-10 mb-20" />
         <LazySection>
-        <Section />
+          <Section />
         </LazySection>
         <div className="relative left-1/2 -translate-x-1/2 w-screen h-[1px] bg-black" />
       </div>

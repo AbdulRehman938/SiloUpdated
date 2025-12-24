@@ -64,7 +64,7 @@ export default function TheRiseOfAI() {
     title: "The Rise of AI-Powered Content Creation",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    author: "Ruby Turbot",
+    author: "Ruby Turbott",
     publishDate: "12 Sept 2025",
     featuredImage:
       "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960191/1_rr3wzk.png",

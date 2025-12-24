@@ -164,7 +164,7 @@ const BasementApproved = () => {
   };
 
   return (
-    <div className="w-full h-auto bg-white mb-20">
+    <div className="w-full h-auto bg-white mb-5 md:mb-20">
       {/* Inline Hero Section */}
       <div className="relative w-full h-[50vh] md:h-auto md:aspect-video overflow-hidden">
         <video
@@ -223,7 +223,7 @@ const BasementApproved = () => {
         images={caseStudy.galleryWithText.images}
       />
 
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-6 md:px-0 py-10 md:py-20">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-3 md:px-0 py-5 md:py-20">
         <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/3 lg:w-1/2">
           Clear and confident visual direction for the show’s future
         </h1>
@@ -246,7 +246,7 @@ const BasementApproved = () => {
         column2={caseStudy.stats.column2}
         column3={caseStudy.stats.column3}
       />
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-6 md:px-0 py-10 md:py-20 lg:mb-10">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-3 md:px-0 py-5 md:py-20 lg:mb-10">
         <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/3 lg:w-1/2">
           Strengthening the platform for a growing community
         </h1>

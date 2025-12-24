@@ -65,7 +65,7 @@ export default function UGCvsTraditionalAds() {
       "Why UGC Is Outperforming Traditional Ads in 2025 and How Brands Are Adapting",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    author: "Ruby Turbot",
+    author: "Ruby Turbott",
     publishDate: "12 Sept 2025",
     featuredImage:
       "https://res.cloudinary.com/di9tb45rl/image/upload/v1766219441/Placeholder_Image_voracu.png",

@@ -169,7 +169,7 @@ const Hero = () => {
                 letterSpacing: "0%",
               }}
             >
-              This is the <br /> <span className="text-[#FF322E]">Silo, </span>we're
+              This is <br /> <span className="text-[#FF322E]">Silo, </span>we're
               <br /> glad you're <br /> here.
             </h1>
 

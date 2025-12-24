@@ -57,7 +57,7 @@ const Interested = () => {
 
           {/* Card 2: Web Design & Development */}
           <article className="border border-black  md:p-8 p-0 py-5 pr-0 border-l-0 md:border-l border-r-0 border-b-0 flex flex-col gap-4">
-            <div className="w-full h-[250px] md:h-[280px] bg-gray-100 overflow-hidden">
+            <div className="w-full h-[250px] md:h-[300px] bg-gray-100 overflow-hidden">
               <img
                 src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/3_r08wlm.png"
                 alt="img2"

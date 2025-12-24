@@ -75,7 +75,9 @@ export default function VideoAndWelcome() {
           <img
             src={cmsData.imageUrl}
             alt="Showcase"
-            className="block w-full h-full object-cover select-none" loading="lazy" />
+            className="block w-full h-full object-cover select-none"
+            loading="lazy"
+          />
 
           {cmsData.showVideo ? (
             <>
@@ -140,12 +142,17 @@ export default function VideoAndWelcome() {
           className="relative flex items-end max-w-[1280px] mx-auto justify-between h-[60vh] lg:h-[70vh] xl:h-[80vh] md:h-[60vh] 2xl:h-[90vh] z-10"
         >
           {/* Left text div - aligned at bottom left */}
-          <div className="relative z-10 self-end pb-4 max-w-[38%] md:max-w-[35%] flex flex-col justify-end gap-6 md:gap-7">
+          <div className="relative z-10 self-end pb-20 max-w-[38%] md:max-w-[35%] flex flex-col justify-end gap-6 md:gap-7">
             <p className="text-base md:text-base lg:text-xl font-semibold md:tracking-tighter tracking-tight text-black">
-            We are the creative agency for brands that want stronger strategy, better design, smarter websites and content that truly connects
+              We are the creative agency for brands that want stronger strategy,
+              better design, smarter websites and content that truly connects
             </p>
             <p className="text-xs md:text-xs lg:text-base font-semibold leading-relaxed text-black/80">
-             We create content first, personality driven work that delivers real results and elevates your brand. Our approach unites strategic management, bold design, brand development, seamless websites and authentic creator content into one cohesive, creative and engaging experience across every digital touchpoint.
+              We create content first, personality driven work that delivers
+              real results and elevates your brand. Our approach unites
+              strategic management, bold design, brand development, seamless
+              websites and authentic creator content into one cohesive, creative
+              and engaging experience across every digital touchpoint.
             </p>
             <div className="flex flex-wrap items-center gap-8">
               <a
@@ -175,7 +182,7 @@ export default function VideoAndWelcome() {
           </div>
 
           {/* Welcome text div - aligned at bottom right, covering full width */}
-          <div className="relative z-20 self-end w-[55%] h-full flex justify-start items-end pointer-events-none select-none overflow-visible">
+          <div className="relative z-20 self-end w-[55%] h-full flex justify-start items-end pb-16 pointer-events-none select-none overflow-visible">
             <div className="canvas w-full h-full relative flex items-end">
               <WelcomeLetters />
             </div>
@@ -206,7 +213,7 @@ export default function VideoAndWelcome() {
             )}
           </div>
 
-          < div className="mx-[3vw] md:px-0 ">
+          <div className="mx-[3vw] md:px-0 ">
             <p className="text-[18px] font-extrabold tracking-tight text-black">
               We're the creative agency for brands that want more than filler
               posts or cookie–cutter campaigns.
@@ -214,9 +221,9 @@ export default function VideoAndWelcome() {
             <p className="text-[12px] leading-relaxed text-black/80 mt-2">
               We create intentional, personality–driven content, from authentic
               creator videos to scroll–stopping social feeds – designed to
-              connect. Every piece is gin strategy, fuelled by
-              creativity, and built to spark genuine engagement that grows your
-              brand’s online community.
+              connect. Every piece is gin strategy, fuelled by creativity, and
+              built to spark genuine engagement that grows your brand’s online
+              community.
             </p>
             <div className="flex flex-wrap items-center gap-4 mt-4">
               <a

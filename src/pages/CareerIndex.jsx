@@ -6,6 +6,7 @@ import {
 } from "react-icons/md";
 import Section2 from "../components/About/Section2";
 import { usePageMeta } from "../hooks/usePageMeta";
+import Section from "../components/Home/Section";
 
 const CareerIndex = () => {
   usePageMeta(
@@ -36,10 +37,10 @@ const CareerIndex = () => {
             {/* Left Content */}
             <div className="space-y-4 sm:space-y-6 order-1 lg:order-1">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
-                Work at the Silo
+                Work at Silo
               </h1>
               <p className="text-sm sm:text-base md:text-lg font-normal text-black leading-relaxed">
-                Want to make ideas happen? Join The Silo - a team of creators
+                Want to make ideas happen? Join Silo - a team of creators
                 <br className="hidden sm:block" />
                 strategists, and storytellers shaping brands that stand <br /> out
                 online
@@ -357,7 +358,7 @@ const CareerIndex = () => {
           </div>
         </div>
       </div>
-      <Section2 />
+      <Section />
       <div className="relative left-1/2 -translate-x-1/2 w-screen h-[1px] bg-black mt-20" />
     </div>
   );

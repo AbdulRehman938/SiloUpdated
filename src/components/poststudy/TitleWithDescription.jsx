@@ -95,8 +95,8 @@ const TitleWithDescription = ({
 
   return (
     <>
-      <div className="w-full max-w-[1280px] mx-auto py-16 md:py-24 px-3 md:px-0">
-        <div className={`relative ${minHeightClass || 'min-h-[300px] md:min-h-[400px]'}`}>
+      <div className="w-full max-w-[1280px] mx-auto pt-16 md:pt-24  px-3 md:px-0">
+        <div className={`relative min-h-[200px] md:min-h-[400px]`}>
           <div className={`relative w-full md:absolute md:top-0 md:left-0 ${leftWidthClass || 'md:w-[55%]'}`}>
             <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-epilogue font-bold text-black">
               {title || "This job was pretty bloody cool."}

@@ -63,7 +63,7 @@ export default function MeetTheCreators() {
     title: "Why 2025 Is the Year of Interactive Brand Design",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-    author: "Ruby Turbot",
+    author: "Ruby Turbott",
     publishDate: "12 Sept 2025",
     featuredImage:
       "https://res.cloudinary.com/di9tb45rl/image/upload/v1765960198/Placeholder_Image_kwdrqm.png",

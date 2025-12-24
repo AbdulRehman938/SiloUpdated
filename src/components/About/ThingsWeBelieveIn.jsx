@@ -1,7 +1,7 @@
 const ThingsWeBelieveIn = () => {
   return (
     <section className="min-h-screen flex items-center justify-center pb-6 sm:py-8 md:py-12 lg:py-16 px-3 sm:px-4 md:px-0 bg-white overflow-x-hidden">
-      <div className="max-w-full mx-auto w-full">
+      <div className="max-w-full mx-auto w-full mt-10">
         {/* Text Section - Zoom & Small Laptop Optimized */}
         <div className="text-left xl:text-left mb-2 md:mb-16 lg:mb-20 px-2 sm:px-0 max-w-4xl mx-auto xl:mx-0">
           {/* Heading - Zoom & Small Laptop Optimized */}
