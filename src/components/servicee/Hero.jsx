@@ -10,7 +10,7 @@ import Section from "../Home/Section.jsx";
 
 const Hero = () => {
   const [cmsData] = useState({
-    showVideo: true,
+    showVideo: false,
     videoUrl: "https://player.vimeo.com/video/76979871",
   });
 
@@ -259,11 +259,13 @@ const Hero = () => {
       >
         <div className="w-full max-w-[1280px] min-h-[calc(100vh-80px)] mx-auto flex flex-col justify-center items-center px-4 md:px-10 lg:px-10 pb-8">
           {/* Video at top center */}
-          <div
-            ref={initialVideoPositionRef}
-            className="w-auto aspect-[9/13] h-[280px] mb-8 shrink-0"
-            aria-hidden="true"
-          />
+          {cmsData.showVideo && (
+            <div
+              ref={initialVideoPositionRef}
+              className="w-auto aspect-[9/13] h-[280px] mb-8 shrink-0"
+              aria-hidden="true"
+            />
+          )}
 
           {/* Heading */}
           <div className="flex flex-col items-center w-full mb-6">
@@ -308,41 +310,53 @@ const Hero = () => {
       </div>
 
       {/* Video - always rendered with smooth animation */}
-      {createPortal(
-        <div
-          ref={videoContainerRef}
-          className="service-hero-title hidden sm:flex items-center justify-center service-video z-10"
-          style={{
-            position:
-              videoState === "transitioning" ? "fixed"
-                : videoState === "fixed" ? "fixed"
-                : "absolute",
-            ...(videoState === "fixed"
-              ? {
-                  right: `${24}px`,
-                  bottom: `${24}px`,
-                }
-              : videoState === "absolute"
-              ? {
-                  top: videoPosition.top !== "auto" ? `${videoPosition.top}px` : videoPosition.top,
-                  right: `${24}px`,
-                }
-              : {
-                  top: videoPosition.top !== "auto" ? `${videoPosition.top}px` : videoPosition.top,
-                  left: videoPosition.left !== "auto" ? `${videoPosition.left}px` : videoPosition.left,
-                }),
-            width: `${videoPosition.width}px`,
-            height: `${videoPosition.height}px`,
-            transition: "none", // Smooth animation via position updates
-          }}
-        >
-          <VideoPlayer
-            containerClassName="w-full h-full"
-            onVideoClick={handleOpen}
-          />
-        </div>,
-        document.body
-      )}
+      {cmsData.showVideo &&
+        createPortal(
+          <div
+            ref={videoContainerRef}
+            className="service-hero-title hidden sm:flex items-center justify-center service-video z-10"
+            style={{
+              position:
+                videoState === "transitioning"
+                  ? "fixed"
+                  : videoState === "fixed"
+                  ? "fixed"
+                  : "absolute",
+              ...(videoState === "fixed"
+                ? {
+                    right: `${24}px`,
+                    bottom: `${24}px`,
+                  }
+                : videoState === "absolute"
+                ? {
+                    top:
+                      videoPosition.top !== "auto"
+                        ? `${videoPosition.top}px`
+                        : videoPosition.top,
+                    right: `${24}px`,
+                  }
+                : {
+                    top:
+                      videoPosition.top !== "auto"
+                        ? `${videoPosition.top}px`
+                        : videoPosition.top,
+                    left:
+                      videoPosition.left !== "auto"
+                        ? `${videoPosition.left}px`
+                        : videoPosition.left,
+                  }),
+              width: `${videoPosition.width}px`,
+              height: `${videoPosition.height}px`,
+              transition: "none", // Smooth animation via position updates
+            }}
+          >
+            <VideoPlayer
+              containerClassName="w-full h-full"
+              onVideoClick={handleOpen}
+            />
+          </div>,
+          document.body
+        )}
 
       <div className="hidden sm:block">
         <Cards />
@@ -355,13 +369,15 @@ const Hero = () => {
       <div className="block sm:hidden w-full h-auto pt-8 px-4">
         <div className="flex flex-col justify-start items-center gap-10 pb-0 pt-20">
           {/* Video (targeting the same video but sized for mobile) */}
-          <div className="mb-2">
-            <VideoPlayer
-              containerClassName="w-[180px] h-[220px] mx-auto"
-              videoClassName="w-full h-[220px] object-cover"
-              onVideoClick={handleOpen}
-            />
-          </div>
+          {cmsData.showVideo && (
+            <div className="mb-2">
+              <VideoPlayer
+                containerClassName="w-[180px] h-[220px] mx-auto"
+                videoClassName="w-full h-[220px] object-cover"
+                onVideoClick={handleOpen}
+              />
+            </div>
+          )}
 
           {/* Headline & description (smaller for mobile) */}
           <div className="flex flex-col gap-2 text-center text-black mb-3">

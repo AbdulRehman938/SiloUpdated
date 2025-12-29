@@ -146,7 +146,7 @@ export default function ContentAndDone() {
 
           {/* Card 2: Web Design & Development */}
           <article className="border border-black p-8 pr-0 border-r-0 border-b-0 flex flex-col gap-4">
-            <div className="w-full h-[250px] md:h-[280px] bg-gray-100 overflow-hidden">
+            <div className="w-full h-[250px] md:h-[300px] bg-gray-100 overflow-hidden">
               <img
                 src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765879826/3_r08wlm.png"
                 alt="img2"
@@ -225,15 +225,15 @@ export default function ContentAndDone() {
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
+              {/* <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765883977/Rectangle_34_pbf4gh.png"
                   alt="smoothie"
                   className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
-              </div>
-              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out lg:group-hover:translate-x-28">
+              </div> */}
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out">
                 <h3 className="text-4xl font-bold text-black">
                   Basement Approved
                 </h3>
@@ -264,7 +264,7 @@ export default function ContentAndDone() {
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -296,11 +296,11 @@ export default function ContentAndDone() {
                   <span className="text-base font-normal whitespace-nowrap text-black p-2 bg-brand/20">
                     Web Design
                   </span>
-                    <div className="w-full md:w-auto">
-                      <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-base font-normal md:whitespace-nowrap text-black p-2 bg-brand/20">
-                          Design System
-                        </span>
-                    </div>
+                  <div className="w-full md:w-auto">
+                    <span className="transform -translate-x-2 translate-y-1 md:translate-x-0 md:translate-y-0 text-base font-normal md:whitespace-nowrap text-black p-2 bg-brand/20">
+                      Design System
+                    </span>
+                  </div>
                   <span className="text-base font-normal whitespace-nowrap text-black p-2 bg-brand/20">
                     Web Development
                   </span>
@@ -316,7 +316,7 @@ export default function ContentAndDone() {
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -331,14 +331,14 @@ export default function ContentAndDone() {
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
+                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
                     src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765883977/Rectangle_34_pbf4gh.png"
                     alt="smoothie"
                     className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -358,15 +358,15 @@ export default function ContentAndDone() {
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
+              {/* <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884763/Rectangle_29_il7hhb.png"
                   alt="smoothie"
                   className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
-              </div>
-              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
+              </div> */}
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5">
                 <h3 className="text-4xl font-bold text-black">
                   Tomoka Fine & Rare
                 </h3>
@@ -407,7 +407,7 @@ export default function ContentAndDone() {
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -452,7 +452,7 @@ export default function ContentAndDone() {
                   <span className="text-base font-semibold md:whitespace-nowrap text-black p-2 bg-brand/20">
                     CRM
                   </span>
-                  
+
                   <span className="text-base font-semibold md:whitespace-nowrap text-black p-2 bg-brand/20 block md:inline-block">
                     PPC
                   </span>
@@ -465,7 +465,7 @@ export default function ContentAndDone() {
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -480,14 +480,14 @@ export default function ContentAndDone() {
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
+                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
                     src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884763/Rectangle_29_il7hhb.png"
                     alt="smoothie"
                     className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -507,15 +507,15 @@ export default function ContentAndDone() {
                 />
               </div>
               {/* Hover image placeholder (absolutely positioned so it doesn't shift layout) */}
-              <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
+              {/* <div className="absolute left-[35%] top-0 -translate-x-full w-1/6 h-full bg-white overflow-hidden p-0 m-0 border-0 box-border opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none lg:group-hover:opacity-100 lg:group-hover:scale-100 lg:group-hover:-translate-x-32 lg:group-hover:rotate-0 lg:group-hover:pointer-events-auto">
                 <img
                   src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765885427/Rectangle_33_n4bq46.png"
                   alt="smoothie"
                   className="absolute inset-0 w-full h-full object-cover p-0 m-0 border-0 block" // absolutely fill parent, no gap
                   loading="lazy"
                 />
-              </div>
-              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5 lg:group-hover:translate-x-28">
+              </div> */}
+              <div className="w-[50%] flex flex-col justify-center items-start gap-4 text-left transform transition-transform duration-600 ease-in-out pt-5">
                 <h3 className="text-4xl font-bold text-black">
                   Electrolytes with Joly
                 </h3>
@@ -551,7 +551,7 @@ export default function ContentAndDone() {
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -603,7 +603,7 @@ export default function ContentAndDone() {
                   <span>View Project</span>
                   <span
                     aria-hidden
-                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out lg:group-hover:translate-x-2"
+                    className="inline-block ml-1 transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
                   >
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
@@ -618,14 +618,14 @@ export default function ContentAndDone() {
                   loading="lazy"
                 />
                 {/* Hover image placeholder */}
-                <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
+                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
                   <img
                     src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765885427/Rectangle_33_n4bq46.png"
                     alt="smoothie"
                     className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
                     loading="lazy"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -786,10 +786,12 @@ export default function ContentAndDone() {
                 </div>
                 <a
                   href="/case-studies/basement-approved"
-                  className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E]"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E] group"
                 >
                   <span>View Project</span>
-                  <MdOutlineKeyboardArrowRight className="text-xl" />
+                  <span className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2">
+                    <MdOutlineKeyboardArrowRight className="text-xl" />
+                  </span>
                 </a>
               </div>
             </div>
@@ -851,10 +853,12 @@ export default function ContentAndDone() {
                 </div>
                 <a
                   href="/case-studies/tomoka-fine-and-rare"
-                  className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E]"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E] group"
                 >
                   <span>View Project</span>
-                  <MdOutlineKeyboardArrowRight className="text-xl" />
+                  <span className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2">
+                    <MdOutlineKeyboardArrowRight className="text-xl" />
+                  </span>
                 </a>
               </div>
             </div>
@@ -911,10 +915,12 @@ export default function ContentAndDone() {
                 </div>
                 <a
                   href="/case-studies/electrolytes-with-joly"
-                  className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E]"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg text-[#FF322E] group"
                 >
                   <span>View Project</span>
-                  <MdOutlineKeyboardArrowRight className="text-xl" />
+                  <span className="transform transition-transform duration-300 ease-in-out group-hover:translate-x-2">
+                    <MdOutlineKeyboardArrowRight className="text-xl" />
+                  </span>
                 </a>
               </div>
             </div>
