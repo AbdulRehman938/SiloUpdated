@@ -219,7 +219,7 @@ const Cards = () => {
       {/* Mobile View - Only Visible on Mobile */}
       <div
         ref={mobileRef}
-        className="sm:hidden w-full h-[110vh] pb-20 flex flex-col items-center justify-center relative"
+        className="sm:hidden w-full h-[90vh] pb-20 flex flex-col items-center justify-center relative"
         style={{ overflow: "visible" }}
       >
         <h1 className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 text-brand text-[20vw] leading-[5rem] font-bold text-center z-10 pointer-events-none">
@@ -279,7 +279,7 @@ const Cards = () => {
                   zIndex: z,
                 }}
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}
-                className="absolute -translate-x-1/2 -translate-y-1/2 w-[310px] h-[250px] bg-white border-[1px] border-[#FF322E] flex flex-col items-start justify-between px-4 py-8"
+                className="absolute -translate-x-1/2 -translate-y-1/2 w-[310px] h-[250px] bg-white shadow-[0_0_0_2px_#FF322E] outline-1 outline-transparent outline flex flex-col items-start justify-between px-4 py-8 will-change-transform"
               >
                 <div className="flex w-full justify-between items-start">
                   <div className="scale-[0.55] origin-top-left">
