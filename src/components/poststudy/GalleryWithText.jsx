@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const GalleryWithText = ({ heading, text, content, images }) => {
+const GalleryWithText = ({ heading, text, content, images, itemSpacing }) => {
   const defaultImages = [
     { src: null, alt: "Gallery image 1" },
     { src: null, alt: "Gallery image 2" },
@@ -125,14 +125,17 @@ const GalleryWithText = ({ heading, text, content, images }) => {
           style={{ minHeight: "320px" }}
         >
           <div ref={textRef} className="relative lg:absolute w-full top-0">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
               {heading || "Mobile-first design that converts"}
             </h2>
             {content ? (
               content.map((item, index) => (
-                <div key={index} className="mb-8 last:mb-0">
+                <div
+                  key={index}
+                  className={`${itemSpacing || "mb-8"} last:mb-0`}
+                >
                   {item.subheading && (
-                    <h3 className="text-xl md:text-xl font-dm font-semibold text-black mb-3">
+                    <h3 className="text-2xl mt-10 md:text-xl font-dm font-semibold text-black mb-3">
                       {item.subheading}
                     </h3>
                   )}

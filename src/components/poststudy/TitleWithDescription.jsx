@@ -61,8 +61,10 @@ const TitleWithDescription = ({
       if (playerRef.current) {
         const handlers = playerRef.current._silo_handlers || {};
         try {
-          if (handlers.handlePlay) playerRef.current.off("play", handlers.handlePlay);
-          if (handlers.handlePause) playerRef.current.off("pause", handlers.handlePause);
+          if (handlers.handlePlay)
+            playerRef.current.off("play", handlers.handlePlay);
+          if (handlers.handlePause)
+            playerRef.current.off("pause", handlers.handlePause);
         } catch (e) {}
         try {
           playerRef.current.unload();
@@ -97,13 +99,21 @@ const TitleWithDescription = ({
     <>
       <div className="w-full max-w-[1280px] mx-auto pt-16 md:pt-24  px-3 md:px-0">
         <div className={`relative min-h-[200px] md:min-h-[400px]`}>
-          <div className={`relative w-full md:absolute md:top-0 md:left-0 ${leftWidthClass || 'md:w-[55%]'}`}>
-            <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-epilogue font-bold text-black">
+          <div
+            className={`relative w-full md:absolute md:top-0 md:left-0 ${
+              leftWidthClass || "md:w-[55%]"
+            }`}
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-epilogue font-bold text-black">
               {title || "This job was pretty bloody cool."}
             </h1>
           </div>
 
-          <div className={`relative mt-6 w-full md:absolute md:-bottom-0 md:right-0 ${rightWidthClass || 'md:w-[50%]'} flex flex-col gap-4 md:mt-0`}>
+          <div
+            className={`relative mt-6 w-full md:absolute md:-bottom-0 md:right-0 ${
+              rightWidthClass || "md:w-[50%]"
+            } flex flex-col gap-4 md:mt-0`}
+          >
             {Array.isArray(description) ? (
               description.map((para, index) => (
                 <p
@@ -129,13 +139,19 @@ const TitleWithDescription = ({
               setHovered(true);
               setMouseIdle(false);
               if (idleTimeoutRef.current) clearTimeout(idleTimeoutRef.current);
-              idleTimeoutRef.current = setTimeout(() => setMouseIdle(true), 1000);
+              idleTimeoutRef.current = setTimeout(
+                () => setMouseIdle(true),
+                1000
+              );
             }}
             onMouseMove={() => {
               // reset idle timer on movement
               setMouseIdle(false);
               if (idleTimeoutRef.current) clearTimeout(idleTimeoutRef.current);
-              idleTimeoutRef.current = setTimeout(() => setMouseIdle(true), 1000);
+              idleTimeoutRef.current = setTimeout(
+                () => setMouseIdle(true),
+                1000
+              );
             }}
             onMouseLeave={() => {
               setHovered(false);
@@ -160,7 +176,11 @@ const TitleWithDescription = ({
                   allowFullScreen
                   title="Vimeo Video"
                   className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto z-0"
-                  style={{ border: 0, borderRadius: 0, transform: `translate(-50%,-50%) scaleY(${mediaScaleY})` }}
+                  style={{
+                    border: 0,
+                    borderRadius: 0,
+                    transform: `translate(-50%,-50%) scaleY(${mediaScaleY})`,
+                  }}
                 />
 
                 {/* Show cover image over the video when paused */}
@@ -176,61 +196,64 @@ const TitleWithDescription = ({
 
                 <div className="absolute inset-0 w-full h-full bg-black bg-opacity-30 pointer-events-none z-15" />
               </>
-              ) : mediaType === "iframe" ? (
-                <>
-                  <iframe
-                    ref={vimeoIframeRef}
-                    src={mediaSrc}
-                    title={title || "Case study video"}
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto"
-                    style={{ transform: `translate(-50%,-50%) scaleY(${mediaScaleY})` }}
+            ) : mediaType === "iframe" ? (
+              <>
+                <iframe
+                  ref={vimeoIframeRef}
+                  src={mediaSrc}
+                  title={title || "Case study video"}
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto"
+                  style={{
+                    transform: `translate(-50%,-50%) scaleY(${mediaScaleY})`,
+                  }}
+                />
+
+                {/* Show cover image over the video when paused */}
+                {!isPlaying && mediaCover && (
+                  <img
+                    src={mediaCover}
+                    alt={title || "video cover"}
+                    className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto object-cover z-10 transform-gpu transition-transform duration-500"
+                    style={{ transform: `translate(-50%,-50%) scale(1.03)` }}
+                    loading="lazy"
                   />
+                )}
 
-                    {/* Show cover image over the video when paused */}
-                    {!isPlaying && mediaCover && (
-                      <img
-                        src={mediaCover}
-                        alt={title || "video cover"}
-                        className="absolute left-1/2 top-1/2 min-w-full min-h-full w-auto h-auto object-cover z-10 transform-gpu transition-transform duration-500"
-                        style={{ transform: `translate(-50%,-50%) scale(1.03)` }}
-                        loading="lazy"
-                      />
-                    )}
+                {/* Overlay + centered play/pause button */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  {/** dark overlay shown only when paused */}
+                  {!isPlaying && (
+                    <div className="absolute inset-0 bg-black bg-opacity-30 z-15" />
+                  )}
 
-                    {/* Overlay + centered play/pause button */}
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      {/** dark overlay shown only when paused */}
-                      {!isPlaying && (
-                        <div className="absolute inset-0 bg-black bg-opacity-30 z-15" />
+                  {/* Button: visible when paused, or when hovered while playing and not idle for 1s */}
+                  {(!isPlaying || (hovered && !mouseIdle)) && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleVimeoClick();
+                      }}
+                      className={`relative z-20 pointer-events-auto rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-300 ${
+                        animating ? "scale-110" : "scale-100"
+                      }`}
+                      aria-label={isPlaying ? "Pause video" : "Play video"}
+                    >
+                      {isPlaying ? (
+                        <FaCirclePause className="w-12 h-12 bg-black rounded-full text-white" />
+                      ) : (
+                        // Pause icon when paused
+                        // Play icon while playing (per spec) — will hide when not hovered
+                        <FaCirclePlay className="w-12 h-12 bg-black rounded-full text-white" />
                       )}
-
-                    {/* Button: visible when paused, or when hovered while playing and not idle for 1s */}
-                    {((!isPlaying) || (hovered && !mouseIdle)) && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleVimeoClick();
-                        }}
-                        className={`relative z-20 pointer-events-auto rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-300 ${animating ? 'scale-110' : 'scale-100'}`}
-                        aria-label={isPlaying ? "Pause video" : "Play video"}
-                      >
-                        {isPlaying ? (
-                         
-                            <FaCirclePause className="w-12 h-12 bg-black rounded-full text-white" />
-                        ) : (
-                          // Pause icon when paused
-                         // Play icon while playing (per spec) — will hide when not hovered
-                         <FaCirclePlay className="w-12 h-12 bg-black rounded-full text-white" />
-                        )}
-                      </button>
-                    )}
-                  </div>
-                </>
+                    </button>
+                  )}
+                </div>
+              </>
             ) : (
               <img
                 src={mediaSrc}

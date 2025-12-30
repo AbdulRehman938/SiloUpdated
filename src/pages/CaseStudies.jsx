@@ -249,39 +249,46 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 border-t-0 border-t-black md:border-t-0 md:border-b md:border-b-black py-12 group relative mt-0 cursor-pointer"
+              className="flex flex-col md:flex-row-reverse lg:hidden items-center w-full mx-auto justify-center md:space-x-10 py-8 group relative mt-0 cursor-pointer border-b border-b-black lg:border-b-0"
               onClick={() =>
                 (window.location.href = "/case-studies/basement-approved")
               }
             >
-              {/* Text content first */}
-              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">
+              <div className="w-full md:w-1/2 h-80 relative md:-top-20">
+                <img
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765882727/Untitled_Project_smo9qt.jpg"
+                  alt="basement approved"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start space-y-4 mt-10 md:mt-0 text-left">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
                   Basement Approved
                 </h3>
-                <p className="text-xl text-black">
+                <p className="text-lg font-bold md:text-xl md:font-normal text-black">
                   Culture, music and editorial platform
                 </p>
-                <p className="text-lg text-black">
+                <p className="text-base font-medium md:text-lg md:font-normal text-black leading-relaxed">
                   Silo transformed BasementApproved’s digital presence with a
                   new website, Mixcloud integration and a streamlined content
                   system that brings their community, music and cultural
                   storytelling into one cohesive experience.
                 </p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Web Design
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Web Development
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     API Integeration
                   </span>
                 </div>
                 <a
                   href="/case-studies/basement-approved"
-                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg md:text-xl text-[#FF322E] group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -292,24 +299,6 @@ const CaseStudies = () => {
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
-              </div>
-              {/* Image second */}
-              <div className="w-[60%] mx-auto md:w-1/2 md:-top-20 h-60 top-0 relative">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765882727/Untitled_Project_smo9qt.jpg"
-                  alt="smoothie"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                {/* Hover image placeholder */}
-                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
-                  <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765883977/Rectangle_34_pbf4gh.png"
-                    alt="smoothie"
-                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
-                    loading="lazy"
-                  />
-                </div> */}
               </div>
             </div>
 
@@ -385,47 +374,54 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 md:border-b md:border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="flex flex-col md:flex-row-reverse lg:hidden items-center w-full mx-auto justify-center md:space-x-10 py-8 pt-5 group relative mt-0 cursor-pointer border-b border-b-black lg:border-b-0"
               onClick={() =>
                 (window.location.href = "/case-studies/tomoka-fine-and-rare")
               }
             >
-              {/* Text content first */}
-              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">
+              <div className="w-full md:w-1/2 h-72 relative md:-top-20">
+                <img
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/Tomoko-e10fd11f_2_jto3ax.png"
+                  alt="tomoka"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start space-y-4 mt-10 md:mt-0 text-left">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
                   Tomoka Fine & Rare
                 </h3>
-                <p className="text-xl text-black">
+                <p className="text-lg font-bold md:text-xl md:font-normal text-black">
                   Modern whisky investment & retail
                 </p>
-                <p className="text-lg text-black">
+                <p className="text-base font-medium md:text-lg md:font-normal text-black leading-relaxed">
                   A heritage whisky brand modernised without losing its soul.
                   From website build to social, video, PR and CRM, Silo
                   transformed Tomoka into a premium digital powerhouse.
                 </p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
-                    Brandig
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
+                    Branding
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Website
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Social
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Creative
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     CRM
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     PPC
                   </span>
                 </div>
                 <a
                   href="/case-studies/tomoka-fine-and-rare"
-                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg md:text-xl text-[#FF322E] group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -436,24 +432,6 @@ const CaseStudies = () => {
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
-              </div>
-              {/* Image second */}
-              <div className="w-full md:w-1/2 h-60 top-0 md:-top-20 relative">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/Tomoko-e10fd11f_2_jto3ax.png"
-                  alt="smoothie"
-                  className="w-full h-full md:h-44 object-cover"
-                  loading="lazy"
-                />
-                {/* Hover image placeholder */}
-                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
-                  <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884763/Rectangle_29_il7hhb.png"
-                    alt="smoothie"
-                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
-                    loading="lazy"
-                  />
-                </div> */}
               </div>
             </div>
 
@@ -524,42 +502,49 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 md:border-b md:border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="flex flex-col md:flex-row-reverse lg:hidden items-center w-full mx-auto justify-center md:space-x-10 py-8 pt-5 group relative mt-0 cursor-pointer border-b border-b-black lg:border-b-0"
               onClick={() =>
                 (window.location.href = "/case-studies/electrolytes-with-joly")
               }
             >
-              {/* Text content first */}
-              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">
+              <div className="w-full md:w-1/2 h-60 relative md:-top-20">
+                <img
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
+                  alt="electrolytes"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start space-y-4 mt-10 md:mt-0 text-left">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
                   Electrolytes with Joly
                 </h3>
-                <p className="text-xl text-black">
+                <p className="text-lg font-bold md:text-xl md:font-normal text-black">
                   A vibrant identity for a new radio show
                 </p>
-                <p className="text-lg text-black">
+                <p className="text-base font-medium md:text-lg md:font-normal text-black leading-relaxed">
                   Silo created an identity reflecting the show’s energetic,
                   atmospheric and slightly cosmic tone, supported by a visual
                   system that works across social media and ongoing episode
                   releases.
                 </p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Typography
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Social Templates
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Design System
                   </span>
                 </div>
                 <a
                   href="/case-studies/electrolytes-with-joly"
-                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg md:text-xl text-[#FF322E] group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -570,24 +555,6 @@ const CaseStudies = () => {
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
-              </div>
-              {/* Image second */}
-              <div className="w-full md:w-1/2 h-60 top-0 md:-top-20 relative">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765884632/image_5_ibtcoo.png"
-                  alt="smoothie"
-                  className="w-full h-full md:h-32 object-cover"
-                  loading="lazy"
-                />
-                {/* Hover image placeholder */}
-                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
-                  <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765885427/Rectangle_33_n4bq46.png"
-                    alt="smoothie"
-                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
-                    loading="lazy"
-                  />
-                </div> */}
               </div>
             </div>
           </div>
@@ -660,45 +627,52 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 md:border-b md:border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="flex flex-col mt-10 md:flex-row-reverse lg:hidden items-center w-full mx-auto justify-center md:space-x-10 py-8 pt-5 group relative cursor-pointer border-b border-b-black lg:border-b-0"
               onClick={() =>
                 (window.location.href = "/case-studies/acorn-property-group")
               }
             >
-              {/* Text content first */}
-              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">
+              <div className="w-[80%] md:w-1/2 h-80 relative md:-top-20">
+                <img
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951283/28cf00a299ba07f7be18bd388b5bf801_1_fxiv5y.png"
+                  alt="acorn"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start space-y-4 mt-10 md:mt-0 text-left">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
                   Acorn Property Group
                 </h3>
-                <p className="text-xl text-black">
+                <p className="text-lg font-bold md:text-xl md:font-normal text-black">
                   Leading sustainable home creators
                 </p>
-                <p className="text-lg text-black">
+                <p className="text-base font-medium md:text-lg md:font-normal text-black leading-relaxed">
                   Building a connected growing digital presence for one of the
                   South West’s leading housebuilders. Silo has strengthened
                   Acorn’s digital voice and delivered sustained multi platform
                   growth.
                 </p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Social Media
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Strategy
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Social Templates
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Influencer
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Content
                   </span>
                 </div>
                 <a
                   href="/case-studies/acorn-property-group"
-                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg md:text-xl text-[#FF322E] group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -709,24 +683,6 @@ const CaseStudies = () => {
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
-              </div>
-              {/* Image second */}
-              <div className="w-full md:w-1/2 h-60 top-0 relative md:-top-10">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951283/28cf00a299ba07f7be18bd388b5bf801_1_fxiv5y.png"
-                  alt="smoothie"
-                  className="w-1/2 mx-auto h-full md:h-32 object-cover"
-                  loading="lazy"
-                />
-                {/* Hover image placeholder */}
-                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
-                  <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951492/Rectangle_31_tzvdcs.png"
-                    alt="smoothie"
-                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
-                    loading="lazy"
-                  />
-                </div> */}
               </div>
             </div>
 
@@ -793,38 +749,47 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 md:border-b md:border-b-black py-12 pt-5 group relative mt-0 cursor-pointer"
+              className="flex flex-col md:flex-row-reverse lg:hidden items-center w-full mx-auto justify-center md:space-x-10 py-8 pt-5 group relative mt-0 cursor-pointer border-b border-b-black lg:border-b-0"
               onClick={() => (window.location.href = "/case-studies/cluberly")}
             >
-              {/* Text content first */}
-              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">Cluberly</h3>
-                <p className="text-xl text-black">
+              <div className="w-full md:w-1/2 h-60 relative md:-top-20">
+                <img
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/1_xifbbg.png"
+                  alt="cluberly"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start space-y-4 mt-0 md:mt-0 text-left">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
+                  Cluberly
+                </h3>
+                <p className="text-lg font-bold md:text-xl md:font-normal text-black">
                   Savings and investment app built for sports fans, schools and
                   charities.
                 </p>
-                <p className="text-lg text-black">
+                <p className="text-base font-medium md:text-lg md:font-normal text-black leading-relaxed">
                   We created an animated explainer and a real footage brand
                   video, along with multi platform edits and branded documents,
                   to simplify and amplify Cluberly's mission.
                 </p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Fintech
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Video
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Storytelling
                   </span>
                 </div>
                 <a
                   href="/case-studies/cluberly"
-                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg md:text-xl text-[#FF322E] group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -835,24 +800,6 @@ const CaseStudies = () => {
                     <MdOutlineKeyboardArrowRight className="text-2xl font-black" />
                   </span>
                 </a>
-              </div>
-              {/* Image second */}
-              <div className="w-full md:w-1/2 h-60 top-0 relative md:-top-20">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951282/1_xifbbg.png"
-                  alt="smoothie"
-                  className="w-full h-full md:h-32 object-cover"
-                  loading="lazy"
-                />
-                {/* Hover image placeholder */}
-                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
-                  <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951496/Rectangle_32_wekcvt.png"
-                    alt="smoothie"
-                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
-                    loading="lazy"
-                  />
-                </div> */}
               </div>
             </div>
 
@@ -922,44 +869,51 @@ const CaseStudies = () => {
             </div>
 
             <div
-              className="block md:flex lg:hidden items-center w-full mx-auto justify-center md:space-x-10 space-y-3 md:space-y-0 py-12 pb-0 pt-5 group relative mt-0 cursor-pointer"
+              className="flex flex-col md:flex-row-reverse lg:hidden items-center w-full mx-auto justify-center md:space-x-10 py-8 pb-0 pt-5 group relative mt-10 cursor-pointer"
               onClick={() =>
                 (window.location.href = "/case-studies/knightsgate-partners")
               }
             >
-              {/* Text content first */}
-              <div className="w-full md:w-[80%] flex flex-col justify-center items-start gap-4 text-left">
-                <h3 className="text-4xl font-bold text-black">
+              <div className="w-full md:w-1/2 h-80 relative md:-top-20">
+                <img
+                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1766427917/image_15_uceyvk.png"
+                  alt="knightsgate"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="w-full md:w-[80%] flex flex-col justify-center items-start space-y-4 mt-10 md:mt-0 text-left">
+                <h3 className="text-2xl md:text-4xl font-bold text-black">
                   Knightsgate Partners
                 </h3>
-                <p className="text-xl text-black">
+                <p className="text-lg font-bold md:text-xl md:font-normal text-black">
                   Advisory and funding for growing businesses
                 </p>
-                <p className="text-lg text-black">
+                <p className="text-base font-medium md:text-lg md:font-normal text-black leading-relaxed">
                   We partnered with Knightsgate to elevate their brand digital
                   presence and investor communications through a full website
                   redesign and fresh creative suite.
                 </p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Branding
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Digital
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Communications
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Creative
                   </span>
-                  <span className="text-base font-bold whitespace-nowrap text-black p-2 bg-brand/20">
+                  <span className="text-sm font-semibold md:text-base md:font-normal text-black p-2 bg-brand/20">
                     Content
                   </span>
                 </div>
                 <a
                   href="/case-studies/knightsgate-partners"
-                  className="inline-flex items-center gap-2 font-dm mt-6 mb-5 font-bold text-xl leading-[150%] text-[#FF322E] tracking-normal group"
+                  className="inline-flex items-center gap-2 font-dm font-bold text-lg md:text-xl text-[#FF322E] group"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <span>View Project</span>
@@ -971,29 +925,11 @@ const CaseStudies = () => {
                   </span>
                 </a>
               </div>
-              {/* Image second */}
-              <div className="w-full md:w-1/2 h-64 top-0 relative md:-top-10 md:ml-10">
-                <img
-                  src="https://res.cloudinary.com/di9tb45rl/image/upload/v1766427917/image_15_uceyvk.png"
-                  alt="smoothie"
-                  className=" w-1/2 mx-auto  h-full md:h-32 object-cover"
-                  loading="lazy"
-                />
-                {/* Hover image placeholder */}
-                {/* <div className="hidden md:block absolute -right-80 top-0 w-[70%] h-full bg-white opacity-0 scale-90 rotate-6 transition-all duration-600 ease-in-out z-10 pointer-events-none md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:rotate-0 md:group-hover:pointer-events-auto overflow-hidden">
-                  <img
-                    src="https://res.cloudinary.com/di9tb45rl/image/upload/v1765951490/Rectangle_30_fmlti2.png"
-                    alt="smoothie"
-                    className="w-full h-[calc(100%+32px)] -translate-y-4 object-cover block"
-                    loading="lazy"
-                  />
-                </div> */}
-              </div>
             </div>
           </div>
         </div>
       </LazySection>
-      <div className="w-screen mx-auto h-[1px] bg-black md:my-28 my-28 mb-10 relative left-1/2 -translate-x-1/2" />
+      <div className="w-screen mx-auto h-[1px] bg-black md:my-28 my-20 mb-10 relative left-1/2 -translate-x-1/2" />
       <LazySection>
         <Section />
       </LazySection>

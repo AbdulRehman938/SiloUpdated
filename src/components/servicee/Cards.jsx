@@ -127,7 +127,7 @@ const Cards = () => {
       ScrollTrigger.create({
         trigger: mobileRef.current,
         start: "60% center", // Lock when the cards (at 80% height) hit the center of viewport
-        end: "+=2000", // Scroll distance to complete the animation
+        end: "+=1200", // Scroll distance to complete the animation
         pin: true, // Pin the section
         scrub: 0.5, // Smooth scrubbing
         onUpdate: (self) => {
@@ -220,7 +220,7 @@ const Cards = () => {
       <div
         ref={mobileRef}
         className="sm:hidden w-full h-[110vh] pb-20 flex flex-col items-center justify-center relative"
-        style={{ overflow: "hidden" }}
+        style={{ overflow: "visible" }}
       >
         <h1 className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 text-brand text-[20vw] leading-[5rem] font-bold text-center z-10 pointer-events-none">
           CORE <br /> SERVICES
@@ -279,7 +279,7 @@ const Cards = () => {
                   zIndex: z,
                 }}
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}
-                className="absolute -translate-x-1/2 -translate-y-1/2 w-[310px] h-[220px] bg-white border-[1px] border-[#FF322E] flex flex-col items-start justify-between px-8 py-8"
+                className="absolute -translate-x-1/2 -translate-y-1/2 w-[310px] h-[250px] bg-white border-[1px] border-[#FF322E] flex flex-col items-start justify-between px-4 py-8"
               >
                 <div className="flex w-full justify-between items-start">
                   <div className="scale-[0.55] origin-top-left">

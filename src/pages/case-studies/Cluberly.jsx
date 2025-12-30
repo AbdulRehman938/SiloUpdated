@@ -165,9 +165,9 @@ const Cluberly = () => {
       />
 
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-3 md:px-0 py-5 md:py-20">
-        <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
+        <h2 className="text-black text-2xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
           Understanding the challenge
-        </h1>
+        </h2>
         <div className="flex flex-col w-full md:w-[70%] gap-6 justify-between items-start text-left font-epilogue text-base md:text-base">
           <p>
             Cluberly’s product model was strong but not immediately easy to
@@ -196,9 +196,9 @@ const Cluberly = () => {
       />
 
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-3 md:px-0 py-5 md:py-20 md:pt-0">
-        <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
+        <h2 className="text-black text-2xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
           Strengthening clarity for every audience
-        </h1>
+        </h2>
         <div className="flex flex-col w-full md:w-[70%] gap-6 justify-between items-start text-left font-epilogue text-base md:text-base">
           <p>
             Cluberly now has a clear and cohesive range of communication tools

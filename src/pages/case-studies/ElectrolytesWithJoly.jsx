@@ -82,7 +82,7 @@ const ElectrolytesWithJoly = () => {
           alt: "Social challenges",
         },
         {
-          src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1765998163/Placeholder_Image_pxcpro.png",
+          src: "https://res.cloudinary.com/di9tb45rl/image/upload/v1767110172/416b7bfd-8ace-458d-a238-c4199ed9b5cf_ushfmg.jpg",
           alt: "Achievement system",
         },
       ],
@@ -149,9 +149,9 @@ const ElectrolytesWithJoly = () => {
         images={caseStudy.galleryWithText.images}
       />
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-3 md:px-0 py-5 md:py-20">
-        <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
+        <h2 className="text-black text-2xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
           Clear and confident visual direction for the show’s future
-        </h1>
+        </h2>
         <div className="flex flex-col w-full md:w-[70%] gap-6 justify-between items-start text-left font-epilogue text-base md:text-base">
           <p>
             The new identity gives Electrolytes With Joly a visual direction

@@ -155,9 +155,9 @@ const KnightsgatePartners = () => {
         images={caseStudy.galleryWithText.images}
       />
       <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16 lg:gap-20 w-full max-w-[1280px] mx-auto px-3 md:px-0 py-5 md:py-20">
-        <h1 className="text-black text-3xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
+        <h2 className="text-black text-2xl md:text-4xl lg:text-5xl font-bold text-left font-epilogue w-full md:w-1/2">
           A strategic creative overhaul
-        </h1>
+        </h2>
         <div className="flex flex-col w-full md:w-[70%] gap-6 justify-between items-start text-left font-epilogue text-base md:text-base">
           <p>
             We redesigned Knightsgate’s website to deliver a sharp modern and
